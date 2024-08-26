@@ -56,16 +56,80 @@ struct SimpleEntry: TimelineEntry {
 }
 
 struct HaruhanjulWidgetEntryView : View {
+    @Environment(\.widgetFamily) var family: WidgetFamily
+    
     // 위젯의 데이터 모델로, 각 항목의 표시될 정보가 포함되어 있음
     var entry: Provider.Entry
-
+    
+    @ViewBuilder
     var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Favorite Emoji:")
-            Text(entry.configuration.favoriteEmoji)
+        switch family {
+        case .systemSmall:
+            VStack {
+                Text("Time:")
+                Text(entry.date, style: .time)
+            }
+        case .systemMedium:
+            VStack {
+                Text("Time:")
+                Text(entry.date, style: .time)
+                
+                Text("Favorite Emoji:")
+                Text(entry.configuration.favoriteEmoji)
+            }
+        case .systemLarge:
+            VStack {
+                Text("Time:")
+                Text(entry.date, style: .time)
+                
+                Text("Favorite Emoji:")
+                Text(entry.configuration.favoriteEmoji)
+            }
+        case .systemExtraLarge:  // ExtraLarge는 iPad의 위젯에만 표출
+            VStack {
+                Text("Time:")
+                Text(entry.date, style: .time)
+                
+                Text("Favorite Emoji:")
+                Text(entry.configuration.favoriteEmoji)
+            }
+        case .accessoryCorner:
+            VStack {
+                Text("Time:")
+                Text(entry.date, style: .time)
+                
+                Text("Favorite Emoji:")
+                Text(entry.configuration.favoriteEmoji)
+            }
+        case .accessoryCircular:
+            VStack {
+                Text("Time:")
+                Text(entry.date, style: .time)
+                
+                Text("Favorite Emoji:")
+                Text(entry.configuration.favoriteEmoji)
+            }
+        case .accessoryRectangular:
+            VStack {
+                Text("Time:")
+                Text(entry.date, style: .time)
+                
+                Text("Favorite Emoji:")
+                Text(entry.configuration.favoriteEmoji)
+            }
+        case .accessoryInline:
+            VStack {
+                Text("Time:")
+                Text(entry.date, style: .time)
+                
+                Text("Favorite Emoji:")
+                Text(entry.configuration.favoriteEmoji)
+            }
+        @unknown default:
+            VStack {
+                Text("Time:")
+                Text(entry.date, style: .time)
+            }
         }
     }
 }
