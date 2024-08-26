@@ -38,7 +38,9 @@ struct Provider: AppIntentTimelineProvider {
             entries.append(entry)
         }
 
-        // `policy: .atEnd는 타임라인의 마지막 항목이 표시된 후, 위젯이 더 이상 갱신되지 않음을 의미
+        // .atEnd: 마지막 date가 끝난 후 타임라인 reloading
+        // .after: 다음 data가 지난 후 타임라인 reloading
+        // .never: 즉시 타임라인 reloading
         return Timeline(entries: entries, policy: .atEnd)
     }
 }
