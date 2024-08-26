@@ -11,7 +11,7 @@ import SwiftUI
 struct HaruhanjulApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
         }
     }
 }
