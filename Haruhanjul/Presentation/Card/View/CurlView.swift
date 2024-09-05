@@ -23,15 +23,15 @@ struct CurlView: View {
                         ProgressView()
                     }
                 } else {
-                    ForEach(Array(cardStore.advices.enumerated()), id: \.element.slip.id) { index, advice in
+                    ForEach(Array(cardStore.advices.enumerated()), id: \.element.id) { index, advice in
                         PeelEffect(dragProgress: $dragProgresses[index]) {
                             ZStack {
-                                Image("qq")
+                                Image("image1")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 
-                                Text(advice.slip.advice)
+                                Text(advice.advice)
                                     .padding()
                             }
                             .frame(width: 300, height: 500)

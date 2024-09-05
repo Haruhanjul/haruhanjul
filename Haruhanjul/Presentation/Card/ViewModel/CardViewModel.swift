@@ -7,18 +7,17 @@
 
 import Foundation
 
-struct Slip: Codable {
-    let slip: SlipResponse
+struct AdviceResponse: Codable {
+    let slip: Advice
 }
 
-struct SlipResponse: Codable {
+struct Advice: Codable {
     let id: Int
     let advice: String
 }
 
 final class CardViewModel: ObservableObject {
-    @Published var advices: [Slip] = [Slip]()
-    @Published var dragProgresses: [CGFloat] = []
+    @Published var advices: [Advice] = [Advice]()
     @Published var isLoading: Bool = false
     
     func loadAdvices(count: Int) async {
@@ -53,9 +52,9 @@ final class CardViewModel: ObservableObject {
                 if (200..<300).contains(httpResponse.statusCode) {
                     if let data = data {
                         do {
-                            let advice = try JSONDecoder().decode(Slip.self, from: data)
+                            let response = try JSONDecoder().decode(AdviceResponse.self, from: data)
+                            let advice = Advice(id: response.slip.id, advice: response.slip.advice)
                             self.advices.append(advice)
-                            self.dragProgresses.append(0)
                         } catch {
                             print("Error decoding JSON: \(error)")
                         }
