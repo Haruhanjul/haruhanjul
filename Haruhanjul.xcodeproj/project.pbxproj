@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC3B39C32C88C1660020ECE3 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B39C22C88C1660020ECE3 /* CardViewModel.swift */; };
+		BC5246C62C80E04200D36A0C /* CurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5246C52C80E04200D36A0C /* CurlView.swift */; };
 		F62B3F3E2C7C15A700B05608 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62B3F3D2C7C15A600B05608 /* WidgetKit.framework */; };
 		F62B3F402C7C15A700B05608 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62B3F3F2C7C15A700B05608 /* SwiftUI.framework */; };
 		F62B3F432C7C15A700B05608 /* HaruhanjulWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62B3F422C7C15A700B05608 /* HaruhanjulWidgetBundle.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BC3B39C22C88C1660020ECE3 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		BC5246C52C80E04200D36A0C /* CurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurlView.swift; sourceTree = "<group>"; };
 		F62B3F3B2C7C15A600B05608 /* HaruhanjulWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HaruhanjulWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F62B3F3D2C7C15A600B05608 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		F62B3F3F2C7C15A700B05608 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -82,6 +86,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC3B39BE2C88BE970020ECE3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				BC3B39BF2C88BEAF0020ECE3 /* Card */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BC3B39BF2C88BEAF0020ECE3 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				BC3B39C02C88C0320020ECE3 /* View */,
+				BC3B39C12C88C0370020ECE3 /* ViewModel */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		BC3B39C02C88C0320020ECE3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC5246C52C80E04200D36A0C /* CurlView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC3B39C12C88C0370020ECE3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BC3B39C22C88C1660020ECE3 /* CardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		F62B3F3C2C7C15A600B05608 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				F66849512C742A870023143B /* App */,
+				BC3B39BE2C88BE970020ECE3 /* Presentation */,
 				F66849502C742A7C0023143B /* Resource */,
 				F66849462C7422610023143B /* Preview Content */,
 			);
@@ -270,6 +308,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3B39C32C88C1660020ECE3 /* CardViewModel.swift in Sources */,
+				BC5246C62C80E04200D36A0C /* CurlView.swift in Sources */,
 				F66849432C74225D0023143B /* MainTabView.swift in Sources */,
 				F66849412C74225D0023143B /* HaruhanjulApp.swift in Sources */,
 			);
@@ -470,7 +510,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Haruhanjul/Preview Content\"";
-				DEVELOPMENT_TEAM = C39BYRTABZ;
+				DEVELOPMENT_TEAM = 3URYLCPH2H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "하루 한줄";
@@ -506,7 +546,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Haruhanjul/Preview Content\"";
-				DEVELOPMENT_TEAM = C39BYRTABZ;
+				DEVELOPMENT_TEAM = 3URYLCPH2H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "하루 한줄";
