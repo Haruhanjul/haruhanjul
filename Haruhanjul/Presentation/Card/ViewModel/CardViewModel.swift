@@ -13,7 +13,16 @@ struct AdviceResponse: Codable {
 
 struct Advice: Codable {
     let id: Int
-    let advice: String
+    var advice: String
+}
+
+struct TranslationResponse: Codable {
+    let translations: [Translation]
+}
+
+struct Translation: Codable {
+    let detected_source_language: String
+    let text: String
 }
 
 final class CardViewModel: ObservableObject {
@@ -37,7 +46,7 @@ final class CardViewModel: ObservableObject {
             
             dispatchGroup.enter()
             
-            let task = session.dataTask(with: request) { (data, response, error) in
+            let task = session.dataTask(with: request) { [self] (data, response, error) in
                 defer { dispatchGroup.leave() }
                 
                 guard error == nil else {
@@ -54,7 +63,7 @@ final class CardViewModel: ObservableObject {
                         do {
                             let response = try JSONDecoder().decode(AdviceResponse.self, from: data)
                             let advice = Advice(id: response.slip.id, advice: response.slip.advice)
-                            self.advices.append(advice)
+                            advices.append(advice)
                         } catch {
                             print("Error decoding JSON: \(error)")
                         }
@@ -70,8 +79,57 @@ final class CardViewModel: ObservableObject {
         }
         
         dispatchGroup.notify(queue: .main) {
-            print("명언 \(count)개 중 \(self.advices.count)개 불러오기 완료.")
-            self.isLoading = false
+            self.translateText(texts: self.advices.map { $0.advice }) {
+                print("명언 \(count)개 중 \(self.advices.count)개 불러오기 완료.")
+                self.isLoading = false
+            }
         }
     }
+    
+    func translateText(texts: [String], completion: @escaping () -> ()) {
+        let urlString = "https://api-free.deepl.com/v2/translate"
+        guard let url = URL(string: urlString) else { return }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        // 임시 text key
+        request.setValue("DeepL-Auth-Key ed5b770f-3009-4054-8982-df95771baf76:fx", forHTTPHeaderField: "Authorization")
+        
+        let body: [String: Any] = [
+            "text": texts,
+            "target_lang": "KO",
+            "source_lang":"EN"
+        ]
+
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: body, options: [])
+            request.httpBody = jsonData
+        } catch {
+            print("Error serializing JSON: \(error)")
+        }
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard error == nil else {
+                print("Error: \(error!.localizedDescription)")
+                return
+            }
+            
+            guard let data = data else { return }
+            
+            do {
+                let decodedResponse = try JSONDecoder().decode(TranslationResponse.self, from: data)
+                
+                for (index, text) in decodedResponse.translations.map({ $0.text }).enumerated() {
+                    self.advices[index].advice = text
+                }
+                completion()
+            } catch {
+                print("Error decoding JSON: \(error)")
+            }
+        }
+        task.resume()
+    }
+
 }

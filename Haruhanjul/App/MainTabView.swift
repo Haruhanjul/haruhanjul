@@ -11,7 +11,7 @@ struct MainTabView: View {
     var body: some View {
         TabView {
             NavigationView {
-                CurlView(count: 5)
+                CurlView(count: 11)
             }
             .tabItem {
                 Image(systemName: "plus.circle")
