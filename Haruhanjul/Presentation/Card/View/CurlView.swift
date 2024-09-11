@@ -34,7 +34,7 @@ struct CurlView: View {
                                 }
                                 .padding()
                             }
-                            .frame(width: 400, height: 200)
+                            .frame(height: 200)
                         } onDelete: {
                             dragProgresses[index] = 0
                             cardStore.advices.append(cardStore.advices.removeFirst())
