@@ -15,7 +15,6 @@ struct CurlView: View {
     var body: some View {
         VStack {
             ZStack {
-                Color.orange.opacity(0.1).ignoresSafeArea()
                 
                 if cardStore.isLoading {
                     VStack {
@@ -26,15 +25,16 @@ struct CurlView: View {
                     ForEach(Array(cardStore.advices.enumerated()), id: \.element.id) { index, advice in
                         PeelEffect(dragProgress: $dragProgresses[index]) {
                             ZStack {
-                                Image("image1")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                RoundedRectangle(cornerRadius: 16)
+                                    .foregroundStyle(.yellow)
                                 
-                                Text(advice.advice)
-                                    .padding()
+                                VStack(alignment: .center, spacing: 16) {
+                                    Text(advice.adviceKorean ?? "")
+                                    Text(advice.advice)
+                                }
+                                .padding()
                             }
-                            .frame(width: 300, height: 500)
+                            .frame(width: 400, height: 200)
                         } onDelete: {
                             dragProgresses[index] = 0
                             cardStore.advices.append(cardStore.advices.removeFirst())

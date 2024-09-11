@@ -6,28 +6,24 @@
 //
 
 import Foundation
-
-struct AdviceResponse: Codable {
-    let slip: Advice
-}
-
-struct Advice: Codable {
-    let id: Int
-    var advice: String
-}
-
-struct TranslationResponse: Codable {
-    let translations: [Translation]
-}
-
-struct Translation: Codable {
-    let detected_source_language: String
-    let text: String
-}
+import MLKitTranslate
 
 final class CardViewModel: ObservableObject {
     @Published var advices: [Advice] = [Advice]()
     @Published var isLoading: Bool = false
+    
+    let englishKoreanTranslator = Translator.translator(options: TranslatorOptions(sourceLanguage: .english, targetLanguage: .korean))
+    
+    let conditions = ModelDownloadConditions(
+        allowsCellularAccess: false, // 셀룰러 허용 여부
+        allowsBackgroundDownloading: true // 백그라운드 다운 허용 여부
+    )
+    
+    init() {
+        self.englishKoreanTranslator.downloadModelIfNeeded(with: conditions) { error in
+            guard error == nil else { return }
+        }
+    }
     
     func loadAdvices(count: Int) async {
         let urlString = "https://api.adviceslip.com/advice"
@@ -62,8 +58,14 @@ final class CardViewModel: ObservableObject {
                     if let data = data {
                         do {
                             let response = try JSONDecoder().decode(AdviceResponse.self, from: data)
-                            let advice = Advice(id: response.slip.id, advice: response.slip.advice)
-                            advices.append(advice)
+                            var advice = Advice(id: response.slip.id, advice: response.slip.advice, adviceKorean: "")
+                            
+                            englishKoreanTranslator.translate(advice.advice) { translatedText, error in
+                                guard error == nil, let translatedText else { return }
+                                advice.adviceKorean = translatedText
+                                self.advices.append(advice)
+                            }
+
                         } catch {
                             print("Error decoding JSON: \(error)")
                         }
@@ -79,57 +81,7 @@ final class CardViewModel: ObservableObject {
         }
         
         dispatchGroup.notify(queue: .main) {
-            self.translateText(texts: self.advices.map { $0.advice }) {
-                print("명언 \(count)개 중 \(self.advices.count)개 불러오기 완료.")
-                self.isLoading = false
-            }
+            self.isLoading = false
         }
     }
-    
-    func translateText(texts: [String], completion: @escaping () -> ()) {
-        let urlString = "https://api-free.deepl.com/v2/translate"
-        guard let url = URL(string: urlString) else { return }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        // 임시 text key
-        request.setValue("DeepL-Auth-Key ed5b770f-3009-4054-8982-df95771baf76:fx", forHTTPHeaderField: "Authorization")
-        
-        let body: [String: Any] = [
-            "text": texts,
-            "target_lang": "KO",
-            "source_lang":"EN"
-        ]
-
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: body, options: [])
-            request.httpBody = jsonData
-        } catch {
-            print("Error serializing JSON: \(error)")
-        }
-        
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            guard error == nil else {
-                print("Error: \(error!.localizedDescription)")
-                return
-            }
-            
-            guard let data = data else { return }
-            
-            do {
-                let decodedResponse = try JSONDecoder().decode(TranslationResponse.self, from: data)
-                
-                for (index, text) in decodedResponse.translations.map({ $0.text }).enumerated() {
-                    self.advices[index].advice = text
-                }
-                completion()
-            } catch {
-                print("Error decoding JSON: \(error)")
-            }
-        }
-        task.resume()
-    }
-
 }
