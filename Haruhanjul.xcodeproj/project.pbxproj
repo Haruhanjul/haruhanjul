@@ -13,6 +13,7 @@
 		BC8858A22C92C47C0042664C /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589E2C92C47C0042664C /* Advice.swift */; };
 		BC8858A32C92C47C0042664C /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589F2C92C47C0042664C /* Translation.swift */; };
 		E118832A2323A00FFE0C28C4 /* Pods_Haruhanjul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C427C7FF8EDEF8F4D57086 /* Pods_Haruhanjul.framework */; };
+		F61BEEC72C93E42E00F8A62B /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589E2C92C47C0042664C /* Advice.swift */; };
 		F62B3F3E2C7C15A700B05608 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62B3F3D2C7C15A600B05608 /* WidgetKit.framework */; };
 		F62B3F402C7C15A700B05608 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62B3F3F2C7C15A700B05608 /* SwiftUI.framework */; };
 		F62B3F432C7C15A700B05608 /* HaruhanjulWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62B3F422C7C15A700B05608 /* HaruhanjulWidgetBundle.swift */; };
@@ -490,6 +491,7 @@
 			files = (
 				F62B3F452C7C15A700B05608 /* HaruhanjulWidgetLiveActivity.swift in Sources */,
 				F62B3F492C7C15A700B05608 /* AppIntent.swift in Sources */,
+				F61BEEC72C93E42E00F8A62B /* Advice.swift in Sources */,
 				F62B3F432C7C15A700B05608 /* HaruhanjulWidgetBundle.swift in Sources */,
 				F62B3F472C7C15A700B05608 /* HaruhanjulWidget.swift in Sources */,
 			);

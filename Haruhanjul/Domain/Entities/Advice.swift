@@ -16,3 +16,5 @@ struct Advice: Codable {
     var advice: String
     var adviceKorean: String?
 }
+
+var tempAdvice = Advice(id: 1, advice: "이것이 명언이도다")
