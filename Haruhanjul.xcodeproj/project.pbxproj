@@ -12,6 +12,7 @@
 		BC3B39C32C88C1660020ECE3 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B39C22C88C1660020ECE3 /* CardViewModel.swift */; };
 		BC5246C62C80E04200D36A0C /* CurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5246C52C80E04200D36A0C /* CurlView.swift */; };
 		BC8858A22C92C47C0042664C /* AdviceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589E2C92C47C0042664C /* AdviceDTO.swift */; };
+		BC8858A22C92C47C0042664C /* AdviceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589E2C92C47C0042664C /* AdviceEntity.swift */; };
 		BC8858A32C92C47C0042664C /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589F2C92C47C0042664C /* Translation.swift */; };
 		BC8858A92C9F1FC00042664C /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC8858A72C9F1FC00042664C /* CoreData.xcdatamodeld */; };
 		BC8858CA2C9F20DA0042664C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8858C92C9F20DA0042664C /* Persistence.swift */; };
@@ -87,6 +88,12 @@
 		E78365A933EA6494AC678FF8 /* Pods-HaruhanjulWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaruhanjulWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-HaruhanjulWidgetExtension/Pods-HaruhanjulWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		F61BEEC92C93E6B200F8A62B /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		F61BEECC2C9BB24000F8A62B /* AdviceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceEntity.swift; sourceTree = "<group>"; };
+		BC88589E2C92C47C0042664C /* AdviceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdviceEntity.swift; sourceTree = "<group>"; };
+		BC88589F2C92C47C0042664C /* Translation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		BF473C870869AC71263D00C0 /* Pods-Haruhanjul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haruhanjul.debug.xcconfig"; path = "Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul.debug.xcconfig"; sourceTree = "<group>"; };
+		C40EEE79F3A6EA942BC6C44D /* Pods-HaruhanjulWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaruhanjulWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-HaruhanjulWidgetExtension/Pods-HaruhanjulWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
+		D7C427C7FF8EDEF8F4D57086 /* Pods_Haruhanjul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Haruhanjul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F61BEEC92C93E6B200F8A62B /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		F62B3F3B2C7C15A600B05608 /* HaruhanjulWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HaruhanjulWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F62B3F3D2C7C15A600B05608 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		F62B3F3F2C7C15A700B05608 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -184,6 +191,7 @@
 			children = (
 				F61BEECC2C9BB24000F8A62B /* AdviceEntity.swift */,
 				BC8858C92C9F20DA0042664C /* Persistence.swift */,
+				BC88589E2C92C47C0042664C /* AdviceEntity.swift */,
 				BC88589F2C92C47C0042664C /* Translation.swift */,
 			);
 			path = Entities;
@@ -556,6 +564,8 @@
 				BC93B52F2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataProperties.swift in Sources */,
 				BC5246C62C80E04200D36A0C /* CurlView.swift in Sources */,
 				BC8858A22C92C47C0042664C /* AdviceDTO.swift in Sources */,
+				BC5246C62C80E04200D36A0C /* CurlView.swift in Sources */,
+				BC8858A22C92C47C0042664C /* AdviceEntity.swift in Sources */,
 				F66849432C74225D0023143B /* MainTabView.swift in Sources */,
 				F66849412C74225D0023143B /* HaruhanjulApp.swift in Sources */,
 				BC8858A32C92C47C0042664C /* Translation.swift in Sources */,
