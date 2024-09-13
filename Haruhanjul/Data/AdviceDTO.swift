@@ -29,3 +29,6 @@ struct AdviceSlip: Codable {
         )
     }
 }
+
+var tempAdvice = AdviceSlip(id: 1, content: "이것이 명언이도다")
+

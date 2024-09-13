@@ -49,7 +49,7 @@ struct AdviceEntry: TimelineEntry {
     // 위젯이 언제 해당 항목을 화면에 표시할 지를 정함
     // 각 타임라인 항목이 특정 시점에 표시될 시간을 정의하고 시점에 맞춰 내용을 업데이트
     let date: Date
-    let advice: Advice
+    let advice: AdviceSlip
     
     // 위젯에 대한 사용자 설정, 사용자가 위젯 설정 화면에서 지정한 설정 값을 포함
     // 이 설정 값은 위젯의 UI나 동작에 영향을 미침
@@ -174,6 +174,6 @@ extension ConfigurationAppIntent {
 #Preview(as: .systemSmall) {
     HaruhanjulWidget()
 } timeline: {
-    AdviceEntry(date: .now, configuration: .smiley)
-    AdviceEntry(date: .now, configuration: .starEyes)
+    AdviceEntry(date: .now, advice: tempAdvice, configuration: .smiley)
+    AdviceEntry(date: .now, advice: tempAdvice, configuration: .starEyes)
 }
