@@ -36,7 +36,7 @@ final class TranslateTextTests: XCTestCase {
         
         // Translated texts 확인
         for advice in viewModel.advices {
-            print("Translated advice: \(advice.advice)")
+            print("Translated content: \(advice.advice)")
         }
         
         XCTAssertEqual("안녕하세요", viewModel.advices[0].advice, "\(testTexts[0]) 은/는 \"안녕하세요\" 로 번역되어야 합니다")
