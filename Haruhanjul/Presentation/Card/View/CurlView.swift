@@ -30,7 +30,7 @@ struct CurlView: View {
                                 
                                 VStack(alignment: .center, spacing: 16) {
                                     Text(advice.adviceKorean ?? "")
-                                    Text(advice.advice)
+                                    Text(advice.content)
                                 }
                                 .padding()
                             }

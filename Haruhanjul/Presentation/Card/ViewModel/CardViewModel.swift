@@ -9,7 +9,7 @@ import Foundation
 import MLKitTranslate
 
 final class CardViewModel: ObservableObject {
-    @Published var advices: [Advice] = [Advice]()
+    @Published var advices: [AdviceEntity] = []
     @Published var isLoading: Bool = false
     
     let englishKoreanTranslator = Translator.translator(options: TranslatorOptions(sourceLanguage: .english, targetLanguage: .korean))
@@ -57,15 +57,11 @@ final class CardViewModel: ObservableObject {
                 if (200..<300).contains(httpResponse.statusCode) {
                     if let data = data {
                         do {
-                            let response = try JSONDecoder().decode(AdviceResponse.self, from: data)
-                            var advice = Advice(id: response.slip.id, advice: response.slip.advice, adviceKorean: "")
+                            let response = try JSONDecoder().decode(AdviceDTO.self, from: data)
+                            let advice = response.slip.convertToEntity()
+                            self.translateToKorean(with: advice)
+                            self.advices.append(advice)
                             
-                            englishKoreanTranslator.translate(advice.advice) { translatedText, error in
-                                guard error == nil, let translatedText else { return }
-                                advice.adviceKorean = translatedText
-                                self.advices.append(advice)
-                            }
-
                         } catch {
                             print("Error decoding JSON: \(error)")
                         }
@@ -82,6 +78,15 @@ final class CardViewModel: ObservableObject {
         
         dispatchGroup.notify(queue: .main) {
             self.isLoading = false
+        }
+    }
+    
+    private func translateToKorean(with advice: AdviceEntity) {
+        guard let index = advices.firstIndex(where: { $0.id == advice.id }) else { return }
+        englishKoreanTranslator.translate(advice.content) { [weak self] translatedText, error in
+            guard let self else { return }
+            guard error == nil, let translatedText else { return }
+            advices[index].adviceKorean = translatedText
         }
     }
 }
