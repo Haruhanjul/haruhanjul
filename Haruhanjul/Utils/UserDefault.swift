@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum AdviceDefaults {
+    @UserDefault(key: "adviceKey", defaultValue: "")
+    static var content: String
+}
+
 @propertyWrapper
 struct UserDefault<T> {
     let key: String
