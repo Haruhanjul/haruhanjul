@@ -3,21 +3,12 @@
 //  Haruhanjul
 //
 //  Created by 최하늘 on 9/19/24.
+//
 
 import Foundation
 
-struct AdviceEntity: Codable {
+struct AdviceEntity: Codable, Equatable {
     let id: Int
-    var content: String
+    let content: String
     var adviceKorean: String?
 }
-
-struct AdviceResponse: Codable {
-    let slip: AdviceEntity
-}
-
-enum Advice {
-    @UserDefault(key: "adviceKey", defaultValue: "")
-    static var content: String
-}
-

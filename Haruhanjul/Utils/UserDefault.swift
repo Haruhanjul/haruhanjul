@@ -8,8 +8,8 @@
 import Foundation
 
 enum AdviceDefaults {
-    @UserDefault(key: "adviceKey", defaultValue: "")
-    static var content: String
+    @UserDefault(key: "adviceKey", defaultValue: [""])
+    static var content: [String]
     
     @UserDefault(key: "lastDay", defaultValue: Date())
     static var day: Date
@@ -32,4 +32,3 @@ struct UserDefault<T> {
         }
     }
 }
-

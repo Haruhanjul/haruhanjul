@@ -27,7 +27,7 @@ struct CurlView: View {
                     .padding()
                 ProgressView()
             } else {
-                ForEach(Array(advices.enumerated()), id: \.element.uuid) { index, advice in
+                ForEach(Array(advices.enumerated()), id: \.element.id) { index, advice in
                     PeelEffect(dragProgress: $dragProgresses[index]) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 16)
@@ -61,6 +61,11 @@ struct CurlView: View {
             // 불러온 명언 4개 이하 남을시 5개 불러옴
             if value <= 4 { fetchAdvice(count: 5) }
         }
+        .onChange(of: advices) { value in
+            if let advice = value.first {
+                AdviceDefaults.content = [advice.content, advice.adviceKorean ?? ""]
+            }
+        }
         .onAppear {
             Task {
                 if !cardStore.isTranslatorReady {
@@ -85,7 +90,6 @@ struct CurlView: View {
         }
         .onDisappear {
             AdviceDefaults.cardIndex = lastIndex
-            print(AdviceDefaults.cardIndex)
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
