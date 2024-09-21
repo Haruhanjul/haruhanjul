@@ -12,6 +12,8 @@
 		BC5246C62C80E04200D36A0C /* CurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5246C52C80E04200D36A0C /* CurlView.swift */; };
 		BC8858A22C92C47C0042664C /* AdviceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589E2C92C47C0042664C /* AdviceDTO.swift */; };
 		BC8858A32C92C47C0042664C /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589F2C92C47C0042664C /* Translation.swift */; };
+		BC8858A92C9F1FC00042664C /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC8858A72C9F1FC00042664C /* CoreData.xcdatamodeld */; };
+		BC8858CA2C9F20DA0042664C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8858C92C9F20DA0042664C /* Persistence.swift */; };
 		E118832A2323A00FFE0C28C4 /* Pods_Haruhanjul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C427C7FF8EDEF8F4D57086 /* Pods_Haruhanjul.framework */; };
 		F61BEEC72C93E42E00F8A62B /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589E2C92C47C0042664C /* Advice.swift */; };
 		F61BEECA2C93E6B200F8A62B /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61BEEC92C93E6B200F8A62B /* UserDefault.swift */; };
@@ -71,6 +73,8 @@
 		BC5246C52C80E04200D36A0C /* CurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurlView.swift; sourceTree = "<group>"; };
 		BC88589E2C92C47C0042664C /* AdviceDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdviceDTO.swift; sourceTree = "<group>"; };
 		BC88589F2C92C47C0042664C /* Translation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		BC8858A82C9F1FC00042664C /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		BC8858C92C9F20DA0042664C /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		BF473C870869AC71263D00C0 /* Pods-Haruhanjul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haruhanjul.debug.xcconfig"; path = "Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul.debug.xcconfig"; sourceTree = "<group>"; };
 		C40EEE79F3A6EA942BC6C44D /* Pods-HaruhanjulWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaruhanjulWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-HaruhanjulWidgetExtension/Pods-HaruhanjulWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		D7C427C7FF8EDEF8F4D57086 /* Pods_Haruhanjul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Haruhanjul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,8 +175,9 @@
 		BC8858A02C92C47C0042664C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				BC88589F2C92C47C0042664C /* Translation.swift */,
 				F61BEECC2C9BB24000F8A62B /* AdviceEntity.swift */,
+				BC8858C92C9F20DA0042664C /* Persistence.swift */,
+				BC88589F2C92C47C0042664C /* Translation.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -183,6 +188,14 @@
 				BC8858A02C92C47C0042664C /* Entities */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		BC8858CF2C9F27EC0042664C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BC8858A72C9F1FC00042664C /* CoreData.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		F61BEEC82C93E69900F8A62B /* Utils */ = {
@@ -255,6 +268,7 @@
 				BC8858A12C92C47C0042664C /* Domain */,
 				BC3B39BE2C88BE970020ECE3 /* Presentation */,
 				F61BEEC82C93E69900F8A62B /* Utils */,
+				BC8858CF2C9F27EC0042664C /* CoreData */,
 				F66849502C742A7C0023143B /* Resource */,
 				F66849462C7422610023143B /* Preview Content */,
 			);
@@ -525,12 +539,14 @@
 			files = (
 				BC3B39C32C88C1660020ECE3 /* CardViewModel.swift in Sources */,
 				F61BEECA2C93E6B200F8A62B /* UserDefault.swift in Sources */,
+				BC8858A92C9F1FC00042664C /* CoreData.xcdatamodeld in Sources */,
 				BC5246C62C80E04200D36A0C /* CurlView.swift in Sources */,
 				BC8858A22C92C47C0042664C /* AdviceDTO.swift in Sources */,
 				F66849432C74225D0023143B /* MainTabView.swift in Sources */,
 				F66849412C74225D0023143B /* HaruhanjulApp.swift in Sources */,
 				F61BEECD2C9BB24000F8A62B /* AdviceEntity.swift in Sources */,
 				BC8858A32C92C47C0042664C /* Translation.swift in Sources */,
+				BC8858CA2C9F20DA0042664C /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,6 +904,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BC8858A72C9F1FC00042664C /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BC8858A82C9F1FC00042664C /* CoreData.xcdatamodel */,
+			);
+			currentVersion = BC8858A82C9F1FC00042664C /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F66849352C74225D0023143B /* Project object */;
 }
