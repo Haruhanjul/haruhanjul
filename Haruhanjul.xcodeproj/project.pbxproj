@@ -18,6 +18,7 @@
 		BC93B52E2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93B52C2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataClass.swift */; };
 		BC93B52F2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93B52D2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataProperties.swift */; };
 		F61BEEC72C93E42E00F8A62B /* AdviceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589E2C92C47C0042664C /* AdviceEntity.swift */; };
+		E118832A2323A00FFE0C28C4 /* Pods_Haruhanjul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C427C7FF8EDEF8F4D57086 /* Pods_Haruhanjul.framework */; };
 		F61BEECA2C93E6B200F8A62B /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61BEEC92C93E6B200F8A62B /* UserDefault.swift */; };
 		F61BEECD2C9BB24000F8A62B /* AdviceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61BEECC2C9BB24000F8A62B /* AdviceEntity.swift */; };
 		F62B3F3E2C7C15A700B05608 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62B3F3D2C7C15A600B05608 /* WidgetKit.framework */; };
@@ -87,6 +88,9 @@
 		BC93B52C2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BC93B52D2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E78365A933EA6494AC678FF8 /* Pods-HaruhanjulWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaruhanjulWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-HaruhanjulWidgetExtension/Pods-HaruhanjulWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		BF473C870869AC71263D00C0 /* Pods-Haruhanjul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haruhanjul.debug.xcconfig"; path = "Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul.debug.xcconfig"; sourceTree = "<group>"; };
+		C40EEE79F3A6EA942BC6C44D /* Pods-HaruhanjulWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaruhanjulWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-HaruhanjulWidgetExtension/Pods-HaruhanjulWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
+		D7C427C7FF8EDEF8F4D57086 /* Pods_Haruhanjul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Haruhanjul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F61BEEC92C93E6B200F8A62B /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		F61BEECC2C9BB24000F8A62B /* AdviceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceEntity.swift; sourceTree = "<group>"; };
 		F62B3F3B2C7C15A600B05608 /* HaruhanjulWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HaruhanjulWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +193,8 @@
 				BC88589E2C92C47C0042664C /* AdviceEntity.swift */,
 				BC88589F2C92C47C0042664C /* Translation.swift */,
 				F61BEECC2C9BB24000F8A62B /* AdviceEntity.swift */,
+				BC8858C92C9F20DA0042664C /* Persistence.swift */,
+				BC88589F2C92C47C0042664C /* Translation.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
