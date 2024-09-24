@@ -23,6 +23,7 @@ struct AdviceSlip: Codable {
     func convertToEntity() -> AdviceEntity {
         return AdviceEntity(
             id: id,
+            slipId: id,
             content: content,
             adviceKorean: nil
         )

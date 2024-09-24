@@ -13,6 +13,9 @@ enum AdviceDefaults {
     
     @UserDefault(key: "lastDay", defaultValue: Date())
     static var day: Date
+    
+    @UserDefault(key: "cardIndex", defaultValue: 0)
+    static var cardIndex: Int
 }
 
 @propertyWrapper

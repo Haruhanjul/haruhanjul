@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Haruhanjul/CoreData/CDAdviceEntity+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:Haruhanjul/CoreData/CDAdviceEntity+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
       location = "group:Haruhanjul.xcodeproj">
    </FileRef>
    <FileRef
