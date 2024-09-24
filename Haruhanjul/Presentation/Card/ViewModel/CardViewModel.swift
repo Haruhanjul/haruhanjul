@@ -7,33 +7,35 @@
 
 import Foundation
 import MLKitTranslate
+import CoreData
 
 final class CardViewModel: ObservableObject {
-    @Published var advices: [AdviceEntity] = []
-    @Published var isLoading: Bool = false
-    
     private let englishKoreanTranslator = Translator.translator(options: TranslatorOptions(sourceLanguage: .english, targetLanguage: .korean))
-    private let conditions = ModelDownloadConditions(
-        allowsCellularAccess: false,
-        allowsBackgroundDownloading: true
-    )
-    
-    init() {
-        self.englishKoreanTranslator.downloadModelIfNeeded(with: conditions) { error in
-            if let error = error {
-                print("Error downloading model: \(error)")
+    private let conditions = ModelDownloadConditions(allowsCellularAccess: false, allowsBackgroundDownloading: true)
+    var isTranslatorReady = false
+
+    func downloadTranslatorModel() async {
+        print("언어 모델 다운로드 시작")
+        await withCheckedContinuation { continuation in
+            self.englishKoreanTranslator.downloadModelIfNeeded(with: conditions) { error in
+                guard error == nil else {
+                    print("언어 모델 다운로드 실패: \(error!)")
+                    return continuation.resume()
+                }
+                print("언어 모델 다운로드 완료")
+                self.isTranslatorReady = true
+                continuation.resume()
             }
         }
     }
     
-    func loadAdvices(count: Int) {
+    func downloadAdvices(count: Int, context: NSManagedObjectContext, completion: @escaping ([AdviceEntity]) -> ()) {
+        var result: [AdviceEntity] = []
         let urlString = "https://api.adviceslip.com/advice"
         guard let url = URL(string: urlString) else {
             print("Invalid URL")
             return
         }
-        
-        self.isLoading = true
         
         let dispatchGroup = DispatchGroup()
         
@@ -45,7 +47,7 @@ final class CardViewModel: ObservableObject {
             let task = URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) in
                 defer { dispatchGroup.leave() }
                 
-                guard let self = self else { return }
+                guard let self else { return }
                 
                 if let error = error {
                     print("Error: \(error)")
@@ -66,15 +68,16 @@ final class CardViewModel: ObservableObject {
                     let response = try JSONDecoder().decode(AdviceDTO.self, from: data)
                     let advice = response.slip.convertToEntity()
                     
-                    translateToKorean(advice) { translatedText in
-                        var updatedAdvice = advice
-                        updatedAdvice.adviceKorean = translatedText
-                        
-                        DispatchQueue.main.async { [weak self] in
-                            guard let self else { return }
-                            advices.append(updatedAdvice)
+                    englishKoreanTranslator.translate(advice.content) { translatedText, error in
+                        if let error = error {
+                            print("Translation error: \(error)")
+                        } else {
+                            let updatedAdvice = AdviceEntity(id: advice.id, slipId: advice.slipId, content: advice.content, adviceKorean: translatedText)
+                            self.saveAdviceEntity(adviceEntity: updatedAdvice, context: context)
+                            result.append(updatedAdvice)
                         }
                     }
+                    
                 } catch {
                     print("Error decoding JSON: \(error)")
                 }
@@ -83,18 +86,63 @@ final class CardViewModel: ObservableObject {
         }
         
         dispatchGroup.notify(queue: .main) {
-            self.isLoading = false
+            completion(result)
         }
     }
     
-    private func translateToKorean(_ advice: AdviceEntity, completion: @escaping (String) -> Void) {
-        self.englishKoreanTranslator.translate(advice.content) { translatedText, error in
-            if let error = error {
-                print("Translation error: \(error)")
-                completion("")
+    func saveAdviceEntity(adviceEntity: AdviceEntity, context: NSManagedObjectContext) {
+        let countRequest: NSFetchRequest<CDAdviceEntity> = CDAdviceEntity.fetchRequest()
+        let duplicateRequest: NSFetchRequest<CDAdviceEntity> = CDAdviceEntity.fetchRequest()
+        
+        duplicateRequest.predicate = NSPredicate(format: "slipId == %d", adviceEntity.slipId)
+
+        do {
+            let count = try context.count(for: countRequest)
+            let existingEntities = try context.fetch(duplicateRequest)
+
+            if existingEntities.isEmpty {
+                
+                let cdAdviceEntity = CDAdviceEntity(context: context)
+                cdAdviceEntity.id = Int64(count + 1)
+                cdAdviceEntity.update(from: adviceEntity, context: context)
+                
+                try context.save()
+                print("명언 저장 완료 id: \(cdAdviceEntity.id)")
             } else {
-                completion(translatedText ?? "")
+                print("이미 저장된 명언 slipId: \(adviceEntity.slipId)")
             }
+        } catch {
+            print("데이터 저장 실패: \(error)")
+        }
+    }
+
+    func loadAdviceEntities(context: NSManagedObjectContext, completion: @escaping ([AdviceEntity], Int) -> ()) {
+        let fetchRequest: NSFetchRequest<CDAdviceEntity> = CDAdviceEntity.fetchRequest()
+        
+        do {
+            let cdAdviceEntities = try context.fetch(fetchRequest)
+            
+            completion(cdAdviceEntities.map { $0.toAdviceEntity() }, cdAdviceEntities.count)
+        } catch {
+            print("데이터 로드 실패: \(error)")
+            completion([], 0)
+        }
+    }
+    
+    func deleteAllAdviceEntities(context: NSManagedObjectContext) async {
+        let fetchRequest: NSFetchRequest<CDAdviceEntity> = CDAdviceEntity.fetchRequest()
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            
+            for object in results {
+                context.delete(object)
+            }
+            
+            try context.save()
+            print("모든 명언 객체가 삭제되었습니다.")
+        } catch {
+            print("데이터 삭제 중 오류 발생: \(error)")
         }
     }
 }

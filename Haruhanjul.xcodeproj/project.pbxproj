@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C2852E9554E68FB28E68CF1 /* Pods_HaruhanjulWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12BE6B30E7395A8516FE40D5 /* Pods_HaruhanjulWidgetExtension.framework */; };
+		2FAB7A2FF7FECC95DE057CCF /* Pods_Haruhanjul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94CCB06883E113F2B2714BE8 /* Pods_Haruhanjul.framework */; };
+		7FC52B908CCE15E6447874D0 /* Pods_HaruhanjulWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB142E92E34F4C42EBAF786 /* Pods_HaruhanjulWidgetExtension.framework */; };
 		BC3B39C32C88C1660020ECE3 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B39C22C88C1660020ECE3 /* CardViewModel.swift */; };
 		BC5246C62C80E04200D36A0C /* CurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5246C52C80E04200D36A0C /* CurlView.swift */; };
 		BC8858A22C92C47C0042664C /* AdviceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589E2C92C47C0042664C /* AdviceDTO.swift */; };
@@ -16,6 +17,8 @@
 		BC8858CA2C9F20DA0042664C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8858C92C9F20DA0042664C /* Persistence.swift */; };
 		E118832A2323A00FFE0C28C4 /* Pods_Haruhanjul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C427C7FF8EDEF8F4D57086 /* Pods_Haruhanjul.framework */; };
 		F61BEEC72C93E42E00F8A62B /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589E2C92C47C0042664C /* Advice.swift */; };
+		BC93B52E2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93B52C2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataClass.swift */; };
+		BC93B52F2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93B52D2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataProperties.swift */; };
 		F61BEECA2C93E6B200F8A62B /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61BEEC92C93E6B200F8A62B /* UserDefault.swift */; };
 		F61BEECD2C9BB24000F8A62B /* AdviceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61BEECC2C9BB24000F8A62B /* AdviceEntity.swift */; };
 		F62B3F3E2C7C15A700B05608 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62B3F3D2C7C15A600B05608 /* WidgetKit.framework */; };
@@ -54,30 +57,32 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		F62B3F502C7C15AA00B05608 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
 				F62B3F4F2C7C15AA00B05608 /* HaruhanjulWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		12BE6B30E7395A8516FE40D5 /* Pods_HaruhanjulWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HaruhanjulWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		373F7B975DC10D192D15A054 /* Pods-HaruhanjulWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaruhanjulWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-HaruhanjulWidgetExtension/Pods-HaruhanjulWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
-		8811E5342D4727BCDC3FD0F4 /* Pods-Haruhanjul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haruhanjul.release.xcconfig"; path = "Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul.release.xcconfig"; sourceTree = "<group>"; };
+		5344DC1537DA2FE9C3BAACED /* Pods-Haruhanjul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haruhanjul.release.xcconfig"; path = "Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul.release.xcconfig"; sourceTree = "<group>"; };
+		70C07F842AC13A26EC400634 /* Pods-HaruhanjulWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaruhanjulWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-HaruhanjulWidgetExtension/Pods-HaruhanjulWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
+		7BB142E92E34F4C42EBAF786 /* Pods_HaruhanjulWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HaruhanjulWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94CCB06883E113F2B2714BE8 /* Pods_Haruhanjul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Haruhanjul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A52C6FBE103F0DB3E6CBC563 /* Pods-Haruhanjul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haruhanjul.debug.xcconfig"; path = "Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul.debug.xcconfig"; sourceTree = "<group>"; };
 		BC3B39C22C88C1660020ECE3 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		BC5246C52C80E04200D36A0C /* CurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurlView.swift; sourceTree = "<group>"; };
 		BC88589E2C92C47C0042664C /* AdviceDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdviceDTO.swift; sourceTree = "<group>"; };
 		BC88589F2C92C47C0042664C /* Translation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		BC8858A82C9F1FC00042664C /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		BC8858C92C9F20DA0042664C /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		BF473C870869AC71263D00C0 /* Pods-Haruhanjul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haruhanjul.debug.xcconfig"; path = "Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul.debug.xcconfig"; sourceTree = "<group>"; };
-		C40EEE79F3A6EA942BC6C44D /* Pods-HaruhanjulWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaruhanjulWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-HaruhanjulWidgetExtension/Pods-HaruhanjulWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
-		D7C427C7FF8EDEF8F4D57086 /* Pods_Haruhanjul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Haruhanjul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC93B52C2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BC93B52D2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E78365A933EA6494AC678FF8 /* Pods-HaruhanjulWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaruhanjulWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-HaruhanjulWidgetExtension/Pods-HaruhanjulWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		F61BEEC92C93E6B200F8A62B /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		F61BEECC2C9BB24000F8A62B /* AdviceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceEntity.swift; sourceTree = "<group>"; };
 		F62B3F3B2C7C15A600B05608 /* HaruhanjulWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HaruhanjulWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,7 +111,7 @@
 			files = (
 				F62B3F402C7C15A700B05608 /* SwiftUI.framework in Frameworks */,
 				F62B3F3E2C7C15A700B05608 /* WidgetKit.framework in Frameworks */,
-				9C2852E9554E68FB28E68CF1 /* Pods_HaruhanjulWidgetExtension.framework in Frameworks */,
+				7FC52B908CCE15E6447874D0 /* Pods_HaruhanjulWidgetExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E118832A2323A00FFE0C28C4 /* Pods_Haruhanjul.framework in Frameworks */,
+				2FAB7A2FF7FECC95DE057CCF /* Pods_Haruhanjul.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,10 +136,10 @@
 		532FF5F738B8801BE5C7EBC9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BF473C870869AC71263D00C0 /* Pods-Haruhanjul.debug.xcconfig */,
-				8811E5342D4727BCDC3FD0F4 /* Pods-Haruhanjul.release.xcconfig */,
-				373F7B975DC10D192D15A054 /* Pods-HaruhanjulWidgetExtension.debug.xcconfig */,
-				C40EEE79F3A6EA942BC6C44D /* Pods-HaruhanjulWidgetExtension.release.xcconfig */,
+				A52C6FBE103F0DB3E6CBC563 /* Pods-Haruhanjul.debug.xcconfig */,
+				5344DC1537DA2FE9C3BAACED /* Pods-Haruhanjul.release.xcconfig */,
+				E78365A933EA6494AC678FF8 /* Pods-HaruhanjulWidgetExtension.debug.xcconfig */,
+				70C07F842AC13A26EC400634 /* Pods-HaruhanjulWidgetExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -193,6 +198,8 @@
 		BC8858CF2C9F27EC0042664C /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				BC93B52C2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataClass.swift */,
+				BC93B52D2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataProperties.swift */,
 				BC8858A72C9F1FC00042664C /* CoreData.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -219,8 +226,8 @@
 			children = (
 				F62B3F3D2C7C15A600B05608 /* WidgetKit.framework */,
 				F62B3F3F2C7C15A700B05608 /* SwiftUI.framework */,
-				D7C427C7FF8EDEF8F4D57086 /* Pods_Haruhanjul.framework */,
-				12BE6B30E7395A8516FE40D5 /* Pods_HaruhanjulWidgetExtension.framework */,
+				94CCB06883E113F2B2714BE8 /* Pods_Haruhanjul.framework */,
+				7BB142E92E34F4C42EBAF786 /* Pods_HaruhanjulWidgetExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -316,7 +323,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F62B3F532C7C15AA00B05608 /* Build configuration list for PBXNativeTarget "HaruhanjulWidgetExtension" */;
 			buildPhases = (
-				2A681E6EF342FF75F516D07E /* [CP] Check Pods Manifest.lock */,
+				3EC195AFD34C8B5A4ACAF4ED /* [CP] Check Pods Manifest.lock */,
 				F62B3F372C7C15A600B05608 /* Sources */,
 				F62B3F382C7C15A600B05608 /* Frameworks */,
 				F62B3F392C7C15A600B05608 /* Resources */,
@@ -334,13 +341,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F668494B2C7422610023143B /* Build configuration list for PBXNativeTarget "Haruhanjul" */;
 			buildPhases = (
-				6C364DB13ECD6C87CA7F89B5 /* [CP] Check Pods Manifest.lock */,
+				98F166B062B8DDD743525140 /* [CP] Check Pods Manifest.lock */,
 				F66849392C74225D0023143B /* Sources */,
 				F668493A2C74225D0023143B /* Frameworks */,
 				F668493B2C74225D0023143B /* Resources */,
 				F62B3F502C7C15AA00B05608 /* Embed Foundation Extensions */,
-				3D6000BDD689FFD0893508E0 /* [CP] Embed Pods Frameworks */,
-				8745602AC881CE407A884588 /* [CP] Copy Pods Resources */,
+				A2DC3C58B1362D915020F3C0 /* [CP] Embed Pods Frameworks */,
+				58D445E0D84B18D4554C1CBC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -440,7 +447,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A681E6EF342FF75F516D07E /* [CP] Check Pods Manifest.lock */ = {
+		3EC195AFD34C8B5A4ACAF4ED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -462,24 +469,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3D6000BDD689FFD0893508E0 /* [CP] Embed Pods Frameworks */ = {
+		58D445E0D84B18D4554C1CBC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6C364DB13ECD6C87CA7F89B5 /* [CP] Check Pods Manifest.lock */ = {
+		98F166B062B8DDD743525140 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -501,21 +508,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8745602AC881CE407A884588 /* [CP] Copy Pods Resources */ = {
+		A2DC3C58B1362D915020F3C0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -540,6 +547,8 @@
 				BC3B39C32C88C1660020ECE3 /* CardViewModel.swift in Sources */,
 				F61BEECA2C93E6B200F8A62B /* UserDefault.swift in Sources */,
 				BC8858A92C9F1FC00042664C /* CoreData.xcdatamodeld in Sources */,
+				BC93B52E2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataClass.swift in Sources */,
+				BC93B52F2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataProperties.swift in Sources */,
 				BC5246C62C80E04200D36A0C /* CurlView.swift in Sources */,
 				BC8858A22C92C47C0042664C /* AdviceDTO.swift in Sources */,
 				F66849432C74225D0023143B /* MainTabView.swift in Sources */,
@@ -577,13 +586,15 @@
 /* Begin XCBuildConfiguration section */
 		F62B3F512C7C15AA00B05608 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 373F7B975DC10D192D15A054 /* Pods-HaruhanjulWidgetExtension.debug.xcconfig */;
+			baseConfigurationReference = E78365A933EA6494AC678FF8 /* Pods-HaruhanjulWidgetExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C39BYRTABZ;
+				DEVELOPMENT_TEAM = 3URYLCPH2H;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HaruhanjulWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = HaruhanjulWidget;
@@ -600,19 +611,22 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		F62B3F522C7C15AA00B05608 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C40EEE79F3A6EA942BC6C44D /* Pods-HaruhanjulWidgetExtension.release.xcconfig */;
+			baseConfigurationReference = 70C07F842AC13A26EC400634 /* Pods-HaruhanjulWidgetExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C39BYRTABZ;
+				DEVELOPMENT_TEAM = 3URYLCPH2H;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HaruhanjulWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = HaruhanjulWidget;
@@ -629,6 +643,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -754,7 +769,7 @@
 		};
 		F668494C2C7422610023143B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF473C870869AC71263D00C0 /* Pods-Haruhanjul.debug.xcconfig */;
+			baseConfigurationReference = A52C6FBE103F0DB3E6CBC563 /* Pods-Haruhanjul.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -762,7 +777,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Haruhanjul/Preview Content\"";
-				DEVELOPMENT_TEAM = C39BYRTABZ;
+				DEVELOPMENT_TEAM = 3URYLCPH2H;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -777,6 +792,50 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"iconv\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Pods_HaruhanjulWidgetExtension\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleDataTransport\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"GoogleUtilitiesComponents\"",
+					"-framework",
+					"\"LocalAuthentication\"",
+					"-framework",
+					"\"MLKitCommon\"",
+					"-framework",
+					"\"MLKitNaturalLanguage\"",
+					"-framework",
+					"\"MLKitTranslate\"",
+					"-framework",
+					"\"Protobuf\"",
+					"-framework",
+					"\"SSZipArchive\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"nanopb\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.daeha.Haruhanjul;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -791,7 +850,7 @@
 		};
 		F668494D2C7422610023143B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8811E5342D4727BCDC3FD0F4 /* Pods-Haruhanjul.release.xcconfig */;
+			baseConfigurationReference = 5344DC1537DA2FE9C3BAACED /* Pods-Haruhanjul.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -799,7 +858,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Haruhanjul/Preview Content\"";
-				DEVELOPMENT_TEAM = C39BYRTABZ;
+				DEVELOPMENT_TEAM = 3URYLCPH2H;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -814,6 +873,51 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"iconv\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Pods_HaruhanjulWidgetExtension\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleDataTransport\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"GoogleUtilitiesComponents\"",
+					"-framework",
+					"\"LocalAuthentication\"",
+					"-framework",
+					"\"MLKitCommon\"",
+					"-framework",
+					"\"MLKitNaturalLanguage\"",
+					"-framework",
+					"\"MLKitTranslate\"",
+					"-framework",
+					"\"Protobuf\"",
+					"-framework",
+					"\"SSZipArchive\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"nanopb\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.daeha.Haruhanjul;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
