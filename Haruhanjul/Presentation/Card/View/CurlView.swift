@@ -32,10 +32,6 @@ struct CurlView: View {
                         ZStack {
                             RoundedRectangle(cornerRadius: 16)
                                 .foregroundStyle(.yellow)
-                                .overlay(alignment: .topTrailing) {
-                                    Text("\(advice.id)")
-                                        .padding()
-                                }
                             
                             VStack(alignment: .center, spacing: 16) {
                                 Text(advice.adviceKorean ?? "")
