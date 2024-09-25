@@ -91,11 +91,13 @@ struct CurlView: View {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
                     Task {
-//                        isLoading = true
-//                        await cardStore.deleteAllAdviceEntities(context: viewContext)
-//                        removedCount = 0
-//                        lastIndex = 0
-//                        fetchAdvice(count: 10)
+                        isLoading = true
+                        await cardStore.deleteAllAdviceEntities(context: viewContext)
+                        removedAdvices = []
+                        advices = []
+                        removedCount = 0
+                        lastIndex = 0
+                        fetchAdvice(count: 10)
                     }
                 } label: {
                     Text("초기화")
@@ -115,10 +117,9 @@ struct CurlView: View {
                     advices.append(contentsOf: result)
                     removedCount += result.count
                     removedCount += count
+                    isLoading = false
                 }
             }
-            isLoading = false
-            print(advices.map { $0.adviceKorean })
         }
     }
     
