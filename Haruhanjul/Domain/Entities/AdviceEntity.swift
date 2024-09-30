@@ -9,7 +9,6 @@ import Foundation
 
 struct AdviceEntity: Codable, Equatable {
     let id: Int
-    let slipId: Int
     let content: String
     var adviceKorean: String?
 }
