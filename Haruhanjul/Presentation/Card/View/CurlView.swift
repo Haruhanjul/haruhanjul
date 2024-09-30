@@ -62,7 +62,9 @@ struct CurlView: View {
             if value <= 4 { fetchAdvice(count: 5) }
         }
         .onChange(of: advices) { value in
-            AdviceDefaults.content = value.first ?? ""
+            if let advice = value.first {
+                AdviceDefaults.content = [advice.content, advice.adviceKorean ?? ""]
+            }
         }
         .onAppear {
             Task {

@@ -11,13 +11,14 @@
 		7FC52B908CCE15E6447874D0 /* Pods_HaruhanjulWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB142E92E34F4C42EBAF786 /* Pods_HaruhanjulWidgetExtension.framework */; };
 		BC3B39C32C88C1660020ECE3 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B39C22C88C1660020ECE3 /* CardViewModel.swift */; };
 		BC5246C62C80E04200D36A0C /* CurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5246C52C80E04200D36A0C /* CurlView.swift */; };
+		BC56EA172CAAFB9C00BE8A49 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61BEEC92C93E6B200F8A62B /* UserDefault.swift */; };
+		BC56EA182CAAFB9C00BE8A49 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61BEEC92C93E6B200F8A62B /* UserDefault.swift */; };
 		BC8858A22C92C47C0042664C /* AdviceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589E2C92C47C0042664C /* AdviceDTO.swift */; };
 		BC8858A32C92C47C0042664C /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589F2C92C47C0042664C /* Translation.swift */; };
 		BC8858A92C9F1FC00042664C /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC8858A72C9F1FC00042664C /* CoreData.xcdatamodeld */; };
 		BC8858CA2C9F20DA0042664C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8858C92C9F20DA0042664C /* Persistence.swift */; };
 		BC93B52E2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93B52C2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataClass.swift */; };
 		BC93B52F2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93B52D2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataProperties.swift */; };
-		F61BEECA2C93E6B200F8A62B /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61BEEC92C93E6B200F8A62B /* UserDefault.swift */; };
 		F61BEECD2C9BB24000F8A62B /* AdviceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61BEECC2C9BB24000F8A62B /* AdviceEntity.swift */; };
 		F62B3F3E2C7C15A700B05608 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62B3F3D2C7C15A600B05608 /* WidgetKit.framework */; };
 		F62B3F402C7C15A700B05608 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62B3F3F2C7C15A700B05608 /* SwiftUI.framework */; };
@@ -532,6 +533,7 @@
 			files = (
 				F62B3F452C7C15A700B05608 /* HaruhanjulWidgetLiveActivity.swift in Sources */,
 				F62B3F492C7C15A700B05608 /* AppIntent.swift in Sources */,
+				BC56EA182CAAFB9C00BE8A49 /* UserDefault.swift in Sources */,
 				F62B3F432C7C15A700B05608 /* HaruhanjulWidgetBundle.swift in Sources */,
 				F62B3F472C7C15A700B05608 /* HaruhanjulWidget.swift in Sources */,
 			);
@@ -542,7 +544,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC3B39C32C88C1660020ECE3 /* CardViewModel.swift in Sources */,
-				F61BEECA2C93E6B200F8A62B /* UserDefault.swift in Sources */,
 				BC8858A92C9F1FC00042664C /* CoreData.xcdatamodeld in Sources */,
 				BC93B52E2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataClass.swift in Sources */,
 				BC93B52F2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataProperties.swift in Sources */,
@@ -550,6 +551,7 @@
 				BC8858A22C92C47C0042664C /* AdviceDTO.swift in Sources */,
 				F66849432C74225D0023143B /* MainTabView.swift in Sources */,
 				F66849412C74225D0023143B /* HaruhanjulApp.swift in Sources */,
+				BC56EA172CAAFB9C00BE8A49 /* UserDefault.swift in Sources */,
 				F61BEECD2C9BB24000F8A62B /* AdviceEntity.swift in Sources */,
 				BC8858A32C92C47C0042664C /* Translation.swift in Sources */,
 				BC8858CA2C9F20DA0042664C /* Persistence.swift in Sources */,
@@ -592,7 +594,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3URYLCPH2H;
 				EXCLUDED_ARCHS = "";
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HaruhanjulWidget/Info.plist;
@@ -625,7 +626,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3URYLCPH2H;
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HaruhanjulWidget/Info.plist;
@@ -638,7 +638,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.daeha.Haruhanjul.HaruhanjulWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
