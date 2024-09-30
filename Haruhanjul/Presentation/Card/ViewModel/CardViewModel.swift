@@ -72,7 +72,7 @@ final class CardViewModel: ObservableObject {
                         if let error = error {
                             print("Translation error: \(error)")
                         } else {
-                            let updatedAdvice = AdviceEntity(id: advice.id, slipId: advice.slipId, content: advice.content, adviceKorean: translatedText)
+                            let updatedAdvice = AdviceEntity(id: advice.id, content: advice.content, adviceKorean: translatedText)
                             self.saveAdviceEntity(adviceEntity: updatedAdvice, context: context)
                             result.append(updatedAdvice)
                         }
@@ -91,25 +91,21 @@ final class CardViewModel: ObservableObject {
     }
     
     func saveAdviceEntity(adviceEntity: AdviceEntity, context: NSManagedObjectContext) {
-        let countRequest: NSFetchRequest<CDAdviceEntity> = CDAdviceEntity.fetchRequest()
         let duplicateRequest: NSFetchRequest<CDAdviceEntity> = CDAdviceEntity.fetchRequest()
-        
-        duplicateRequest.predicate = NSPredicate(format: "slipId == %d", adviceEntity.slipId)
+        duplicateRequest.predicate = NSPredicate(format: "id == %d", adviceEntity.id)
 
         do {
-            let count = try context.count(for: countRequest)
             let existingEntities = try context.fetch(duplicateRequest)
 
             if existingEntities.isEmpty {
                 
                 let cdAdviceEntity = CDAdviceEntity(context: context)
-                cdAdviceEntity.id = Int64(count + 1)
                 cdAdviceEntity.update(from: adviceEntity, context: context)
                 
                 try context.save()
                 print("명언 저장 완료 id: \(cdAdviceEntity.id)")
             } else {
-                print("이미 저장된 명언 slipId: \(adviceEntity.slipId)")
+                print("이미 저장된 명언 id: \(adviceEntity.id)")
             }
         } catch {
             print("데이터 저장 실패: \(error)")

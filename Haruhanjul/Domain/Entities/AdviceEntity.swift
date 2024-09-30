@@ -8,9 +8,7 @@
 import Foundation
 
 struct AdviceEntity: Codable {
-    let uuid: String = UUID().uuidString
     let id: Int
-    let slipId: Int
     let content: String
     var adviceKorean: String?
 }

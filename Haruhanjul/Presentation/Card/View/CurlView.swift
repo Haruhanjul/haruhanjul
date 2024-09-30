@@ -27,7 +27,7 @@ struct CurlView: View {
                     .padding()
                 ProgressView()
             } else {
-                ForEach(Array(advices.enumerated()), id: \.element.uuid) { index, advice in
+                ForEach(Array(advices.enumerated()), id: \.element.id) { index, advice in
                     PeelEffect(dragProgress: $dragProgresses[index]) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 16)
@@ -85,7 +85,6 @@ struct CurlView: View {
         }
         .onDisappear {
             AdviceDefaults.cardIndex = lastIndex
-            print(AdviceDefaults.cardIndex)
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
