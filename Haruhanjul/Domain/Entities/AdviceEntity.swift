@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AdviceEntity: Codable {
+struct AdviceEntity: Codable, Equatable {
     let id: Int
     let content: String
     var adviceKorean: String?

@@ -61,6 +61,9 @@ struct CurlView: View {
             // 불러온 명언 4개 이하 남을시 5개 불러옴
             if value <= 4 { fetchAdvice(count: 5) }
         }
+        .onChange(of: advices) { value in
+            AdviceDefaults.content = value.first ?? ""
+        }
         .onAppear {
             Task {
                 if !cardStore.isTranslatorReady {
