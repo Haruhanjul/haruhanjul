@@ -74,56 +74,56 @@ struct HaruhanjulWidgetEntryView : View {
                 Text("Time:")
                 Text(entry.date, style: .time)
                 
-                Text("Favorite Emoji:")
-                Text(entry.configuration.favoriteEmoji)
+                Text(AdviceDefaults.content.first ?? "")
+                Text(AdviceDefaults.content.last ?? "")
             }
         case .systemLarge:
             VStack {
                 Text("Time:")
                 Text(entry.date, style: .time)
                 
-                Text("Favorite Emoji:")
-                Text(entry.configuration.favoriteEmoji)
+                Text(AdviceDefaults.content.first ?? "")
+                Text(AdviceDefaults.content.last ?? "")
             }
         case .systemExtraLarge:  // ExtraLarge는 iPad의 위젯에만 표출
             VStack {
                 Text("Time:")
                 Text(entry.date, style: .time)
                 
-                Text("Favorite Emoji:")
-                Text(entry.configuration.favoriteEmoji)
+                Text(AdviceDefaults.content.first ?? "")
+                Text(AdviceDefaults.content.last ?? "")
             }
         case .accessoryCorner:
             VStack {
                 Text("Time:")
                 Text(entry.date, style: .time)
                 
-                Text("Favorite Emoji:")
-                Text(entry.configuration.favoriteEmoji)
+                Text(AdviceDefaults.content.first ?? "")
+                Text(AdviceDefaults.content.last ?? "")
             }
         case .accessoryCircular:
             VStack {
                 Text("Time:")
                 Text(entry.date, style: .time)
                 
-                Text("Favorite Emoji:")
-                Text(entry.configuration.favoriteEmoji)
+                Text(AdviceDefaults.content.first ?? "")
+                Text(AdviceDefaults.content.last ?? "")
             }
         case .accessoryRectangular:
             VStack {
                 Text("Time:")
                 Text(entry.date, style: .time)
                 
-                Text("Favorite Emoji:")
-                Text(entry.configuration.favoriteEmoji)
+                Text(AdviceDefaults.content.first ?? "")
+                Text(AdviceDefaults.content.last ?? "")
             }
         case .accessoryInline:
             VStack {
                 Text("Time:")
                 Text(entry.date, style: .time)
                 
-                Text("Favorite Emoji:")
-                Text(entry.configuration.favoriteEmoji)
+                Text(AdviceDefaults.content.first ?? "")
+                Text(AdviceDefaults.content.last ?? "")
             }
         @unknown default:
             VStack {
