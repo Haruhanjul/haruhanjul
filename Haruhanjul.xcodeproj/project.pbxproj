@@ -11,19 +11,13 @@
 		7FC52B908CCE15E6447874D0 /* Pods_HaruhanjulWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB142E92E34F4C42EBAF786 /* Pods_HaruhanjulWidgetExtension.framework */; };
 		BC3B39C32C88C1660020ECE3 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B39C22C88C1660020ECE3 /* CardViewModel.swift */; };
 		BC5246C62C80E04200D36A0C /* CurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5246C52C80E04200D36A0C /* CurlView.swift */; };
-		BC8858A22C92C47C0042664C /* AdviceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589E2C92C47C0042664C /* AdviceEntity.swift */; };
 		BC56EA172CAAFB9C00BE8A49 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61BEEC92C93E6B200F8A62B /* UserDefault.swift */; };
 		BC56EA182CAAFB9C00BE8A49 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61BEEC92C93E6B200F8A62B /* UserDefault.swift */; };
-		BC8858A22C92C47C0042664C /* AdviceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589E2C92C47C0042664C /* AdviceDTO.swift */; };
 		BC8858A32C92C47C0042664C /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589F2C92C47C0042664C /* Translation.swift */; };
 		BC8858A92C9F1FC00042664C /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC8858A72C9F1FC00042664C /* CoreData.xcdatamodeld */; };
 		BC8858CA2C9F20DA0042664C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8858C92C9F20DA0042664C /* Persistence.swift */; };
 		BC93B52E2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93B52C2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataClass.swift */; };
 		BC93B52F2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93B52D2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataProperties.swift */; };
-		F61BEEC72C93E42E00F8A62B /* AdviceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589E2C92C47C0042664C /* AdviceEntity.swift */; };
-		E118832A2323A00FFE0C28C4 /* Pods_Haruhanjul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C427C7FF8EDEF8F4D57086 /* Pods_Haruhanjul.framework */; };
-		F61BEECA2C93E6B200F8A62B /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61BEEC92C93E6B200F8A62B /* UserDefault.swift */; };
-		F61BEECD2C9BB24000F8A62B /* AdviceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61BEECC2C9BB24000F8A62B /* AdviceEntity.swift */; };
 		F62B3F3E2C7C15A700B05608 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62B3F3D2C7C15A600B05608 /* WidgetKit.framework */; };
 		F62B3F402C7C15A700B05608 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62B3F3F2C7C15A700B05608 /* SwiftUI.framework */; };
 		F62B3F432C7C15A700B05608 /* HaruhanjulWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62B3F422C7C15A700B05608 /* HaruhanjulWidgetBundle.swift */; };
@@ -38,11 +32,10 @@
 		F66849482C7422610023143B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F66849472C7422610023143B /* Preview Assets.xcassets */; };
 		F66FEF152C9039E100544BB6 /* HaruhanjulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66FEF142C9039E100544BB6 /* HaruhanjulTests.swift */; };
 		F66FEF1C2C903B2500544BB6 /* TranslateTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66FEF1B2C903B2500544BB6 /* TranslateTextTests.swift */; };
-		F69CB9D42CAAA452007B73F9 /* AdviceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC88589E2C92C47C0042664C /* AdviceEntity.swift */; };
-		F6C292E62CAAA56400AAA523 /* AdviceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61BEECC2C9BB24000F8A62B /* AdviceEntity.swift */; };
-		F6C292E72CAAA58300AAA523 /* AdviceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61BEECC2C9BB24000F8A62B /* AdviceEntity.swift */; };
 		F6C292ED2CACD8B300AAA523 /* AdviceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C292EC2CACD8B300AAA523 /* AdviceDTO.swift */; };
 		F6C292EE2CACD92900AAA523 /* AdviceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C292EC2CACD8B300AAA523 /* AdviceDTO.swift */; };
+		F6C292F02CACDC6500AAA523 /* AdviceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C292EF2CACDC6500AAA523 /* AdviceEntity.swift */; };
+		F6C292F12CACDD0F00AAA523 /* AdviceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C292EF2CACDC6500AAA523 /* AdviceEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,18 +77,13 @@
 		A52C6FBE103F0DB3E6CBC563 /* Pods-Haruhanjul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haruhanjul.debug.xcconfig"; path = "Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul.debug.xcconfig"; sourceTree = "<group>"; };
 		BC3B39C22C88C1660020ECE3 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		BC5246C52C80E04200D36A0C /* CurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurlView.swift; sourceTree = "<group>"; };
-		BC88589E2C92C47C0042664C /* AdviceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdviceEntity.swift; sourceTree = "<group>"; };
 		BC88589F2C92C47C0042664C /* Translation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		BC8858A82C9F1FC00042664C /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		BC8858C92C9F20DA0042664C /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		BC93B52C2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BC93B52D2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E78365A933EA6494AC678FF8 /* Pods-HaruhanjulWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaruhanjulWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-HaruhanjulWidgetExtension/Pods-HaruhanjulWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
-		BF473C870869AC71263D00C0 /* Pods-Haruhanjul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haruhanjul.debug.xcconfig"; path = "Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul.debug.xcconfig"; sourceTree = "<group>"; };
-		C40EEE79F3A6EA942BC6C44D /* Pods-HaruhanjulWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaruhanjulWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-HaruhanjulWidgetExtension/Pods-HaruhanjulWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
-		D7C427C7FF8EDEF8F4D57086 /* Pods_Haruhanjul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Haruhanjul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F61BEEC92C93E6B200F8A62B /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
-		F61BEECC2C9BB24000F8A62B /* AdviceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceEntity.swift; sourceTree = "<group>"; };
 		F62B3F3B2C7C15A600B05608 /* HaruhanjulWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HaruhanjulWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F62B3F3D2C7C15A600B05608 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		F62B3F3F2C7C15A700B05608 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -114,6 +102,7 @@
 		F66FEF142C9039E100544BB6 /* HaruhanjulTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruhanjulTests.swift; sourceTree = "<group>"; };
 		F66FEF1B2C903B2500544BB6 /* TranslateTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateTextTests.swift; sourceTree = "<group>"; };
 		F6C292EC2CACD8B300AAA523 /* AdviceDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceDTO.swift; sourceTree = "<group>"; };
+		F6C292EF2CACDC6500AAA523 /* AdviceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,10 +181,7 @@
 		BC8858A02C92C47C0042664C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				BC8858C92C9F20DA0042664C /* Persistence.swift */,
-				BC88589E2C92C47C0042664C /* AdviceEntity.swift */,
-				BC88589F2C92C47C0042664C /* Translation.swift */,
-				F61BEECC2C9BB24000F8A62B /* AdviceEntity.swift */,
+				F6C292EF2CACDC6500AAA523 /* AdviceEntity.swift */,
 				BC8858C92C9F20DA0042664C /* Persistence.swift */,
 				BC88589F2C92C47C0042664C /* Translation.swift */,
 			);
@@ -547,11 +533,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6C292E72CAAA58300AAA523 /* AdviceEntity.swift in Sources */,
-				F69CB9D42CAAA452007B73F9 /* AdviceEntity.swift in Sources */,
+				F6C292F12CACDD0F00AAA523 /* AdviceEntity.swift in Sources */,
 				F62B3F452C7C15A700B05608 /* HaruhanjulWidgetLiveActivity.swift in Sources */,
 				F62B3F492C7C15A700B05608 /* AppIntent.swift in Sources */,
-				F61BEEC72C93E42E00F8A62B /* AdviceEntity.swift in Sources */,
 				F6C292EE2CACD92900AAA523 /* AdviceDTO.swift in Sources */,
 				BC56EA182CAAFB9C00BE8A49 /* UserDefault.swift in Sources */,
 				F62B3F432C7C15A700B05608 /* HaruhanjulWidgetBundle.swift in Sources */,
@@ -563,19 +547,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6C292E62CAAA56400AAA523 /* AdviceEntity.swift in Sources */,
 				BC3B39C32C88C1660020ECE3 /* CardViewModel.swift in Sources */,
 				BC8858A92C9F1FC00042664C /* CoreData.xcdatamodeld in Sources */,
 				BC93B52E2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataClass.swift in Sources */,
 				BC93B52F2CA024A000FF1FA5 /* CDAdviceEntity+CoreDataProperties.swift in Sources */,
 				BC5246C62C80E04200D36A0C /* CurlView.swift in Sources */,
-				BC8858A22C92C47C0042664C /* AdviceEntity.swift in Sources */,
 				BC5246C62C80E04200D36A0C /* CurlView.swift in Sources */,
-				BC8858A22C92C47C0042664C /* AdviceEntity.swift in Sources */,
 				F66849432C74225D0023143B /* MainTabView.swift in Sources */,
+				F6C292F02CACDC6500AAA523 /* AdviceEntity.swift in Sources */,
 				F66849412C74225D0023143B /* HaruhanjulApp.swift in Sources */,
 				BC56EA172CAAFB9C00BE8A49 /* UserDefault.swift in Sources */,
-				F61BEECD2C9BB24000F8A62B /* AdviceEntity.swift in Sources */,
 				F6C292ED2CACD8B300AAA523 /* AdviceDTO.swift in Sources */,
 				BC8858A32C92C47C0042664C /* Translation.swift in Sources */,
 				BC8858CA2C9F20DA0042664C /* Persistence.swift in Sources */,
