@@ -21,9 +21,12 @@
 		BC90C4422CAF9C5900292310 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C4412CAF9C5900292310 /* UserDefault.swift */; };
 		BC90C4492CAF9D9300292310 /* CDAdviceEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C4472CAF9D9300292310 /* CDAdviceEntity+CoreDataClass.swift */; };
 		BC90C44A2CAF9D9300292310 /* CDAdviceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C4482CAF9D9300292310 /* CDAdviceEntity+CoreDataProperties.swift */; };
+		F4B5CBE853C6CDA11F251550 /* Pods_Haruhanjul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D0B68260262D9431F91094 /* Pods_Haruhanjul.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21D0B68260262D9431F91094 /* Pods_Haruhanjul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Haruhanjul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71CFCCF3043728EA949D5199 /* Pods-Haruhanjul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haruhanjul.release.xcconfig"; path = "Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul.release.xcconfig"; sourceTree = "<group>"; };
 		BC90C4132CAF99B200292310 /* Haruhanjul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haruhanjul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC90C4162CAF99B200292310 /* HaruhanjulApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruhanjulApp.swift; sourceTree = "<group>"; };
 		BC90C41A2CAF99B300292310 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 		BC90C4412CAF9C5900292310 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		BC90C4472CAF9D9300292310 /* CDAdviceEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BC90C4482CAF9D9300292310 /* CDAdviceEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E77B8D879F6E87C466878B7E /* Pods-Haruhanjul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haruhanjul.debug.xcconfig"; path = "Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,17 +50,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4B5CBE853C6CDA11F251550 /* Pods_Haruhanjul.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4967183B2BD2EC567B13B608 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21D0B68260262D9431F91094 /* Pods_Haruhanjul.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BC90C40A2CAF99B200292310 = {
 			isa = PBXGroup;
 			children = (
 				BC90C4152CAF99B200292310 /* Haruhanjul */,
 				BC90C4142CAF99B200292310 /* Products */,
+				CBD078D980500C73142E441B /* Pods */,
+				4967183B2BD2EC567B13B608 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,6 +200,16 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		CBD078D980500C73142E441B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E77B8D879F6E87C466878B7E /* Pods-Haruhanjul.debug.xcconfig */,
+				71CFCCF3043728EA949D5199 /* Pods-Haruhanjul.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,9 +217,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC90C4262CAF99B300292310 /* Build configuration list for PBXNativeTarget "Haruhanjul" */;
 			buildPhases = (
+				8728130052A026154443989D /* [CP] Check Pods Manifest.lock */,
 				BC90C40F2CAF99B200292310 /* Sources */,
 				BC90C4102CAF99B200292310 /* Frameworks */,
 				BC90C4112CAF99B200292310 /* Resources */,
+				A50B9F306D715C1F49FEA3E3 /* [CP] Embed Pods Frameworks */,
+				6125F7BEE9ACF9377CDA8384 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,6 +277,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6125F7BEE9ACF9377CDA8384 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8728130052A026154443989D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Haruhanjul-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A50B9F306D715C1F49FEA3E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BC90C40F2CAF99B200292310 /* Sources */ = {
@@ -394,6 +481,7 @@
 		};
 		BC90C4272CAF99B300292310 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E77B8D879F6E87C466878B7E /* Pods-Haruhanjul.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -424,6 +512,7 @@
 		};
 		BC90C4282CAF99B300292310 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71CFCCF3043728EA949D5199 /* Pods-Haruhanjul.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
