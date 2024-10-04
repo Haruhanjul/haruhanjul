@@ -17,7 +17,7 @@ struct HaruhanjulWidgetView : View {
             Text(entry.date, style: .time)
 
             Text("Emoji:")
-            Text(entry.emoji)
+            Text(entry.advice)
         }
     }
 }

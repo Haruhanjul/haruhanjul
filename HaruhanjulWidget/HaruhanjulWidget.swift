@@ -31,6 +31,6 @@ struct HaruhanjulWidget: Widget {
 #Preview(as: .systemSmall) {
     HaruhanjulWidget()
 } timeline: {
-    AdviceEntry(date: .now, emoji: "😀")
-    AdviceEntry(date: .now, emoji: "🤩")
+    AdviceEntry(date: .now, advice: "😀")
+    AdviceEntry(date: .now, advice: "🤩")
 }

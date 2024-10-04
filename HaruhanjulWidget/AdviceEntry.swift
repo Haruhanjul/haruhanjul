@@ -9,5 +9,5 @@ import WidgetKit
 
 struct AdviceEntry: TimelineEntry {
     let date: Date
-    let emoji: String
+    let advice: String
 }
