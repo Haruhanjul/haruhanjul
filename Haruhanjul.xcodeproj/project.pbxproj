@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,7 +22,34 @@
 		BC90C4492CAF9D9300292310 /* CDAdviceEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C4472CAF9D9300292310 /* CDAdviceEntity+CoreDataClass.swift */; };
 		BC90C44A2CAF9D9300292310 /* CDAdviceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C4482CAF9D9300292310 /* CDAdviceEntity+CoreDataProperties.swift */; };
 		F4B5CBE853C6CDA11F251550 /* Pods_Haruhanjul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D0B68260262D9431F91094 /* Pods_Haruhanjul.framework */; };
+		F6C435CE2CAFAF8200E979EC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */; };
+		F6C435D02CAFAF8200E979EC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */; };
+		F6C435DB2CAFAF8500E979EC /* HaruhanjulWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6C435D92CAFAF8500E979EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC90C40B2CAF99B200292310 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6C435CB2CAFAF8200E979EC;
+			remoteInfo = HaruhanjulWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F6C435E02CAFAF8500E979EC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F6C435DB2CAFAF8500E979EC /* HaruhanjulWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		21D0B68260262D9431F91094 /* Pods_Haruhanjul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Haruhanjul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,7 +70,24 @@
 		BC90C4472CAF9D9300292310 /* CDAdviceEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BC90C4482CAF9D9300292310 /* CDAdviceEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E77B8D879F6E87C466878B7E /* Pods-Haruhanjul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haruhanjul.debug.xcconfig"; path = "Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul.debug.xcconfig"; sourceTree = "<group>"; };
+		F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HaruhanjulWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F6C435DC2CAFAF8500E979EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F6C435CB2CAFAF8200E979EC /* HaruhanjulWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F6C435D12CAFAF8200E979EC /* HaruhanjulWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F6C435DC2CAFAF8500E979EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = HaruhanjulWidget; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BC90C4102CAF99B200292310 /* Frameworks */ = {
@@ -54,6 +98,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F6C435C92CAFAF8200E979EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6C435D02CAFAF8200E979EC /* SwiftUI.framework in Frameworks */,
+				F6C435CE2CAFAF8200E979EC /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				21D0B68260262D9431F91094 /* Pods_Haruhanjul.framework */,
+				F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */,
+				F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -69,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				BC90C4152CAF99B200292310 /* Haruhanjul */,
+				F6C435D12CAFAF8200E979EC /* HaruhanjulWidget */,
 				BC90C4142CAF99B200292310 /* Products */,
 				CBD078D980500C73142E441B /* Pods */,
 				4967183B2BD2EC567B13B608 /* Frameworks */,
@@ -79,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				BC90C4132CAF99B200292310 /* Haruhanjul.app */,
+				F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,15 +279,39 @@
 				BC90C4112CAF99B200292310 /* Resources */,
 				A50B9F306D715C1F49FEA3E3 /* [CP] Embed Pods Frameworks */,
 				6125F7BEE9ACF9377CDA8384 /* [CP] Copy Pods Resources */,
+				F6C435E02CAFAF8500E979EC /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F6C435DA2CAFAF8500E979EC /* PBXTargetDependency */,
 			);
 			name = Haruhanjul;
 			productName = Haruhanjul;
 			productReference = BC90C4132CAF99B200292310 /* Haruhanjul.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F6C435CB2CAFAF8200E979EC /* HaruhanjulWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6C435DD2CAFAF8500E979EC /* Build configuration list for PBXNativeTarget "HaruhanjulWidgetExtension" */;
+			buildPhases = (
+				F6C435C82CAFAF8200E979EC /* Sources */,
+				F6C435C92CAFAF8200E979EC /* Frameworks */,
+				F6C435CA2CAFAF8200E979EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F6C435D12CAFAF8200E979EC /* HaruhanjulWidget */,
+			);
+			name = HaruhanjulWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = HaruhanjulWidgetExtension;
+			productReference = F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -239,11 +320,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					BC90C4122CAF99B200292310 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					F6C435CB2CAFAF8200E979EC = {
+						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
@@ -261,6 +345,7 @@
 			projectRoot = "";
 			targets = (
 				BC90C4122CAF99B200292310 /* Haruhanjul */,
+				F6C435CB2CAFAF8200E979EC /* HaruhanjulWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +357,13 @@
 			files = (
 				BC90C41E2CAF99B300292310 /* Preview Assets.xcassets in Resources */,
 				BC90C41B2CAF99B300292310 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6C435CA2CAFAF8200E979EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +448,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F6C435C82CAFAF8200E979EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6C435DA2CAFAF8500E979EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6C435CB2CAFAF8200E979EC /* HaruhanjulWidgetExtension */;
+			targetProxy = F6C435D92CAFAF8500E979EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		BC90C4242CAF99B300292310 /* Debug */ = {
@@ -542,6 +649,62 @@
 			};
 			name = Release;
 		};
+		F6C435DE2CAFAF8500E979EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3URYLCPH2H;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HaruhanjulWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HaruhanjulWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daeha.Haruhanjul.HaruhanjulWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F6C435DF2CAFAF8500E979EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3URYLCPH2H;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HaruhanjulWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HaruhanjulWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daeha.Haruhanjul.HaruhanjulWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -559,6 +722,15 @@
 			buildConfigurations = (
 				BC90C4272CAF99B300292310 /* Debug */,
 				BC90C4282CAF99B300292310 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6C435DD2CAFAF8500E979EC /* Build configuration list for PBXNativeTarget "HaruhanjulWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6C435DE2CAFAF8500E979EC /* Debug */,
+				F6C435DF2CAFAF8500E979EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
