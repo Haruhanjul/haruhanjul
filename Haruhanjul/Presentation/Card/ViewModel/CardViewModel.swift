@@ -6,27 +6,27 @@
 //
 
 import Foundation
-//import MLKitTranslate
+import MLKitTranslate
 import CoreData
 
 final class CardViewModel: ObservableObject {
-//    private let englishKoreanTranslator = Translator.translator(options: TranslatorOptions(sourceLanguage: .english, targetLanguage: .korean))
-//    private let conditions = ModelDownloadConditions(allowsCellularAccess: false, allowsBackgroundDownloading: true)
+    private let englishKoreanTranslator = Translator.translator(options: TranslatorOptions(sourceLanguage: .english, targetLanguage: .korean))
+    private let conditions = ModelDownloadConditions(allowsCellularAccess: false, allowsBackgroundDownloading: true)
     var isTranslatorReady = false
 
     func downloadTranslatorModel() async {
-//        print("언어 모델 다운로드 시작")
-//        await withCheckedContinuation { continuation in
-//            self.englishKoreanTranslator.downloadModelIfNeeded(with: conditions) { error in
-//                guard error == nil else {
-//                    print("언어 모델 다운로드 실패: \(error!)")
-//                    return continuation.resume()
-//                }
-//                print("언어 모델 다운로드 완료")
-//                self.isTranslatorReady = true
-//                continuation.resume()
-//            }
-//        }
+        print("언어 모델 다운로드 시작")
+        await withCheckedContinuation { continuation in
+            self.englishKoreanTranslator.downloadModelIfNeeded(with: conditions) { error in
+                guard error == nil else {
+                    print("언어 모델 다운로드 실패: \(error!)")
+                    return continuation.resume()
+                }
+                print("언어 모델 다운로드 완료")
+                self.isTranslatorReady = true
+                continuation.resume()
+            }
+        }
     }
     
     func downloadAdvices(count: Int, context: NSManagedObjectContext, completion: @escaping ([AdviceEntity]) -> ()) {
@@ -68,15 +68,15 @@ final class CardViewModel: ObservableObject {
                     let response = try JSONDecoder().decode(AdviceDTO.self, from: data)
                     let advice = response.slip.convertToEntity()
                     
-//                    englishKoreanTranslator.translate(advice.content) { translatedText, error in
-//                        if let error = error {
-//                            print("Translation error: \(error)")
-//                        } else {
-//                            let updatedAdvice = AdviceEntity(id: advice.id, content: advice.content, adviceKorean: translatedText)
-//                            self.saveAdviceEntity(adviceEntity: updatedAdvice, context: context)
-//                            result.append(updatedAdvice)
-//                        }
-//                    }
+                    englishKoreanTranslator.translate(advice.content) { translatedText, error in
+                        if let error = error {
+                            print("Translation error: \(error)")
+                        } else {
+                            let updatedAdvice = AdviceEntity(id: advice.id, content: advice.content, adviceKorean: translatedText)
+                            self.saveAdviceEntity(adviceEntity: updatedAdvice, context: context)
+                            result.append(updatedAdvice)
+                        }
+                    }
                     
                 } catch {
                     print("Error decoding JSON: \(error)")
