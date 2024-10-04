@@ -2,7 +2,7 @@
 //  CDAdviceEntity+CoreDataProperties.swift
 //  Haruhanjul
 //
-//  Created by 임대진 on 9/22/24.
+//  Created by 임대진 on 10/4/24.
 //
 //
 
@@ -19,6 +19,7 @@ extension CDAdviceEntity {
     @NSManaged public var adviceKorean: String?
     @NSManaged public var content: String
     @NSManaged public var id: Int64
+
 }
 
 extension CDAdviceEntity {

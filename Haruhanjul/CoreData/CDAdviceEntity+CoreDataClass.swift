@@ -2,7 +2,7 @@
 //  CDAdviceEntity+CoreDataClass.swift
 //  Haruhanjul
 //
-//  Created by 임대진 on 9/22/24.
+//  Created by 임대진 on 10/4/24.
 //
 //
 

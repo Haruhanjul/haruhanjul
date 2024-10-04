@@ -2,7 +2,7 @@
 //  HaruhanjulApp.swift
 //  Haruhanjul
 //
-//  Created by 최하늘 on 8/20/24.
+//  Created by 임대진 on 10/4/24.
 //
 
 import SwiftUI
@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct HaruhanjulApp: App {
     let persistenceController = PersistenceController.shared
-    
+
     var body: some Scene {
         WindowGroup {
             MainTabView()
