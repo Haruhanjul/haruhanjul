@@ -15,9 +15,9 @@ struct HaruhanjulWidgetView : View {
         VStack {
             Text("Time:")
             Text(entry.date, style: .time)
-
-            Text("Emoji:")
-            Text(entry.advice)
+            
+            Text(AdviceDefaults.content.first ?? "")
+            Text(AdviceDefaults.content.last ?? "")
         }
     }
 }

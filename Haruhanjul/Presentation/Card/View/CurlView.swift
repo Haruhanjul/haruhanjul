@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct CurlView: View {
     @State private var advices: [AdviceEntity] = []
@@ -64,6 +65,7 @@ struct CurlView: View {
         .onChange(of: advices) { value in
             if let advice = value.first {
                 AdviceDefaults.content = [advice.content, advice.adviceKorean ?? ""]
+                WidgetCenter.shared.reloadTimelines(ofKind: "HaruhanjulWidget")
             }
         }
         .onChange(of: advices.count) { value in
