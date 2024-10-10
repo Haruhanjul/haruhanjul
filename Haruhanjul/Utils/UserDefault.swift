@@ -22,13 +22,16 @@ enum AdviceDefaults {
 struct UserDefault<T> {
     let key: String
     let defaultValue: T
-    
+    let groupName: String? = "group.daeha.Haruhanjul"
+
     var wrappedValue: T {
         get {
-            return UserDefaults.standard.object(forKey: key) as? T ?? defaultValue
+            let defaults = UserDefaults(suiteName: groupName) ?? .standard
+            return defaults.object(forKey: key) as? T ?? defaultValue
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: key)
+            let defaults = UserDefaults(suiteName: groupName) ?? .standard
+            defaults.set(newValue, forKey: key)
         }
     }
 }
