@@ -22,33 +22,39 @@ struct CurlView: View {
                 ProgressView()
             } else {
                 ForEach(Array(viewModel.advices.enumerated()), id: \.element.id) { index, advice in
-                    PeelEffect(dragProgress: $viewModel.dragProgresses[index]) {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 16)
-                                .foregroundStyle(.yellow)
-                            
-                            VStack(alignment: .center, spacing: 16) {
-                                Text(advice.adviceKorean ?? "")
-                                Text(advice.content)
+                    VStack {
+                        PeelEffect(dragProgress: $viewModel.dragProgresses[index]) {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 16)
+                                    .foregroundStyle(.yellow)
+                                
+                                VStack(alignment: .center, spacing: 16) {
+                                    Text(advice.adviceKorean ?? "")
+                                    Text(advice.content)
+                                }
+                                .padding()
+                                VStack {
+                                    HStack {
+                                        
+                                    }
+                                }
                             }
-                            .padding()
+                            .frame(height: 200)
+                        } onDelete: {
+                            viewModel.removeAdvice(at: index)
+                        } setBack: {
+                            viewModel.restoreAdvice(at: index)
                         }
-                        .frame(height: 200)
-                        .overlay(alignment: .topTrailing) {
-                            Button {
-                                viewModel.toggleBookmark(id: advice.id, at: index, advice: advice, context: viewContext)
-                            } label: {
-                                Image(systemName: viewModel.advices[index].isBookmarked ? "star.fill" : "star")
-                                    .resizable()
-                                    .frame(width: 25, height: 25)
-                            }
-                            .contentShape(Rectangle())
-                            .allowsHitTesting(true)
+                        Button {
+                            viewModel.toggleBookmark(id: advice.id, at: index, advice: advice, context: viewContext)
+                        } label: {
+                            Image(systemName: viewModel.advices[index].isBookmarked ? "star.fill" : "star")
+                                .resizable()
+                                .foregroundStyle(index == 0 ? .brown : .clear)
+                                .frame(width: 25, height: 25)
                         }
-                    } onDelete: {
-                        viewModel.removeAdvice(at: index)
-                    } setBack: {
-                        viewModel.restoreAdvice(at: index)
+                        .contentShape(Rectangle())
+                        .allowsHitTesting(true)
                     }
                     .zIndex(zIndex(index))
                 }
@@ -89,3 +95,4 @@ struct CurlView: View {
         return Double(viewModel.advices.count - index)
     }
 }
+
