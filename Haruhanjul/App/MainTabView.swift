@@ -19,7 +19,7 @@ struct MainTabView: View {
             }
             
             NavigationView {
-                Text("zz")
+                BookmarkView()
             }
             .tabItem {
                 Image(systemName: "trophy.circle")
