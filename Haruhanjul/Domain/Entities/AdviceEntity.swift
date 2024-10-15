@@ -11,4 +11,5 @@ struct AdviceEntity: Codable, Equatable {
     let id: Int
     let content: String
     var adviceKorean: String?
+    var isBookmarked: Bool = false
 }

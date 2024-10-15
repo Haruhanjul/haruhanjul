@@ -19,9 +19,13 @@
 		BC90C43E2CAF9C3300292310 /* CurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C43D2CAF9C3300292310 /* CurlView.swift */; };
 		BC90C4402CAF9C4000292310 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C43F2CAF9C4000292310 /* CardViewModel.swift */; };
 		BC90C4422CAF9C5900292310 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C4412CAF9C5900292310 /* UserDefault.swift */; };
-		BC90C4492CAF9D9300292310 /* CDAdviceEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C4472CAF9D9300292310 /* CDAdviceEntity+CoreDataClass.swift */; };
-		BC90C44A2CAF9D9300292310 /* CDAdviceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C4482CAF9D9300292310 /* CDAdviceEntity+CoreDataProperties.swift */; };
 		BCA6F6912CB0083D009468FF /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C4412CAF9C5900292310 /* UserDefault.swift */; };
+		BCA6F6D42CBEBFF9009468FF /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6F6D32CBEBFF9009468FF /* BookmarkView.swift */; };
+		BCA6F6DB2CBECF4B009468FF /* CDBookmark+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6F6DA2CBECF4B009468FF /* CDBookmark+CoreDataProperties.swift */; };
+		BCA6F6DC2CBECF4B009468FF /* CDBookmark+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6F6D92CBECF4B009468FF /* CDBookmark+CoreDataClass.swift */; };
+		BCA6F6DF2CBEEDAC009468FF /* CDAdviceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6F6DE2CBEEDAC009468FF /* CDAdviceEntity+CoreDataProperties.swift */; };
+		BCA6F6E02CBEEDAC009468FF /* CDAdviceEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6F6DD2CBEEDAC009468FF /* CDAdviceEntity+CoreDataClass.swift */; };
+		BCA6F6E22CBEF235009468FF /* PeelEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6F6E12CBEF235009468FF /* PeelEffect.swift */; };
 		F4B5CBE853C6CDA11F251550 /* Pods_Haruhanjul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D0B68260262D9431F91094 /* Pods_Haruhanjul.framework */; };
 		F6C435CE2CAFAF8200E979EC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */; };
 		F6C435D02CAFAF8200E979EC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */; };
@@ -68,10 +72,14 @@
 		BC90C43D2CAF9C3300292310 /* CurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurlView.swift; sourceTree = "<group>"; };
 		BC90C43F2CAF9C4000292310 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		BC90C4412CAF9C5900292310 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
-		BC90C4472CAF9D9300292310 /* CDAdviceEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BC90C4482CAF9D9300292310 /* CDAdviceEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BCA6F68F2CB0046A009468FF /* Haruhanjul.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Haruhanjul.entitlements; sourceTree = "<group>"; };
 		BCA6F6902CB0047D009468FF /* HaruhanjulWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HaruhanjulWidgetExtension.entitlements; sourceTree = "<group>"; };
+		BCA6F6D32CBEBFF9009468FF /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
+		BCA6F6D92CBECF4B009468FF /* CDBookmark+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDBookmark+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BCA6F6DA2CBECF4B009468FF /* CDBookmark+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDBookmark+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BCA6F6DD2CBEEDAC009468FF /* CDAdviceEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BCA6F6DE2CBEEDAC009468FF /* CDAdviceEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BCA6F6E12CBEF235009468FF /* PeelEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeelEffect.swift; sourceTree = "<group>"; };
 		E77B8D879F6E87C466878B7E /* Pods-Haruhanjul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haruhanjul.debug.xcconfig"; path = "Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul.debug.xcconfig"; sourceTree = "<group>"; };
 		F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HaruhanjulWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -207,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				BC90C42E2CAF9B5800292310 /* Card */,
+				BCA6F6D12CBEBF3D009468FF /* Bookmark */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -224,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				BC90C43D2CAF9C3300292310 /* CurlView.swift */,
+				BCA6F6E12CBEF235009468FF /* PeelEffect.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -247,8 +257,10 @@
 		BC90C4322CAF9B6F00292310 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				BC90C4472CAF9D9300292310 /* CDAdviceEntity+CoreDataClass.swift */,
-				BC90C4482CAF9D9300292310 /* CDAdviceEntity+CoreDataProperties.swift */,
+				BCA6F6DD2CBEEDAC009468FF /* CDAdviceEntity+CoreDataClass.swift */,
+				BCA6F6DE2CBEEDAC009468FF /* CDAdviceEntity+CoreDataProperties.swift */,
+				BCA6F6D92CBECF4B009468FF /* CDBookmark+CoreDataClass.swift */,
+				BCA6F6DA2CBECF4B009468FF /* CDBookmark+CoreDataProperties.swift */,
 				BC90C4212CAF99B300292310 /* Haruhanjul.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -260,6 +272,22 @@
 				BC90C41A2CAF99B300292310 /* Assets.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		BCA6F6D12CBEBF3D009468FF /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				BCA6F6D22CBEBFDD009468FF /* View */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		BCA6F6D22CBEBFDD009468FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCA6F6D32CBEBFF9009468FF /* BookmarkView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CBD078D980500C73142E441B /* Pods */ = {
@@ -443,12 +471,16 @@
 				BC90C4202CAF99B300292310 /* Persistence.swift in Sources */,
 				BC90C4422CAF9C5900292310 /* UserDefault.swift in Sources */,
 				BC90C4232CAF99B300292310 /* Haruhanjul.xcdatamodeld in Sources */,
+				BCA6F6D42CBEBFF9009468FF /* BookmarkView.swift in Sources */,
 				BC90C4402CAF9C4000292310 /* CardViewModel.swift in Sources */,
 				BC90C43C2CAF9C1C00292310 /* Translation.swift in Sources */,
+				BCA6F6DB2CBECF4B009468FF /* CDBookmark+CoreDataProperties.swift in Sources */,
+				BCA6F6DC2CBECF4B009468FF /* CDBookmark+CoreDataClass.swift in Sources */,
 				BC90C4172CAF99B200292310 /* HaruhanjulApp.swift in Sources */,
 				BC90C4362CAF9BCC00292310 /* MainTabView.swift in Sources */,
-				BC90C4492CAF9D9300292310 /* CDAdviceEntity+CoreDataClass.swift in Sources */,
-				BC90C44A2CAF9D9300292310 /* CDAdviceEntity+CoreDataProperties.swift in Sources */,
+				BCA6F6DF2CBEEDAC009468FF /* CDAdviceEntity+CoreDataProperties.swift in Sources */,
+				BCA6F6E02CBEEDAC009468FF /* CDAdviceEntity+CoreDataClass.swift in Sources */,
+				BCA6F6E22CBEF235009468FF /* PeelEffect.swift in Sources */,
 				BC90C4382CAF9BDF00292310 /* AdviceDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,6 +643,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -646,6 +679,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
