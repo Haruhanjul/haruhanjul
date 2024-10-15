@@ -16,6 +16,7 @@ struct CurlView: View {
     @State private var dragProgresses: [CGFloat] = []
     @State private var isLoading: Bool = true
     @State private var updateTrigger = false
+    @State private var bookmarkedAdviceStates: [Int: Bool] = [:]
     @StateObject var cardStore = CardViewModel()
     @Environment(\.managedObjectContext) private var viewContext
     
@@ -29,6 +30,7 @@ struct CurlView: View {
                 ProgressView()
             } else {
                 ForEach(Array(advices.enumerated()), id: \.element.id) { index, advice in
+                    @State var isBookmarked: Bool = false
                     PeelEffect(dragProgress: $dragProgresses[index]) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 16)
@@ -41,6 +43,17 @@ struct CurlView: View {
                             .padding()
                         }
                         .frame(height: 200)
+                        .overlay(alignment: .topTrailing) {
+                            Button {
+                                toggleBookmark(id: advice.id, advice: advice)
+                            } label: {
+                                Image(systemName: bookmarkedAdviceStates[advice.id] == true ? "star.fill" : "star")
+                                    .resizable()
+                                    .frame(width: 25, height: 25)
+                            }
+                            .contentShape(Rectangle())
+                            .allowsHitTesting(true)
+                        }
                     } onDelete: {
                         removedAdvices.append(advices.removeFirst())
                         removedCount -= 1
@@ -68,10 +81,6 @@ struct CurlView: View {
                 WidgetCenter.shared.reloadTimelines(ofKind: "HaruhanjulWidget")
             }
         }
-        .onChange(of: advices.count) { value in
-            // 불러온 명언 4개 이하 남을시 5개 불러옴
-            if value <= 4 { fetchAdvice(count: 5) }
-        }
         .onAppear {
             Task {
                 if !cardStore.isTranslatorReady {
@@ -89,7 +98,6 @@ struct CurlView: View {
                         advices = Array(result[lastIndex..<result.count])
                         removedCount = count
                         isLoading = false
-                        print("명언 카드 \(count)개 로드")
                     }
                 }
             }
@@ -119,7 +127,6 @@ struct CurlView: View {
     }
     
     private func fetchAdvice(count: Int) {
-        print("fetchAdvice")
         Task {
             await MainActor.run {
                 cardStore.downloadAdvices(count: count, context: viewContext) { result in
@@ -131,6 +138,13 @@ struct CurlView: View {
                 }
             }
         }
+    }
+    
+    private func toggleBookmark(id adviceId: Int, advice: AdviceEntity) {
+        let checkBookmark = bookmarkedAdviceStates[adviceId] ?? false
+        bookmarkedAdviceStates[adviceId] = !checkBookmark
+        
+        cardStore.updateBookmark(adviceEntity: advice, context: viewContext)
     }
     
     private func zIndex(_ index: Int) -> Double {

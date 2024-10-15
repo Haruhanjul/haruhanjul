@@ -91,26 +91,49 @@ final class CardViewModel: ObservableObject {
     }
     
     func saveAdviceEntity(adviceEntity: AdviceEntity, context: NSManagedObjectContext) {
-        let duplicateRequest: NSFetchRequest<CDAdviceEntity> = CDAdviceEntity.fetchRequest()
+            let duplicateRequest: NSFetchRequest<CDAdviceEntity> = CDAdviceEntity.fetchRequest()
+            duplicateRequest.predicate = NSPredicate(format: "id == %d", adviceEntity.id)
+            
+            do {
+                let existingEntities = try context.fetch(duplicateRequest)
+
+                if existingEntities.isEmpty {
+                    let cdAdviceEntity = CDAdviceEntity(context: context)
+                    cdAdviceEntity.update(from: adviceEntity, context: context)
+                    
+                    try context.save()
+                } else {
+                    print("중복된 CDAdviceEntity가 존재합니다.")
+                }
+            } catch {
+                print("CDAdviceEntity 데이터 저장 실패: \(error)")
+            }
+    }
+    
+    func updateBookmark(adviceEntity: AdviceEntity, context: NSManagedObjectContext) {
+        let duplicateRequest: NSFetchRequest<CDBookmark> = CDBookmark.fetchRequest()
         duplicateRequest.predicate = NSPredicate(format: "id == %d", adviceEntity.id)
 
         do {
             let existingEntities = try context.fetch(duplicateRequest)
 
             if existingEntities.isEmpty {
-                
-                let cdAdviceEntity = CDAdviceEntity(context: context)
-                cdAdviceEntity.update(from: adviceEntity, context: context)
+                let cdBookmark = CDBookmark(context: context)
+                cdBookmark.update(from: adviceEntity, context: context)
                 
                 try context.save()
-                print("명언 저장 완료 id: \(cdAdviceEntity.id)")
             } else {
-                print("이미 저장된 명언 id: \(adviceEntity.id)")
+                for entity in existingEntities {
+                    context.delete(entity)
+                }
+                try context.save()
+                print("중복된 CDBookmark가 삭제되었습니다.")
             }
         } catch {
-            print("데이터 저장 실패: \(error)")
+            print("CDBookmark 데이터 저장 실패: \(error)")
         }
     }
+
 
     func loadAdviceEntities(context: NSManagedObjectContext, completion: @escaping ([AdviceEntity], Int) -> ()) {
         let fetchRequest: NSFetchRequest<CDAdviceEntity> = CDAdviceEntity.fetchRequest()
