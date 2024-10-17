@@ -309,15 +309,55 @@
 		F63FAD3B2CC0E4C6009A5867 /* HaruhanjulWidget */ = {
 			isa = PBXGroup;
 			children = (
+				F63FAD472CC0E5D0009A5867 /* Config */,
+				F63FAD432CC0E57E009A5867 /* Widget */,
+				F63FAD442CC0E58C009A5867 /* Entry */,
+				F63FAD462CC0E5C0009A5867 /* Provider */,
+				F63FAD452CC0E59C009A5867 /* Presentation */,
 				F63FAD342CC0E4C6009A5867 /* Resource */,
-				F63FAD352CC0E4C6009A5867 /* AdviceEntry.swift */,
-				F63FAD362CC0E4C6009A5867 /* HaruhanjulWidget.swift */,
-				F63FAD372CC0E4C6009A5867 /* HaruhanjulWidgetBundle.swift */,
-				F63FAD382CC0E4C6009A5867 /* HaruhanjulWidgetView.swift */,
-				F63FAD392CC0E4C6009A5867 /* Info.plist */,
-				F63FAD3A2CC0E4C6009A5867 /* Provider.swift */,
 			);
 			path = HaruhanjulWidget;
+			sourceTree = "<group>";
+		};
+		F63FAD432CC0E57E009A5867 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				F63FAD372CC0E4C6009A5867 /* HaruhanjulWidgetBundle.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		F63FAD442CC0E58C009A5867 /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				F63FAD352CC0E4C6009A5867 /* AdviceEntry.swift */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
+		F63FAD452CC0E59C009A5867 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F63FAD362CC0E4C6009A5867 /* HaruhanjulWidget.swift */,
+				F63FAD382CC0E4C6009A5867 /* HaruhanjulWidgetView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F63FAD462CC0E5C0009A5867 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				F63FAD3A2CC0E4C6009A5867 /* Provider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		F63FAD472CC0E5D0009A5867 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F63FAD392CC0E4C6009A5867 /* Info.plist */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -730,7 +770,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3URYLCPH2H;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HaruhanjulWidget/Info.plist;
+				INFOPLIST_FILE = HaruhanjulWidget/Config/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = HaruhanjulWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -761,7 +801,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3URYLCPH2H;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HaruhanjulWidget/Info.plist;
+				INFOPLIST_FILE = HaruhanjulWidget/Config/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = HaruhanjulWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
