@@ -3,30 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC90C4172CAF99B200292310 /* HaruhanjulApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C4162CAF99B200292310 /* HaruhanjulApp.swift */; };
-		BC90C41B2CAF99B300292310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC90C41A2CAF99B300292310 /* Assets.xcassets */; };
-		BC90C41E2CAF99B300292310 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC90C41D2CAF99B300292310 /* Preview Assets.xcassets */; };
-		BC90C4202CAF99B300292310 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C41F2CAF99B300292310 /* Persistence.swift */; };
-		BC90C4232CAF99B300292310 /* Haruhanjul.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC90C4212CAF99B300292310 /* Haruhanjul.xcdatamodeld */; };
-		BC90C4362CAF9BCC00292310 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C4352CAF9BCC00292310 /* MainTabView.swift */; };
-		BC90C4382CAF9BDF00292310 /* AdviceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C4372CAF9BDF00292310 /* AdviceDTO.swift */; };
-		BC90C43A2CAF9BFB00292310 /* AdviceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C4392CAF9BFB00292310 /* AdviceEntity.swift */; };
-		BC90C43C2CAF9C1C00292310 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C43B2CAF9C1C00292310 /* Translation.swift */; };
-		BC90C43E2CAF9C3300292310 /* CurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C43D2CAF9C3300292310 /* CurlView.swift */; };
-		BC90C4402CAF9C4000292310 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C43F2CAF9C4000292310 /* CardViewModel.swift */; };
-		BC90C4422CAF9C5900292310 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C4412CAF9C5900292310 /* UserDefault.swift */; };
-		BCA6F6912CB0083D009468FF /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C4412CAF9C5900292310 /* UserDefault.swift */; };
-		BCA6F6D42CBEBFF9009468FF /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6F6D32CBEBFF9009468FF /* BookmarkView.swift */; };
-		BCA6F6DB2CBECF4B009468FF /* CDBookmark+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6F6DA2CBECF4B009468FF /* CDBookmark+CoreDataProperties.swift */; };
-		BCA6F6DC2CBECF4B009468FF /* CDBookmark+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6F6D92CBECF4B009468FF /* CDBookmark+CoreDataClass.swift */; };
-		BCA6F6DF2CBEEDAC009468FF /* CDAdviceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6F6DE2CBEEDAC009468FF /* CDAdviceEntity+CoreDataProperties.swift */; };
-		BCA6F6E02CBEEDAC009468FF /* CDAdviceEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6F6DD2CBEEDAC009468FF /* CDAdviceEntity+CoreDataClass.swift */; };
-		BCA6F6E22CBEF235009468FF /* PeelEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6F6E12CBEF235009468FF /* PeelEffect.swift */; };
 		F4B5CBE853C6CDA11F251550 /* Pods_Haruhanjul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D0B68260262D9431F91094 /* Pods_Haruhanjul.framework */; };
+		F63FACFF2CC0E42B009A5867 /* HaruhanjulApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACDC2CC0E42B009A5867 /* HaruhanjulApp.swift */; };
+		F63FAD002CC0E42B009A5867 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACDD2CC0E42B009A5867 /* MainTabView.swift */; };
+		F63FAD012CC0E42B009A5867 /* CDAdviceEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACDF2CC0E42B009A5867 /* CDAdviceEntity+CoreDataClass.swift */; };
+		F63FAD022CC0E42B009A5867 /* CDAdviceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACE02CC0E42B009A5867 /* CDAdviceEntity+CoreDataProperties.swift */; };
+		F63FAD032CC0E42B009A5867 /* CDBookmark+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACE12CC0E42B009A5867 /* CDBookmark+CoreDataClass.swift */; };
+		F63FAD042CC0E42B009A5867 /* CDBookmark+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACE22CC0E42B009A5867 /* CDBookmark+CoreDataProperties.swift */; };
+		F63FAD052CC0E42B009A5867 /* Haruhanjul.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F63FACE32CC0E42B009A5867 /* Haruhanjul.xcdatamodeld */; };
+		F63FAD062CC0E42B009A5867 /* AdviceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACE52CC0E42B009A5867 /* AdviceDTO.swift */; };
+		F63FAD072CC0E42B009A5867 /* AdviceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACE72CC0E42B009A5867 /* AdviceEntity.swift */; };
+		F63FAD082CC0E42B009A5867 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACE82CC0E42B009A5867 /* Persistence.swift */; };
+		F63FAD092CC0E42B009A5867 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACE92CC0E42B009A5867 /* Translation.swift */; };
+		F63FAD0A2CC0E42B009A5867 /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACEC2CC0E42B009A5867 /* BookmarkView.swift */; };
+		F63FAD0B2CC0E42B009A5867 /* CurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACEF2CC0E42B009A5867 /* CurlView.swift */; };
+		F63FAD0C2CC0E42B009A5867 /* PeelEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACF02CC0E42B009A5867 /* PeelEffect.swift */; };
+		F63FAD0D2CC0E42B009A5867 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACF22CC0E42B009A5867 /* CardViewModel.swift */; };
+		F63FAD0E2CC0E42B009A5867 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACFA2CC0E42B009A5867 /* UserDefault.swift */; };
+		F63FAD0F2CC0E42B009A5867 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F63FACF62CC0E42B009A5867 /* Preview Assets.xcassets */; };
+		F63FAD102CC0E42B009A5867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F63FACF82CC0E42B009A5867 /* Assets.xcassets */; };
+		F63FAD112CC0E42B009A5867 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACFA2CC0E42B009A5867 /* UserDefault.swift */; };
+		F63FAD3C2CC0E4C6009A5867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F63FAD332CC0E4C6009A5867 /* Assets.xcassets */; };
+		F63FAD3E2CC0E4C6009A5867 /* AdviceEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD352CC0E4C6009A5867 /* AdviceEntry.swift */; };
+		F63FAD3F2CC0E4C6009A5867 /* HaruhanjulWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD362CC0E4C6009A5867 /* HaruhanjulWidget.swift */; };
+		F63FAD402CC0E4C6009A5867 /* HaruhanjulWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD372CC0E4C6009A5867 /* HaruhanjulWidgetBundle.swift */; };
+		F63FAD412CC0E4C6009A5867 /* HaruhanjulWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD382CC0E4C6009A5867 /* HaruhanjulWidgetView.swift */; };
+		F63FAD422CC0E4C6009A5867 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD3A2CC0E4C6009A5867 /* Provider.swift */; };
 		F6C435CE2CAFAF8200E979EC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */; };
 		F6C435D02CAFAF8200E979EC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */; };
 		F6C435DB2CAFAF8500E979EC /* HaruhanjulWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -60,45 +66,38 @@
 		21D0B68260262D9431F91094 /* Pods_Haruhanjul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Haruhanjul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CFCCF3043728EA949D5199 /* Pods-Haruhanjul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haruhanjul.release.xcconfig"; path = "Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul.release.xcconfig"; sourceTree = "<group>"; };
 		BC90C4132CAF99B200292310 /* Haruhanjul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haruhanjul.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC90C4162CAF99B200292310 /* HaruhanjulApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruhanjulApp.swift; sourceTree = "<group>"; };
-		BC90C41A2CAF99B300292310 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BC90C41D2CAF99B300292310 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BC90C41F2CAF99B300292310 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		BC90C4222CAF99B300292310 /* Haruhanjul.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Haruhanjul.xcdatamodel; sourceTree = "<group>"; };
-		BC90C4352CAF9BCC00292310 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		BC90C4372CAF9BDF00292310 /* AdviceDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceDTO.swift; sourceTree = "<group>"; };
-		BC90C4392CAF9BFB00292310 /* AdviceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceEntity.swift; sourceTree = "<group>"; };
-		BC90C43B2CAF9C1C00292310 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
-		BC90C43D2CAF9C3300292310 /* CurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurlView.swift; sourceTree = "<group>"; };
-		BC90C43F2CAF9C4000292310 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
-		BC90C4412CAF9C5900292310 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
-		BCA6F68F2CB0046A009468FF /* Haruhanjul.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Haruhanjul.entitlements; sourceTree = "<group>"; };
 		BCA6F6902CB0047D009468FF /* HaruhanjulWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HaruhanjulWidgetExtension.entitlements; sourceTree = "<group>"; };
-		BCA6F6D32CBEBFF9009468FF /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
-		BCA6F6D92CBECF4B009468FF /* CDBookmark+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDBookmark+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BCA6F6DA2CBECF4B009468FF /* CDBookmark+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDBookmark+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BCA6F6DD2CBEEDAC009468FF /* CDAdviceEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BCA6F6DE2CBEEDAC009468FF /* CDAdviceEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BCA6F6E12CBEF235009468FF /* PeelEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeelEffect.swift; sourceTree = "<group>"; };
 		E77B8D879F6E87C466878B7E /* Pods-Haruhanjul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haruhanjul.debug.xcconfig"; path = "Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul.debug.xcconfig"; sourceTree = "<group>"; };
+		F63FACDC2CC0E42B009A5867 /* HaruhanjulApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruhanjulApp.swift; sourceTree = "<group>"; };
+		F63FACDD2CC0E42B009A5867 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		F63FACDF2CC0E42B009A5867 /* CDAdviceEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F63FACE02CC0E42B009A5867 /* CDAdviceEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAdviceEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F63FACE12CC0E42B009A5867 /* CDBookmark+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDBookmark+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F63FACE22CC0E42B009A5867 /* CDBookmark+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDBookmark+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F63FACE52CC0E42B009A5867 /* AdviceDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceDTO.swift; sourceTree = "<group>"; };
+		F63FACE72CC0E42B009A5867 /* AdviceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceEntity.swift; sourceTree = "<group>"; };
+		F63FACE82CC0E42B009A5867 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		F63FACE92CC0E42B009A5867 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		F63FACEC2CC0E42B009A5867 /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
+		F63FACEF2CC0E42B009A5867 /* CurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurlView.swift; sourceTree = "<group>"; };
+		F63FACF02CC0E42B009A5867 /* PeelEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeelEffect.swift; sourceTree = "<group>"; };
+		F63FACF22CC0E42B009A5867 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		F63FACF62CC0E42B009A5867 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F63FACF82CC0E42B009A5867 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F63FACFA2CC0E42B009A5867 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		F63FACFC2CC0E42B009A5867 /* Haruhanjul.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Haruhanjul.entitlements; sourceTree = "<group>"; };
+		F63FACFE2CC0E42B009A5867 /* Haruhanjul.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Haruhanjul.xcdatamodel; sourceTree = "<group>"; };
+		F63FAD332CC0E4C6009A5867 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F63FAD352CC0E4C6009A5867 /* AdviceEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceEntry.swift; sourceTree = "<group>"; };
+		F63FAD362CC0E4C6009A5867 /* HaruhanjulWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruhanjulWidget.swift; sourceTree = "<group>"; };
+		F63FAD372CC0E4C6009A5867 /* HaruhanjulWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruhanjulWidgetBundle.swift; sourceTree = "<group>"; };
+		F63FAD382CC0E4C6009A5867 /* HaruhanjulWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruhanjulWidgetView.swift; sourceTree = "<group>"; };
+		F63FAD392CC0E4C6009A5867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F63FAD3A2CC0E4C6009A5867 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HaruhanjulWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		F6C435DC2CAFAF8500E979EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = F6C435CB2CAFAF8200E979EC /* HaruhanjulWidgetExtension */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		F6C435D12CAFAF8200E979EC /* HaruhanjulWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F6C435DC2CAFAF8500E979EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = HaruhanjulWidget; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BC90C4102CAF99B200292310 /* Frameworks */ = {
@@ -135,8 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				BCA6F6902CB0047D009468FF /* HaruhanjulWidgetExtension.entitlements */,
-				BC90C4152CAF99B200292310 /* Haruhanjul */,
-				F6C435D12CAFAF8200E979EC /* HaruhanjulWidget */,
+				F63FACFD2CC0E42B009A5867 /* Haruhanjul */,
+				F63FAD3B2CC0E4C6009A5867 /* HaruhanjulWidget */,
 				BC90C4142CAF99B200292310 /* Products */,
 				CBD078D980500C73142E441B /* Pods */,
 				4967183B2BD2EC567B13B608 /* Frameworks */,
@@ -152,144 +151,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BC90C4152CAF99B200292310 /* Haruhanjul */ = {
-			isa = PBXGroup;
-			children = (
-				BCA6F68F2CB0046A009468FF /* Haruhanjul.entitlements */,
-				BC90C4292CAF99E300292310 /* App */,
-				BC90C42A2CAF99E800292310 /* Data */,
-				BC90C42B2CAF99ED00292310 /* Domain */,
-				BC90C42D2CAF9B5000292310 /* Presentation */,
-				BC90C4312CAF9B6700292310 /* Utils */,
-				BC90C4322CAF9B6F00292310 /* CoreData */,
-				BC90C4332CAF9B7500292310 /* Resource */,
-				BC90C41C2CAF99B300292310 /* Preview Content */,
-			);
-			path = Haruhanjul;
-			sourceTree = "<group>";
-		};
-		BC90C41C2CAF99B300292310 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				BC90C41D2CAF99B300292310 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		BC90C4292CAF99E300292310 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				BC90C4162CAF99B200292310 /* HaruhanjulApp.swift */,
-				BC90C4352CAF9BCC00292310 /* MainTabView.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		BC90C42A2CAF99E800292310 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				BC90C4372CAF9BDF00292310 /* AdviceDTO.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		BC90C42B2CAF99ED00292310 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				BC90C42C2CAF99F200292310 /* Entities */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		BC90C42C2CAF99F200292310 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				BC90C41F2CAF99B300292310 /* Persistence.swift */,
-				BC90C4392CAF9BFB00292310 /* AdviceEntity.swift */,
-				BC90C43B2CAF9C1C00292310 /* Translation.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		BC90C42D2CAF9B5000292310 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				BC90C42E2CAF9B5800292310 /* Card */,
-				BCA6F6D12CBEBF3D009468FF /* Bookmark */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		BC90C42E2CAF9B5800292310 /* Card */ = {
-			isa = PBXGroup;
-			children = (
-				BC90C42F2CAF9B5D00292310 /* View */,
-				BC90C4302CAF9B6100292310 /* ViewModel */,
-			);
-			path = Card;
-			sourceTree = "<group>";
-		};
-		BC90C42F2CAF9B5D00292310 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BC90C43D2CAF9C3300292310 /* CurlView.swift */,
-				BCA6F6E12CBEF235009468FF /* PeelEffect.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BC90C4302CAF9B6100292310 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				BC90C43F2CAF9C4000292310 /* CardViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		BC90C4312CAF9B6700292310 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				BC90C4412CAF9C5900292310 /* UserDefault.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		BC90C4322CAF9B6F00292310 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				BCA6F6DD2CBEEDAC009468FF /* CDAdviceEntity+CoreDataClass.swift */,
-				BCA6F6DE2CBEEDAC009468FF /* CDAdviceEntity+CoreDataProperties.swift */,
-				BCA6F6D92CBECF4B009468FF /* CDBookmark+CoreDataClass.swift */,
-				BCA6F6DA2CBECF4B009468FF /* CDBookmark+CoreDataProperties.swift */,
-				BC90C4212CAF99B300292310 /* Haruhanjul.xcdatamodeld */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
-		BC90C4332CAF9B7500292310 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				BC90C41A2CAF99B300292310 /* Assets.xcassets */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
-		BCA6F6D12CBEBF3D009468FF /* Bookmark */ = {
-			isa = PBXGroup;
-			children = (
-				BCA6F6D22CBEBFDD009468FF /* View */,
-			);
-			path = Bookmark;
-			sourceTree = "<group>";
-		};
-		BCA6F6D22CBEBFDD009468FF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BCA6F6D32CBEBFF9009468FF /* BookmarkView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		CBD078D980500C73142E441B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +158,166 @@
 				71CFCCF3043728EA949D5199 /* Pods-Haruhanjul.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F63FACDE2CC0E42B009A5867 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F63FACDC2CC0E42B009A5867 /* HaruhanjulApp.swift */,
+				F63FACDD2CC0E42B009A5867 /* MainTabView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F63FACE42CC0E42B009A5867 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F63FACDF2CC0E42B009A5867 /* CDAdviceEntity+CoreDataClass.swift */,
+				F63FACE02CC0E42B009A5867 /* CDAdviceEntity+CoreDataProperties.swift */,
+				F63FACE12CC0E42B009A5867 /* CDBookmark+CoreDataClass.swift */,
+				F63FACE22CC0E42B009A5867 /* CDBookmark+CoreDataProperties.swift */,
+				F63FACE32CC0E42B009A5867 /* Haruhanjul.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		F63FACE62CC0E42B009A5867 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F63FACE52CC0E42B009A5867 /* AdviceDTO.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F63FACEA2CC0E42B009A5867 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F63FACE72CC0E42B009A5867 /* AdviceEntity.swift */,
+				F63FACE82CC0E42B009A5867 /* Persistence.swift */,
+				F63FACE92CC0E42B009A5867 /* Translation.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F63FACEB2CC0E42B009A5867 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F63FACEA2CC0E42B009A5867 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F63FACED2CC0E42B009A5867 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F63FACEC2CC0E42B009A5867 /* BookmarkView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F63FACEE2CC0E42B009A5867 /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				F63FACED2CC0E42B009A5867 /* View */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		F63FACF12CC0E42B009A5867 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F63FACEF2CC0E42B009A5867 /* CurlView.swift */,
+				F63FACF02CC0E42B009A5867 /* PeelEffect.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F63FACF32CC0E42B009A5867 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F63FACF22CC0E42B009A5867 /* CardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F63FACF42CC0E42B009A5867 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				F63FACF12CC0E42B009A5867 /* View */,
+				F63FACF32CC0E42B009A5867 /* ViewModel */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		F63FACF52CC0E42B009A5867 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F63FACEE2CC0E42B009A5867 /* Bookmark */,
+				F63FACF42CC0E42B009A5867 /* Card */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F63FACF72CC0E42B009A5867 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F63FACF62CC0E42B009A5867 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F63FACF92CC0E42B009A5867 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F63FACF82CC0E42B009A5867 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F63FACFB2CC0E42B009A5867 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F63FACFA2CC0E42B009A5867 /* UserDefault.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F63FACFD2CC0E42B009A5867 /* Haruhanjul */ = {
+			isa = PBXGroup;
+			children = (
+				F63FACDE2CC0E42B009A5867 /* App */,
+				F63FACE42CC0E42B009A5867 /* CoreData */,
+				F63FACE62CC0E42B009A5867 /* Data */,
+				F63FACEB2CC0E42B009A5867 /* Domain */,
+				F63FACF52CC0E42B009A5867 /* Presentation */,
+				F63FACF72CC0E42B009A5867 /* Preview Content */,
+				F63FACF92CC0E42B009A5867 /* Resource */,
+				F63FACFB2CC0E42B009A5867 /* Utils */,
+				F63FACFC2CC0E42B009A5867 /* Haruhanjul.entitlements */,
+			);
+			path = Haruhanjul;
+			sourceTree = "<group>";
+		};
+		F63FAD342CC0E4C6009A5867 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F63FAD332CC0E4C6009A5867 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F63FAD3B2CC0E4C6009A5867 /* HaruhanjulWidget */ = {
+			isa = PBXGroup;
+			children = (
+				F63FAD342CC0E4C6009A5867 /* Resource */,
+				F63FAD352CC0E4C6009A5867 /* AdviceEntry.swift */,
+				F63FAD362CC0E4C6009A5867 /* HaruhanjulWidget.swift */,
+				F63FAD372CC0E4C6009A5867 /* HaruhanjulWidgetBundle.swift */,
+				F63FAD382CC0E4C6009A5867 /* HaruhanjulWidgetView.swift */,
+				F63FAD392CC0E4C6009A5867 /* Info.plist */,
+				F63FAD3A2CC0E4C6009A5867 /* Provider.swift */,
+			);
+			path = HaruhanjulWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,9 +356,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				F6C435D12CAFAF8200E979EC /* HaruhanjulWidget */,
 			);
 			name = HaruhanjulWidgetExtension;
 			packageProductDependencies = (
@@ -388,8 +406,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC90C41E2CAF99B300292310 /* Preview Assets.xcassets in Resources */,
-				BC90C41B2CAF99B300292310 /* Assets.xcassets in Resources */,
+				F63FAD0F2CC0E42B009A5867 /* Preview Assets.xcassets in Resources */,
+				F63FAD102CC0E42B009A5867 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F63FAD3C2CC0E4C6009A5867 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,22 +485,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC90C43E2CAF9C3300292310 /* CurlView.swift in Sources */,
-				BC90C43A2CAF9BFB00292310 /* AdviceEntity.swift in Sources */,
-				BC90C4202CAF99B300292310 /* Persistence.swift in Sources */,
-				BC90C4422CAF9C5900292310 /* UserDefault.swift in Sources */,
-				BC90C4232CAF99B300292310 /* Haruhanjul.xcdatamodeld in Sources */,
-				BCA6F6D42CBEBFF9009468FF /* BookmarkView.swift in Sources */,
-				BC90C4402CAF9C4000292310 /* CardViewModel.swift in Sources */,
-				BC90C43C2CAF9C1C00292310 /* Translation.swift in Sources */,
-				BCA6F6DB2CBECF4B009468FF /* CDBookmark+CoreDataProperties.swift in Sources */,
-				BCA6F6DC2CBECF4B009468FF /* CDBookmark+CoreDataClass.swift in Sources */,
-				BC90C4172CAF99B200292310 /* HaruhanjulApp.swift in Sources */,
-				BC90C4362CAF9BCC00292310 /* MainTabView.swift in Sources */,
-				BCA6F6DF2CBEEDAC009468FF /* CDAdviceEntity+CoreDataProperties.swift in Sources */,
-				BCA6F6E02CBEEDAC009468FF /* CDAdviceEntity+CoreDataClass.swift in Sources */,
-				BCA6F6E22CBEF235009468FF /* PeelEffect.swift in Sources */,
-				BC90C4382CAF9BDF00292310 /* AdviceDTO.swift in Sources */,
+				F63FACFF2CC0E42B009A5867 /* HaruhanjulApp.swift in Sources */,
+				F63FAD002CC0E42B009A5867 /* MainTabView.swift in Sources */,
+				F63FAD012CC0E42B009A5867 /* CDAdviceEntity+CoreDataClass.swift in Sources */,
+				F63FAD022CC0E42B009A5867 /* CDAdviceEntity+CoreDataProperties.swift in Sources */,
+				F63FAD032CC0E42B009A5867 /* CDBookmark+CoreDataClass.swift in Sources */,
+				F63FAD042CC0E42B009A5867 /* CDBookmark+CoreDataProperties.swift in Sources */,
+				F63FAD052CC0E42B009A5867 /* Haruhanjul.xcdatamodeld in Sources */,
+				F63FAD062CC0E42B009A5867 /* AdviceDTO.swift in Sources */,
+				F63FAD072CC0E42B009A5867 /* AdviceEntity.swift in Sources */,
+				F63FAD082CC0E42B009A5867 /* Persistence.swift in Sources */,
+				F63FAD092CC0E42B009A5867 /* Translation.swift in Sources */,
+				F63FAD0A2CC0E42B009A5867 /* BookmarkView.swift in Sources */,
+				F63FAD0B2CC0E42B009A5867 /* CurlView.swift in Sources */,
+				F63FAD0C2CC0E42B009A5867 /* PeelEffect.swift in Sources */,
+				F63FAD0D2CC0E42B009A5867 /* CardViewModel.swift in Sources */,
+				F63FAD0E2CC0E42B009A5867 /* UserDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,7 +508,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCA6F6912CB0083D009468FF /* UserDefault.swift in Sources */,
+				F63FAD3E2CC0E4C6009A5867 /* AdviceEntry.swift in Sources */,
+				F63FAD3F2CC0E4C6009A5867 /* HaruhanjulWidget.swift in Sources */,
+				F63FAD402CC0E4C6009A5867 /* HaruhanjulWidgetBundle.swift in Sources */,
+				F63FAD412CC0E4C6009A5867 /* HaruhanjulWidgetView.swift in Sources */,
+				F63FAD422CC0E4C6009A5867 /* Provider.swift in Sources */,
+				F63FAD112CC0E42B009A5867 /* UserDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,12 +814,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BC90C4212CAF99B300292310 /* Haruhanjul.xcdatamodeld */ = {
+		F63FACE32CC0E42B009A5867 /* Haruhanjul.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BC90C4222CAF99B300292310 /* Haruhanjul.xcdatamodel */,
+				F63FACFE2CC0E42B009A5867 /* Haruhanjul.xcdatamodel */,
 			);
-			currentVersion = BC90C4222CAF99B300292310 /* Haruhanjul.xcdatamodel */;
+			currentVersion = F63FACFE2CC0E42B009A5867 /* Haruhanjul.xcdatamodel */;
 			path = Haruhanjul.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
