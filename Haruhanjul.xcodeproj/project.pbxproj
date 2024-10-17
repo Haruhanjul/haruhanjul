@@ -33,6 +33,8 @@
 		F63FAD402CC0E4C6009A5867 /* HaruhanjulWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD372CC0E4C6009A5867 /* HaruhanjulWidgetBundle.swift */; };
 		F63FAD412CC0E4C6009A5867 /* HaruhanjulWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD382CC0E4C6009A5867 /* HaruhanjulWidgetView.swift */; };
 		F63FAD422CC0E4C6009A5867 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD3A2CC0E4C6009A5867 /* Provider.swift */; };
+		F63FAD492CC0E671009A5867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F63FAD482CC0E671009A5867 /* LaunchScreen.storyboard */; };
+		F63FAD4B2CC0E747009A5867 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD4A2CC0E747009A5867 /* LaunchScreen.swift */; };
 		F6C435CE2CAFAF8200E979EC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */; };
 		F6C435D02CAFAF8200E979EC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */; };
 		F6C435DB2CAFAF8500E979EC /* HaruhanjulWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -94,6 +96,8 @@
 		F63FAD382CC0E4C6009A5867 /* HaruhanjulWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruhanjulWidgetView.swift; sourceTree = "<group>"; };
 		F63FAD392CC0E4C6009A5867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F63FAD3A2CC0E4C6009A5867 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		F63FAD482CC0E671009A5867 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F63FAD4A2CC0E747009A5867 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HaruhanjulWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -163,6 +167,8 @@
 		F63FACDE2CC0E42B009A5867 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				F63FAD482CC0E671009A5867 /* LaunchScreen.storyboard */,
+				F63FAD4A2CC0E747009A5867 /* LaunchScreen.swift */,
 				F63FACDC2CC0E42B009A5867 /* HaruhanjulApp.swift */,
 				F63FACDD2CC0E42B009A5867 /* MainTabView.swift */,
 			);
@@ -446,6 +452,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F63FAD492CC0E671009A5867 /* LaunchScreen.storyboard in Resources */,
 				F63FAD0F2CC0E42B009A5867 /* Preview Assets.xcassets in Resources */,
 				F63FAD102CC0E42B009A5867 /* Assets.xcassets in Resources */,
 			);
@@ -526,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F63FACFF2CC0E42B009A5867 /* HaruhanjulApp.swift in Sources */,
+				F63FAD4B2CC0E747009A5867 /* LaunchScreen.swift in Sources */,
 				F63FAD002CC0E42B009A5867 /* MainTabView.swift in Sources */,
 				F63FAD012CC0E42B009A5867 /* CDAdviceEntity+CoreDataClass.swift in Sources */,
 				F63FAD022CC0E42B009A5867 /* CDAdviceEntity+CoreDataProperties.swift in Sources */,
