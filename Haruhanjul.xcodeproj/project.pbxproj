@@ -35,6 +35,9 @@
 		F63FAD422CC0E4C6009A5867 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD3A2CC0E4C6009A5867 /* Provider.swift */; };
 		F63FAD492CC0E671009A5867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F63FAD482CC0E671009A5867 /* LaunchScreen.storyboard */; };
 		F63FAD4B2CC0E747009A5867 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD4A2CC0E747009A5867 /* LaunchScreen.swift */; };
+		F63FAD4D2CC0E7B5009A5867 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F63FAD4C2CC0E7B5009A5867 /* Colors.xcassets */; };
+		F63FAD552CC0E97B009A5867 /* Colors+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD542CC0E97B009A5867 /* Colors+Generated.swift */; };
+		F63FAD562CC0E97B009A5867 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD532CC0E97B009A5867 /* Assets+Generated.swift */; };
 		F6C435CE2CAFAF8200E979EC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */; };
 		F6C435D02CAFAF8200E979EC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */; };
 		F6C435DB2CAFAF8500E979EC /* HaruhanjulWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -98,6 +101,9 @@
 		F63FAD3A2CC0E4C6009A5867 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		F63FAD482CC0E671009A5867 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F63FAD4A2CC0E747009A5867 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		F63FAD4C2CC0E7B5009A5867 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		F63FAD532CC0E97B009A5867 /* Assets+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
+		F63FAD542CC0E97B009A5867 /* Colors+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Generated.swift"; sourceTree = "<group>"; };
 		F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HaruhanjulWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -275,7 +281,10 @@
 		F63FACF92CC0E42B009A5867 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F63FAD532CC0E97B009A5867 /* Assets+Generated.swift */,
+				F63FAD542CC0E97B009A5867 /* Colors+Generated.swift */,
 				F63FACF82CC0E42B009A5867 /* Assets.xcassets */,
+				F63FAD4C2CC0E7B5009A5867 /* Colors.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -380,6 +389,7 @@
 				A50B9F306D715C1F49FEA3E3 /* [CP] Embed Pods Frameworks */,
 				6125F7BEE9ACF9377CDA8384 /* [CP] Copy Pods Resources */,
 				F6C435E02CAFAF8500E979EC /* Embed Foundation Extensions */,
+				F63FAD4E2CC0E7FD009A5867 /* SwiftGen Run Script */,
 			);
 			buildRules = (
 			);
@@ -453,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F63FAD492CC0E671009A5867 /* LaunchScreen.storyboard in Resources */,
+				F63FAD4D2CC0E7B5009A5867 /* Colors.xcassets in Resources */,
 				F63FAD0F2CC0E42B009A5867 /* Preview Assets.xcassets in Resources */,
 				F63FAD102CC0E42B009A5867 /* Assets.xcassets in Resources */,
 			);
@@ -525,6 +536,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F63FAD4E2CC0E7FD009A5867 /* SwiftGen Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftGen Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nswiftgen xcassets --param enumName=Images ${TARGETNAME}/Resource/Assets.xcassets -t swift4 --output \"${TARGETNAME}/Resource/Assets+Generated.swift\"\n\nswiftgen xcassets --param enumName=Colors ${TARGETNAME}/Resource/Colors.xcassets -t swift4 --output \"${TARGETNAME}/Resource/Colors+Generated.swift\"\n\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -543,6 +572,8 @@
 				F63FAD062CC0E42B009A5867 /* AdviceDTO.swift in Sources */,
 				F63FAD072CC0E42B009A5867 /* AdviceEntity.swift in Sources */,
 				F63FAD082CC0E42B009A5867 /* Persistence.swift in Sources */,
+				F63FAD552CC0E97B009A5867 /* Colors+Generated.swift in Sources */,
+				F63FAD562CC0E97B009A5867 /* Assets+Generated.swift in Sources */,
 				F63FAD092CC0E42B009A5867 /* Translation.swift in Sources */,
 				F63FAD0A2CC0E42B009A5867 /* BookmarkView.swift in Sources */,
 				F63FAD0B2CC0E42B009A5867 /* CurlView.swift in Sources */,
