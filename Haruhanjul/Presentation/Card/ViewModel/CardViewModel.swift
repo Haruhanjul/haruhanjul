@@ -247,12 +247,19 @@ final class CardViewModel: ObservableObject {
     // 명언 카드 리셋
     func resetAdvices(context: NSManagedObjectContext) {
         Task {
-            isLoading = true
+            await MainActor.run {
+                isLoading = true
+            }
+
             await deleteAllAdviceEntities(context: context)
-            removedAdvices = []
-            advices = []
-            removedCount = 0
-            lastIndex = 0
+
+            await MainActor.run {
+                removedAdvices = []
+                advices = []
+                removedCount = 0
+                lastIndex = 0
+            }
+
             fetchAdvice(count: 10, context: context)
         }
     }
