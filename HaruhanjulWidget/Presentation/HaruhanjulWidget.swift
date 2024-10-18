@@ -19,7 +19,6 @@ struct HaruhanjulWidget: Widget {
             } else {
                 HaruhanjulWidgetView(entry: entry)
                     .padding()
-                    .background()
             }
         }
         .configurationDisplayName("My Widget")

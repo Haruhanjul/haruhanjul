@@ -41,6 +41,7 @@
 		F6C435CE2CAFAF8200E979EC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */; };
 		F6C435D02CAFAF8200E979EC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */; };
 		F6C435DB2CAFAF8500E979EC /* HaruhanjulWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F6C73F612CC2244C003E9293 /* Colors+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD542CC0E97B009A5867 /* Colors+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -416,7 +417,6 @@
 				F6C435C82CAFAF8200E979EC /* Sources */,
 				F6C435C92CAFAF8200E979EC /* Frameworks */,
 				F6C435CA2CAFAF8200E979EC /* Resources */,
-				F6C73F5C2CC220B9003E9293 /* SwiftGen Run Script */,
 			);
 			buildRules = (
 			);
@@ -563,24 +563,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nswiftgen xcassets --param enumName=Images ${TARGETNAME}/Resource/Assets.xcassets -t swift4 --output \"${TARGETNAME}/Resource/Assets+Generated.swift\"\n\nswiftgen xcassets --param enumName=Colors ${TARGETNAME}/Resource/Colors.xcassets -t swift4 --output \"${TARGETNAME}/Resource/Colors+Generated.swift\"\n\n";
 		};
-		F6C73F5C2CC220B9003E9293 /* SwiftGen Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "SwiftGen Run Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nswiftgen xcassets --param enumName=Images HaruhanjulWidget/Resource/Assets.xcassets -t swift4 --output \"HaruhanjulWidget/Resource/Assets+Generated.swift\"\n\nswiftgen xcassets --param enumName=Colors HaruhanjulWidget/Resource/Colors.xcassets -t swift4 --output \"HaruhanjulWidget/Resource/Colors+Generated.swift\"\n\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -620,6 +602,7 @@
 				F63FAD412CC0E4C6009A5867 /* HaruhanjulWidgetView.swift in Sources */,
 				F63FAD422CC0E4C6009A5867 /* Provider.swift in Sources */,
 				F63FAD112CC0E42B009A5867 /* UserDefault.swift in Sources */,
+				F6C73F612CC2244C003E9293 /* Colors+Generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

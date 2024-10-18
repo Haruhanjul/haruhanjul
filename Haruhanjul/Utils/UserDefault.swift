@@ -8,6 +8,8 @@
 import Foundation
 
 enum AdviceDefaults {
+    static let defaultText = "새로운 하루 한줄을 만나보세요"
+    
     @UserDefault(key: "adviceKey", defaultValue: [""])
     static var content: [String]
     
@@ -16,6 +18,10 @@ enum AdviceDefaults {
     
     @UserDefault(key: "cardIndex", defaultValue: 0)
     static var cardIndex: Int
+    
+    static var firstAdvice: String {
+        return content.first ?? defaultText
+    }
 }
 
 @propertyWrapper
