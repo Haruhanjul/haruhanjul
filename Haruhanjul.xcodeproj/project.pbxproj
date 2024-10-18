@@ -42,6 +42,7 @@
 		F6C435D02CAFAF8200E979EC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */; };
 		F6C435DB2CAFAF8500E979EC /* HaruhanjulWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F6C73F612CC2244C003E9293 /* Colors+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD542CC0E97B009A5867 /* Colors+Generated.swift */; };
+		F6C73F7D2CC26040003E9293 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD532CC0E97B009A5867 /* Assets+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -602,6 +603,7 @@
 				F63FAD412CC0E4C6009A5867 /* HaruhanjulWidgetView.swift in Sources */,
 				F63FAD422CC0E4C6009A5867 /* Provider.swift in Sources */,
 				F63FAD112CC0E42B009A5867 /* UserDefault.swift in Sources */,
+				F6C73F7D2CC26040003E9293 /* Assets+Generated.swift in Sources */,
 				F6C73F612CC2244C003E9293 /* Colors+Generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
