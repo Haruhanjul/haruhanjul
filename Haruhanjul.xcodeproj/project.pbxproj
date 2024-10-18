@@ -38,7 +38,6 @@
 		F63FAD4D2CC0E7B5009A5867 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F63FAD4C2CC0E7B5009A5867 /* Colors.xcassets */; };
 		F63FAD552CC0E97B009A5867 /* Colors+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD542CC0E97B009A5867 /* Colors+Generated.swift */; };
 		F63FAD562CC0E97B009A5867 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAD532CC0E97B009A5867 /* Assets+Generated.swift */; };
-		F63FAD672CC0F144009A5867 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F63FAD662CC0F144009A5867 /* Colors.xcassets */; };
 		F6C435CE2CAFAF8200E979EC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */; };
 		F6C435D02CAFAF8200E979EC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */; };
 		F6C435DB2CAFAF8500E979EC /* HaruhanjulWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -105,7 +104,6 @@
 		F63FAD4C2CC0E7B5009A5867 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F63FAD532CC0E97B009A5867 /* Assets+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
 		F63FAD542CC0E97B009A5867 /* Colors+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Generated.swift"; sourceTree = "<group>"; };
-		F63FAD662CC0F144009A5867 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HaruhanjulWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -318,7 +316,6 @@
 			isa = PBXGroup;
 			children = (
 				F63FAD332CC0E4C6009A5867 /* Assets.xcassets */,
-				F63FAD662CC0F144009A5867 /* Colors.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -419,6 +416,7 @@
 				F6C435C82CAFAF8200E979EC /* Sources */,
 				F6C435C92CAFAF8200E979EC /* Frameworks */,
 				F6C435CA2CAFAF8200E979EC /* Resources */,
+				F6C73F5C2CC220B9003E9293 /* SwiftGen Run Script */,
 			);
 			buildRules = (
 			);
@@ -485,7 +483,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F63FAD3C2CC0E4C6009A5867 /* Assets.xcassets in Resources */,
-				F63FAD672CC0F144009A5867 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +562,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nswiftgen xcassets --param enumName=Images ${TARGETNAME}/Resource/Assets.xcassets -t swift4 --output \"${TARGETNAME}/Resource/Assets+Generated.swift\"\n\nswiftgen xcassets --param enumName=Colors ${TARGETNAME}/Resource/Colors.xcassets -t swift4 --output \"${TARGETNAME}/Resource/Colors+Generated.swift\"\n\n";
+		};
+		F6C73F5C2CC220B9003E9293 /* SwiftGen Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftGen Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nswiftgen xcassets --param enumName=Images HaruhanjulWidget/Resource/Assets.xcassets -t swift4 --output \"HaruhanjulWidget/Resource/Assets+Generated.swift\"\n\nswiftgen xcassets --param enumName=Colors HaruhanjulWidget/Resource/Colors.xcassets -t swift4 --output \"HaruhanjulWidget/Resource/Colors+Generated.swift\"\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
