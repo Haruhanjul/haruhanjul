@@ -16,9 +16,11 @@ struct HaruhanjulWidget: Widget {
             if #available(iOS 17.0, *) {
                 HaruhanjulWidgetView(entry: entry)
                     .containerBackground(.fill.tertiary, for: .widget)
+                    .background(Color(Colors.background.color))
             } else {
                 HaruhanjulWidgetView(entry: entry)
                     .padding()
+                    .background(Color(Colors.background.color))
             }
         }
         .configurationDisplayName("My Widget")

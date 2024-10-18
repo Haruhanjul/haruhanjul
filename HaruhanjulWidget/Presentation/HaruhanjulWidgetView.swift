@@ -30,6 +30,7 @@ struct HaruhanjulWidgetView : View {
     private func smallView(entry: AdviceEntry) -> some View {
         VStack {
             Text(entry.advice)
+                .foregroundStyle(Color(Colors.black.color))
         }
     }
     
@@ -37,6 +38,7 @@ struct HaruhanjulWidgetView : View {
     private func mediumView(entry: AdviceEntry) -> some View {
         VStack {
             Text(entry.advice)
+                .foregroundStyle(Color(Colors.black.color))
         }
     }
     
@@ -44,6 +46,7 @@ struct HaruhanjulWidgetView : View {
     private func largeView(entry: AdviceEntry) -> some View {
         VStack {
             Text(entry.advice)
+                .foregroundStyle(Color(Colors.background.color))
         }
     }
 }
