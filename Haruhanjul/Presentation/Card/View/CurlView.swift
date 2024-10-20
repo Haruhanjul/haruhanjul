@@ -9,8 +9,9 @@ import SwiftUI
 import WidgetKit
 
 struct CurlView: View {
-    @StateObject var viewModel = CardViewModel()
+    @Environment(\.scenePhase) private var scenePhase
     @Environment(\.managedObjectContext) private var viewContext
+    @EnvironmentObject private var viewModel: CardViewModel
     
     var body: some View {
         ZStack {
@@ -41,7 +42,7 @@ struct CurlView: View {
                             }
                             .frame(height: 200)
                         } onDelete: {
-                            viewModel.removeAdvice(at: index)
+                            viewModel.removeAdvice(at: index, context: viewContext)
                         } setBack: {
                             viewModel.restoreAdvice(at: index)
                         }
@@ -67,17 +68,6 @@ struct CurlView: View {
         .onChange(of: viewModel.lastIndex) { value in
             AdviceDefaults.cardIndex = value
         }
-        .onChange(of: viewModel.advices.count) { value in
-            if value <= 4 {
-                viewModel.fetchAdvice(count: 5, context: viewContext)
-            }
-        }
-        .onChange(of: viewModel.advices) { value in
-            if let advice = value.first {
-                AdviceDefaults.content = [advice.content, advice.adviceKorean ?? ""]
-                WidgetCenter.shared.reloadTimelines(ofKind: "HaruhanjulWidget")
-            }
-        }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
@@ -96,3 +86,7 @@ struct CurlView: View {
     }
 }
 
+#Preview {
+    CurlView()
+        .environmentObject(CardViewModel())
+}

@@ -8,6 +8,7 @@
 import Foundation
 import MLKitTranslate
 import CoreData
+import WidgetKit
 
 final class CardViewModel: ObservableObject {
     @Published var advices: [AdviceEntity] = []
@@ -155,10 +156,18 @@ final class CardViewModel: ObservableObject {
     }
     
     // 카드 넘기기
-    func removeAdvice(at index: Int) {
+    func removeAdvice(at index: Int, context: NSManagedObjectContext) {
         removedAdvices.append(advices.remove(at: index))
         removedCount -= 1
         lastIndex += 1
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
+            widgetUpdate(advice: advices[0].content, adviceKorean: advices[0].adviceKorean ?? "")
+        }
+        
+        if advices.count < 5 {
+            fetchAdvice(count: 5, context: context)
+        }
     }
 
     // 카드 되돌리기
@@ -168,6 +177,11 @@ final class CardViewModel: ObservableObject {
             advices.insert(removedAdvices.removeLast(), at: 0)
             removedCount += 1
             lastIndex -= 1
+            widgetUpdate(advice: advices[0].content, adviceKorean: advices[0].adviceKorean ?? "")
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
+                widgetUpdate(advice: advices[0].content, adviceKorean: advices[0].adviceKorean ?? "")
+            }
         }
     }
     
@@ -190,9 +204,8 @@ final class CardViewModel: ObservableObject {
                 bookmark.isBookmarked = isBookmarked
                 
                 try context.save()
-                print("Bookmark status updated successfully.")
             } else {
-                print("No bookmark found with id: \(id)")
+                print("No bookmark found id: \(id)")
             }
         } catch {
             print("Failed to fetch bookmark: \(error)")
@@ -280,5 +293,10 @@ final class CardViewModel: ObservableObject {
         } catch {
             print("데이터 삭제 중 오류 발생: \(error)")
         }
+    }
+    
+    func widgetUpdate(advice: String, adviceKorean: String) {
+        AdviceDefaults.content = [advice, adviceKorean]
+        WidgetCenter.shared.reloadTimelines(ofKind: "HaruhanjulWidget")
     }
 }

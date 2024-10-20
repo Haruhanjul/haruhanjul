@@ -13,9 +13,6 @@ enum AdviceDefaults {
     @UserDefault(key: "adviceKey", defaultValue: [""])
     static var content: [String]
     
-    @UserDefault(key: "lastDay", defaultValue: Date())
-    static var day: Date
-    
     @UserDefault(key: "cardIndex", defaultValue: 0)
     static var cardIndex: Int
     
