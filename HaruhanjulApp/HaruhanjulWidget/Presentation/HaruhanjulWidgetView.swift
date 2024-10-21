@@ -56,7 +56,11 @@ struct HaruhanjulWidgetView : View {
     private func largeView(entry: AdviceEntry) -> some View {
         VStack {
             Text(entry.advice)
+<<<<<<< HEAD
                 .foregroundStyle(Color(Colors.blackHaru.color))
+=======
+                .foregroundStyle(Color(Colors.blackText.color))
+>>>>>>> e9f1612 (fix: 색상 네이밍 수정)
         }
     }
 }
