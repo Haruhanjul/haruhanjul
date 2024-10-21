@@ -40,6 +40,8 @@
 		F6C7401C2CC62A66003E9293 /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7401B2CC62A66003E9293 /* ResourceKit.framework */; };
 		F6C7401E2CC62B07003E9293 /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7401D2CC62B07003E9293 /* ResourceKit.framework */; };
 		F6C740252CC62EDF003E9293 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C740242CC62EDF003E9293 /* Assets.xcassets */; };
+		F6C7406E2CC64B15003E9293 /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7406D2CC64B15003E9293 /* ResourceKit.framework */; };
+		F6C740702CC64B1E003E9293 /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7406F2CC64B1E003E9293 /* ResourceKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		F6C7401B2CC62A66003E9293 /* ResourceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResourceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C7401D2CC62B07003E9293 /* ResourceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResourceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C740242CC62EDF003E9293 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6C7406D2CC64B15003E9293 /* ResourceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResourceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6C7406F2CC64B1E003E9293 /* ResourceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResourceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6C7401C2CC62A66003E9293 /* ResourceKit.framework in Frameworks */,
+				F6C7406E2CC64B15003E9293 /* ResourceKit.framework in Frameworks */,
 				F4B5CBE853C6CDA11F251550 /* Pods_Haruhanjul.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6C7401E2CC62B07003E9293 /* ResourceKit.framework in Frameworks */,
+				F6C740702CC64B1E003E9293 /* ResourceKit.framework in Frameworks */,
 				F6C435D02CAFAF8200E979EC /* SwiftUI.framework in Frameworks */,
 				F6C435CE2CAFAF8200E979EC /* WidgetKit.framework in Frameworks */,
 			);
@@ -135,6 +141,8 @@
 			children = (
 				F6C7401D2CC62B07003E9293 /* ResourceKit.framework */,
 				F6C7401B2CC62A66003E9293 /* ResourceKit.framework */,
+				F6C7406F2CC64B1E003E9293 /* ResourceKit.framework */,
+				F6C7406D2CC64B15003E9293 /* ResourceKit.framework */,
 				21D0B68260262D9431F91094 /* Pods_Haruhanjul.framework */,
 				F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */,
 				F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */,
@@ -283,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				F6C740242CC62EDF003E9293 /* Assets.xcassets */,
+				F63FACF82CC0E42B009A5867 /* Assets.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";

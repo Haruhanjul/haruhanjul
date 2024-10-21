@@ -91,7 +91,18 @@ iOSInjectionProject/
 .DS_Store
 *.xcconfig
 /**/*.plist
+**/contents.xcworkspacedata
+/Haruhanjul.xcodeproj/xcshareddata
+
+
 # CocoaPods
 Pods/
 Podfile.lock
-/Haruhanjul.xcodeproj/xcshareddata
+
+
+
+# ResourceKit
+ResourceKit/ResourceKit/Derived
+
+
+

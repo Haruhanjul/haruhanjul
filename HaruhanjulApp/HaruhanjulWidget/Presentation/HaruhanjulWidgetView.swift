@@ -32,7 +32,11 @@ struct HaruhanjulWidgetView : View {
     private func smallView(entry: AdviceEntry) -> some View {
         VStack {
             Text(entry.advice)
+<<<<<<< HEAD
                 .foregroundStyle(Color(Colors.blackHaru.color))
+=======
+                .foregroundStyle(Color(Colors.blackText.color))
+>>>>>>> a938c7c (feat: 리소스 프레임워크 추가)
         }
     }
     
@@ -40,7 +44,11 @@ struct HaruhanjulWidgetView : View {
     private func mediumView(entry: AdviceEntry) -> some View {
         VStack {
             Text(entry.advice)
+<<<<<<< HEAD
                 .foregroundStyle(Color(Colors.blackHaru.color))
+=======
+                .foregroundStyle(Color(Colors.blackText.color))
+>>>>>>> a938c7c (feat: 리소스 프레임워크 추가)
         }
     }
     
