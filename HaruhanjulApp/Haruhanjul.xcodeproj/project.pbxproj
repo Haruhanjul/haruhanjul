@@ -143,6 +143,8 @@
 				F6C7401B2CC62A66003E9293 /* ResourceKit.framework */,
 				F6C7406F2CC64B1E003E9293 /* ResourceKit.framework */,
 				F6C7406D2CC64B15003E9293 /* ResourceKit.framework */,
+				F6C7401D2CC62B07003E9293 /* ResourceKit.framework */,
+				F6C7401B2CC62A66003E9293 /* ResourceKit.framework */,
 				21D0B68260262D9431F91094 /* Pods_Haruhanjul.framework */,
 				F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */,
 				F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */,

@@ -21,6 +21,20 @@
                ReferencedContainer = "container:Haruhanjul.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F6C435CB2CAFAF8200E979EC"
+               BuildableName = "HaruhanjulWidgetExtension.appex"
+               BlueprintName = "HaruhanjulWidgetExtension"
+               ReferencedContainer = "container:Haruhanjul.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
