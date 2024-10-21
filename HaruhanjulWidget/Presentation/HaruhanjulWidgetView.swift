@@ -8,6 +8,8 @@
 import WidgetKit
 import SwiftUI
 
+import ResourceKit
+
 struct HaruhanjulWidgetView : View {
     var entry: AdviceEntry
 
@@ -30,7 +32,7 @@ struct HaruhanjulWidgetView : View {
     private func smallView(entry: AdviceEntry) -> some View {
         VStack {
             Text(entry.advice)
-                .foregroundStyle(Color(Colors.black.color))
+                .foregroundStyle(Color(Colors.blackHaru.color))
         }
     }
     
@@ -38,7 +40,7 @@ struct HaruhanjulWidgetView : View {
     private func mediumView(entry: AdviceEntry) -> some View {
         VStack {
             Text(entry.advice)
-                .foregroundStyle(Color(Colors.black.color))
+                .foregroundStyle(Color(Colors.blackHaru.color))
         }
     }
     
@@ -46,7 +48,7 @@ struct HaruhanjulWidgetView : View {
     private func largeView(entry: AdviceEntry) -> some View {
         VStack {
             Text(entry.advice)
-                .foregroundStyle(Color(Colors.background.color))
+                .foregroundStyle(Color(Colors.blackHaru.color))
         }
     }
 }
