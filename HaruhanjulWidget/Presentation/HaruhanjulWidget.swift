@@ -8,6 +8,8 @@
 import WidgetKit
 import SwiftUI
 
+import ResourceKit
+
 struct HaruhanjulWidget: Widget {
     let kind: String = "HaruhanjulWidget"
 

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "container:../ResourceKit/ResourceKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Haruhanjul.xcodeproj">
    </FileRef>
    <FileRef
