@@ -101,9 +101,4 @@ Podfile.lock
 
 
 
-# ResourceKit
-ResourceKit/ResourceKit/Derived/*
-!ResourceKit/ResourceKit/Derived/**/
-
-
 
