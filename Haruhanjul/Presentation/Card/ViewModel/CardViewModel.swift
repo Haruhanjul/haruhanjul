@@ -156,13 +156,24 @@ final class CardViewModel: ObservableObject {
     }
     
     // 카드 넘기기
-    func removeAdvice(at index: Int, context: NSManagedObjectContext) {
-        removedAdvices.append(advices.remove(at: index))
-        removedCount -= 1
-        lastIndex += 1
+    func removeAdvice(at index: Int) {
+        guard index < advices.count else { return }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
-            widgetUpdate(advice: advices[0].content, adviceKorean: advices[0].adviceKorean ?? "")
+        let context = PersistenceController.shared.container.viewContext
+        
+        Task {
+            await MainActor.run {
+                
+                removedAdvices.append(advices.remove(at: index))
+                removedCount -= 1
+                lastIndex += 1
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
+                    if !advices.isEmpty {
+                        widgetUpdate(advice: advices[0].content, adviceKorean: advices[0].adviceKorean ?? "")
+                    }
+                }
+            }
         }
         
         if advices.count < 5 {

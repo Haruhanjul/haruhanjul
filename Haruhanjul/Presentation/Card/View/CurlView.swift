@@ -34,15 +34,10 @@ struct CurlView: View {
                                     Text(advice.content)
                                 }
                                 .padding()
-                                VStack {
-                                    HStack {
-                                        
-                                    }
-                                }
                             }
                             .frame(height: 200)
                         } onDelete: {
-                            viewModel.removeAdvice(at: index, context: viewContext)
+                            viewModel.removeAdvice(at: index)
                         } setBack: {
                             viewModel.restoreAdvice(at: index)
                         }
