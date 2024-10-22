@@ -37,11 +37,12 @@
 		F6C435CE2CAFAF8200E979EC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */; };
 		F6C435D02CAFAF8200E979EC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */; };
 		F6C435DB2CAFAF8500E979EC /* HaruhanjulWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F6C7401C2CC62A66003E9293 /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7401B2CC62A66003E9293 /* ResourceKit.framework */; };
 		F6C7401E2CC62B07003E9293 /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7401D2CC62B07003E9293 /* ResourceKit.framework */; };
 		F6C740252CC62EDF003E9293 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C740242CC62EDF003E9293 /* Assets.xcassets */; };
 		F6C7406E2CC64B15003E9293 /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7406D2CC64B15003E9293 /* ResourceKit.framework */; };
 		F6C740702CC64B1E003E9293 /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7406F2CC64B1E003E9293 /* ResourceKit.framework */; };
+		F6C740792CC74414003E9293 /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7401B2CC62A66003E9293 /* ResourceKit.framework */; };
+		F6C7407A2CC74414003E9293 /* ResourceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7401B2CC62A66003E9293 /* ResourceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,17 @@
 				F6C435DB2CAFAF8500E979EC /* HaruhanjulWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6C7407B2CC74414003E9293 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F6C7407A2CC74414003E9293 /* ResourceKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -116,8 +128,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6C7401C2CC62A66003E9293 /* ResourceKit.framework in Frameworks */,
 				F6C7406E2CC64B15003E9293 /* ResourceKit.framework in Frameworks */,
+				F6C740792CC74414003E9293 /* ResourceKit.framework in Frameworks */,
 				F4B5CBE853C6CDA11F251550 /* Pods_Haruhanjul.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +151,6 @@
 		4967183B2BD2EC567B13B608 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F6C7401D2CC62B07003E9293 /* ResourceKit.framework */,
-				F6C7401B2CC62A66003E9293 /* ResourceKit.framework */,
 				F6C7406F2CC64B1E003E9293 /* ResourceKit.framework */,
 				F6C7406D2CC64B15003E9293 /* ResourceKit.framework */,
 				F6C7401D2CC62B07003E9293 /* ResourceKit.framework */,
@@ -293,7 +303,6 @@
 			isa = PBXGroup;
 			children = (
 				F6C740242CC62EDF003E9293 /* Assets.xcassets */,
-				F63FACF82CC0E42B009A5867 /* Assets.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -407,6 +416,7 @@
 				A50B9F306D715C1F49FEA3E3 /* [CP] Embed Pods Frameworks */,
 				6125F7BEE9ACF9377CDA8384 /* [CP] Copy Pods Resources */,
 				F6C435E02CAFAF8500E979EC /* Embed Foundation Extensions */,
+				F6C7407B2CC74414003E9293 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
