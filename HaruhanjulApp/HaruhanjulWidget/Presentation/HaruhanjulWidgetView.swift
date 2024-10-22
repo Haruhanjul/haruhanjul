@@ -33,6 +33,7 @@ struct HaruhanjulWidgetView : View {
         VStack {
             Text(entry.advice)
                 .foregroundStyle(Color(Colors.blackText.color))
+                .font(.body)
         }
     }
     
@@ -51,4 +52,13 @@ struct HaruhanjulWidgetView : View {
                 .foregroundStyle(Color(Colors.blackText.color))
         }
     }
+}
+
+
+@available(iOS 17.0, *)
+#Preview(as: .systemSmall) {
+    HaruhanjulWidget()
+} timeline: {
+    AdviceEntry(date: .now, advice: "새로운 하루 한줄을 만나보세요.")
+    AdviceEntry(date: .now, advice: "🤩")
 }

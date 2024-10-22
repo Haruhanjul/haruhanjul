@@ -15,18 +15,20 @@ struct HaruhanjulWidget: Widget {
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            if #available(iOS 17.0, *) {
-                HaruhanjulWidgetView(entry: entry)
-                    .containerBackground(.fill.tertiary, for: .widget)
-                    .background(Color(Colors.background.color))
-            } else {
-                HaruhanjulWidgetView(entry: entry)
-                    .padding()
-                    .background(Color(Colors.background.color))
+            ZStack {
+                Color(Colors.background.color)
+                    .ignoresSafeArea()
+                if #available(iOS 17.0, *) {
+                    HaruhanjulWidgetView(entry: entry)
+                        .containerBackground(.fill.tertiary, for: .widget)
+                } else {
+                    HaruhanjulWidgetView(entry: entry)
+                }
             }
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("하루한줄")
+        .description("하루에 새로운 한 줄, 내일을 바꾸는 시작!")
+        .contentMarginsDisabled()
     }
 }
 
