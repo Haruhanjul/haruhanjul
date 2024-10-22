@@ -111,7 +111,3 @@ struct PeelEffect<Content: View>: View {
             }
     }
 }
-
-#Preview {
-    CurlView()
-}
