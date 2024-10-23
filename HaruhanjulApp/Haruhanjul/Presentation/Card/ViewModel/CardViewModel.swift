@@ -9,6 +9,7 @@ import Foundation
 import MLKitTranslate
 import CoreData
 import WidgetKit
+import SwiftUI
 
 final class CardViewModel: ObservableObject {
     @Published var advices: [AdviceEntity] = []
@@ -158,9 +159,9 @@ final class CardViewModel: ObservableObject {
     // 카드 넘기기
     func removeAdvice(at index: Int) {
         guard index < advices.count else { return }
-        
-        let context = PersistenceController.shared.container.viewContext
-        
+        withAnimation {
+            dragProgresses[index] = 0
+        }
         Task {
             await MainActor.run {
                 
@@ -177,6 +178,7 @@ final class CardViewModel: ObservableObject {
         }
         
         if advices.count < 5 {
+            let context = PersistenceController.shared.container.viewContext
             fetchAdvice(count: 5, context: context)
         }
     }
