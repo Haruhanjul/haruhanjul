@@ -84,7 +84,7 @@ struct PeelEffect<Content: View>: View {
                                             
                                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                                                 onDelete()
-                                                dragProgress = .zero
+//                                                dragProgress = .zero
                                             }
                                         } else {
                                             dragProgress = .zero
