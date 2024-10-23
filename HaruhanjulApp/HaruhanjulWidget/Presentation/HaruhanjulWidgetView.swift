@@ -12,9 +12,9 @@ import ResourceKit
 
 struct HaruhanjulWidgetView : View {
     var entry: AdviceEntry
+    @Environment(\.widgetFamily) var widgetFamily
 
     var body: some View {
-        @Environment(\.widgetFamily) var widgetFamily
 
         switch widgetFamily {
         case .systemSmall:

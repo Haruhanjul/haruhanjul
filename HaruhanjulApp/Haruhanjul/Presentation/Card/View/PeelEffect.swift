@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ResourceKit
 
 struct PeelEffect<Content: View>: View {
     var content: Content
@@ -22,12 +23,12 @@ struct PeelEffect<Content: View>: View {
     
     var body: some View {
         content
-            .clipShape(.rect(cornerRadius: 16))
+            .clipShape(.rect)
             .mask {
                 GeometryReader {
                     let rect = $0.frame(in: .global)
                     
-                    RoundedRectangle(cornerRadius: 16)
+                    Rectangle()
                         .padding(.trailing, dragProgress * rect.width)
                 }
             }
@@ -37,12 +38,17 @@ struct PeelEffect<Content: View>: View {
                     let minOpacity = dragProgress / 0.05
                     let opacity = min(1, minOpacity)
                     
-                    content
+//                    content
+                    
+                    Image(uiImage: Images.advidePage.image)
+                        .resizable()
+                        .scaledToFit()
+                        .padding(.horizontal, 10)
                     //                      RoundedRectangle(cornerRadius: 16)
                     //                        .foregroundStyle(.white.opacity(0.9))
                         .shadow(color: .black.opacity(dragProgress != 0 ? 0.1 : 0), radius: 5, x: 15, y: 0)
                         .overlay {
-                            RoundedRectangle(cornerRadius: 16)
+                            Rectangle()
                                 .fill(.white.opacity(0.25))
                                 .mask(content)
                         }
@@ -59,7 +65,7 @@ struct PeelEffect<Content: View>: View {
                         .offset(x: size.width - (size.width * dragProgress))
                         .offset(x: size.width * -dragProgress)
                         .mask {
-                            RoundedRectangle(cornerRadius: 16)
+                            RoundedRectangle(cornerRadius: 4)
                                 .offset(x: size.width * -dragProgress)
                         }
                         .contentShape(.rect(cornerRadius: 16))

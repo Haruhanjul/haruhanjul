@@ -25,7 +25,7 @@ enum AdviceDefaults {
 struct UserDefault<T> {
     let key: String
     let defaultValue: T
-    let groupName: String? = "group.daehaa.Haruhanjul"
+    let groupName: String? = "group.com.daehaa.Haruhanjul"
 
     var wrappedValue: T {
         get {
