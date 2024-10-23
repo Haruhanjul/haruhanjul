@@ -188,7 +188,6 @@ final class CardViewModel: ObservableObject {
             advices.insert(removedAdvices.removeLast(), at: 0)
             removedCount += 1
             lastIndex -= 1
-            widgetUpdate(advice: advices[0].content, adviceKorean: advices[0].adviceKorean ?? "")
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
                 widgetUpdate(advice: advices[0].content, adviceKorean: advices[0].adviceKorean ?? "")

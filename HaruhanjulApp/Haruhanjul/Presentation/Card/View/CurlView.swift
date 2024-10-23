@@ -7,6 +7,7 @@
 
 import SwiftUI
 import WidgetKit
+import ResourceKit
 
 struct CurlView: View {
     @Environment(\.scenePhase) private var scenePhase
@@ -16,38 +17,49 @@ struct CurlView: View {
     var body: some View {
         ZStack {
             if viewModel.isLoading {
-                RoundedRectangle(cornerRadius: 16)
-                    .foregroundStyle(.yellow)
-                    .frame(height: 200)
-                    .padding()
+                Image(uiImage: Images.advidePage.image)
+                    .resizable()
+                    .scaledToFit()
+                    .padding(.horizontal, 10)
                 ProgressView()
             } else {
                 ForEach(Array(viewModel.advices.enumerated()), id: \.element.id) { index, advice in
-                    VStack {
+                    VStack(spacing: 0) {
+                        HStack {
+                            Spacer()
+                            Button {
+                                viewModel.toggleBookmark(id: advice.id, at: index, advice: advice, context: viewContext)
+                            } label: {
+                                Image(systemName: viewModel.advices[index].isBookmarked ? "bookmark.fill" : "bookmark")
+                                    .font(.system(size: 30))
+                                    .foregroundStyle(index == 0 ? .yellow : .clear)
+                                    .scaleEffect(y: -1)
+                                    .mask {
+                                        Rectangle()
+                                            .frame(width: 20, height: 28)
+                                            .offset(y: -2)
+                                    }
+                                    .offset(y: 6)
+                            }
+                            .padding(.trailing, 30)
+                        }
                         PeelEffect(dragProgress: $viewModel.dragProgresses[index]) {
                             ZStack {
-                                RoundedRectangle(cornerRadius: 16)
-                                    .foregroundStyle(.yellow)
+                                Image(uiImage: Images.advidePage.image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .padding(.horizontal, 10)
                                 
-                                VStack(alignment: .center, spacing: 16) {
-                                    Text(advice.adviceKorean ?? "")
+                                VStack(alignment: .leading, spacing: 16) {
                                     Text(advice.content)
+                                    Text(advice.adviceKorean ?? "")
                                 }
-                                .padding()
+                                .padding(.horizontal, 30)
                             }
-                            .frame(height: 200)
                         } onDelete: {
                             viewModel.removeAdvice(at: index)
                         } setBack: {
                             viewModel.restoreAdvice(at: index)
-                        }
-                        Button {
-                            viewModel.toggleBookmark(id: advice.id, at: index, advice: advice, context: viewContext)
-                        } label: {
-                            Image(systemName: viewModel.advices[index].isBookmarked ? "star.fill" : "star")
-                                .resizable()
-                                .foregroundStyle(index == 0 ? .brown : .clear)
-                                .frame(width: 25, height: 25)
                         }
                         .contentShape(Rectangle())
                         .allowsHitTesting(true)
