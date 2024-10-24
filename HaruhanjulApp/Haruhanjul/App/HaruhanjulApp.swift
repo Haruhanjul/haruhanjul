@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let today = calendar.startOfDay(for: currentDate)
 
         let nextDay = calendar.date(byAdding: .day, value: 1, to: today)!
-        let scheduleTime = calendar.date(bySettingHour: 0, minute: 0, second: 0, of: today)!
+        let scheduleTime = calendar.date(bySettingHour: 0, minute: 0, second: 0, of: nextDay)!
 
         request.earliestBeginDate = scheduleTime
 
