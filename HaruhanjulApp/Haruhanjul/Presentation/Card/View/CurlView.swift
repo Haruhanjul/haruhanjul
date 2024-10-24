@@ -12,7 +12,7 @@ import ResourceKit
 struct CurlView: View {
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.managedObjectContext) private var viewContext
-    @EnvironmentObject private var viewModel: CardViewModel
+    @StateObject private var viewModel = CardViewModel.shared
     
     var body: some View {
         ZStack {
@@ -95,5 +95,5 @@ struct CurlView: View {
 
 #Preview {
     CurlView()
-        .environmentObject(CardViewModel())
+//        .environmentObject(CardViewModel())
 }

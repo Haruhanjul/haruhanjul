@@ -12,6 +12,9 @@ import WidgetKit
 import SwiftUI
 
 final class CardViewModel: ObservableObject {
+    
+    static let shared = CardViewModel()
+    
     @Published var advices: [AdviceEntity] = []
     @Published var isLoading: Bool = true
     @Published var dragProgresses: [CGFloat] = []
@@ -159,11 +162,11 @@ final class CardViewModel: ObservableObject {
     // 카드 넘기기
     func removeAdvice(at index: Int) {
         guard index < advices.count else { return }
-        withAnimation {
-            dragProgresses[index] = 0
-        }
         Task {
             await MainActor.run {
+                withAnimation {
+                    dragProgresses[index] = 0
+                }
                 
                 removedAdvices.append(advices.remove(at: index))
                 removedCount -= 1
