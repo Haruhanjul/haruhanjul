@@ -18,10 +18,11 @@ struct CurlView: View {
     var body: some View {
         ZStack {
             if viewModel.isLoading {
-                Image(uiImage: Images.advidePage.image)
+                Image(uiImage: Images.advicePage.image)
                     .resizable()
                     .scaledToFit()
-                    .padding(.horizontal, 10)
+                    .padding(.horizontal, 20)
+                    .padding(.top, 36)
                 ProgressView()
             } else {
                 ForEach(Array(viewModel.advices.enumerated()), id: \.element.id) { index, advice in
@@ -29,7 +30,8 @@ struct CurlView: View {
                         HStack {
                             Spacer()
                             Button {
-                                viewModel.toggleBookmark(id: advice.id, at: index, advice: advice, context: viewContext)
+                                viewModel.advices[index].isBookmarked.toggle()
+                                viewModel.toggleBookmark(id: advice.id, isBookmarked: viewModel.advices[index].isBookmarked, context: viewContext)
                             } label: {
                                 Image(systemName: viewModel.advices[index].isBookmarked ? "bookmark.fill" : "bookmark")
                                     .font(.system(size: 30))
@@ -44,23 +46,9 @@ struct CurlView: View {
                             }
                             .padding(.trailing, 30)
                         }
+                        
                         PeelEffect(dragProgress: $viewModel.dragProgresses[index]) {
-                            ZStack {
-                                Image(uiImage: Images.advidePage.image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .padding(.horizontal, 10)
-                                
-                                VStack(alignment: .leading, spacing: 16) {
-                                    Text(advice.content)
-                                        .font(Fonts.Diphylleia.regular.swiftUIFont(size: 20))
-                                        .multilineTextAlignment(.center)
-                                    Text(advice.adviceKorean ?? "")
-                                        .font(Fonts.Diphylleia.regular.swiftUIFont(size: 16))
-                                        .multilineTextAlignment(.center)
-                                }
-                                .padding(.horizontal, 50)
-                            }
+                            AdvicePage(imageName: Images.advicePage.image, advice: advice)
                         } onDelete: {
                             viewModel.removeAdvice(at: index)
                         } setBack: {
@@ -71,7 +59,6 @@ struct CurlView: View {
                     }
                     .zIndex(zIndex(index))
                 }
-                .padding()
             }
         }
         .onAppear {

@@ -7,40 +7,64 @@
 
 import SwiftUI
 import CoreData
+import ResourceKit
 
 struct BookmarkView: View {
+    @State var toggleTitleLanguage: Bool = false
     @State var advices: [AdviceEntity] = []
     @Environment(\.managedObjectContext) private var viewContext
+    let columns = [GridItem(.flexible()), GridItem(.flexible())]
+
     var body: some View {
         ScrollView {
-            VStack {
+            LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
                 ForEach(advices, id: \.id) { advice in
-                    RoundedRectangle(cornerRadius: 16)
-                        .frame(height: 200)
-                        .foregroundStyle(.gray.opacity(0.3))
-                        .overlay {
-                            VStack(alignment: .leading) {
-                                Text(advice.adviceKorean ?? "")
-                                Text(advice.content)
+                    NavigationLink {
+                        BookmarkDetailView(advice: advice)
+                    } label: {
+                        Image(uiImage: Images.advicePage.image)
+                            .resizable()
+                            .scaledToFit()
+                            .padding(.horizontal, 10)
+                            .overlay {
+                                VStack(alignment: .leading) {
+                                    Text(toggleTitleLanguage ? advice.content : advice.adviceKorean ?? advice.content)
+                                        .font(.system(size: 16))
+                                        .foregroundStyle(.black)
+                                        .lineLimit(8)
+                                        .padding(30)
+                                }
                             }
-                        }
-                        .padding(5)
+                    }
                 }
             }
+            .padding()
         }
         .onAppear {
             Task {
                 advices = await loadAdviceEntities(context: viewContext)
             }
         }
+        .toolbar {
+            ToolbarItem {
+                Button {
+                    toggleTitleLanguage.toggle()
+                } label: {
+                    Text("한/영")
+                        .foregroundStyle(.black)
+                }
+            }
+        }
     }
     
     // 임시
     func loadAdviceEntities(context: NSManagedObjectContext) async -> [AdviceEntity] {
-        let fetchRequest: NSFetchRequest<CDBookmark> = CDBookmark.fetchRequest()
+        let fetchRequest: NSFetchRequest<CDAdviceEntity> = CDAdviceEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "isBookmarked == %d", true)
+
         do {
             let cdAdviceEntities = try context.fetch(fetchRequest)
-            return cdAdviceEntities.map { $0.toAdviceEntity().0 }
+            return cdAdviceEntities.map { $0.toAdviceEntity() }
         } catch {
             print("데이터 로드 실패: \(error)")
             return []
