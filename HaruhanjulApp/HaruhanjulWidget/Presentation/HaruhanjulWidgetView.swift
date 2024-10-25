@@ -11,11 +11,11 @@ import SwiftUI
 import ResourceKit
 
 struct HaruhanjulWidgetView : View {
-    var entry: AdviceEntry
     @Environment(\.widgetFamily) var widgetFamily
-
+    
+    var entry: AdviceEntry
+    
     var body: some View {
-
         switch widgetFamily {
         case .systemSmall:
             smallView(entry: entry)
@@ -32,8 +32,9 @@ struct HaruhanjulWidgetView : View {
     private func smallView(entry: AdviceEntry) -> some View {
         VStack {
             Text(entry.advice)
+                .font(Fonts.Diphylleia.regular.swiftUIFont(size: 16))
                 .foregroundStyle(Color(Colors.blackText.color))
-                .font(.body)
+                .multilineTextAlignment(.leading)
         }
     }
     
@@ -41,7 +42,10 @@ struct HaruhanjulWidgetView : View {
     private func mediumView(entry: AdviceEntry) -> some View {
         VStack {
             Text(entry.advice)
+                .font(Fonts.Diphylleia.regular.swiftUIFont(size: 18))
                 .foregroundStyle(Color(Colors.blackText.color))
+                .multilineTextAlignment(.center)
+                .lineLimit(2)
         }
     }
     
@@ -49,16 +53,9 @@ struct HaruhanjulWidgetView : View {
     private func largeView(entry: AdviceEntry) -> some View {
         VStack {
             Text(entry.advice)
+                .font(Fonts.Diphylleia.regular.swiftUIFont(size: 22))
                 .foregroundStyle(Color(Colors.blackText.color))
+                .multilineTextAlignment(.center)
         }
     }
-}
-
-
-@available(iOS 17.0, *)
-#Preview(as: .systemSmall) {
-    HaruhanjulWidget()
-} timeline: {
-    AdviceEntry(date: .now, advice: "새로운 하루 한줄을 만나보세요.")
-    AdviceEntry(date: .now, advice: "🤩")
 }

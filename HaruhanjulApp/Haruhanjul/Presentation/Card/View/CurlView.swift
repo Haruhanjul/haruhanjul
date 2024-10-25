@@ -7,6 +7,7 @@
 
 import SwiftUI
 import WidgetKit
+
 import ResourceKit
 
 struct CurlView: View {
