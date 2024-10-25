@@ -8,7 +8,7 @@
       location = "group:../ResourceKit/ResourceKit.xcodeproj">
    </FileRef>
    <FileRef
-      location = "absolute:/Users/hanle/Xcode/Test/Haruhanjul/NetworkKit/NetworkKit.xcodeproj">
+      location = "group:../../Haruhanjul/NetworkKit/NetworkKit.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
