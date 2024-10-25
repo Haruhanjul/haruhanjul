@@ -7,6 +7,7 @@
 
 import SwiftUI
 import WidgetKit
+
 import ResourceKit
 
 struct CurlView: View {
@@ -52,9 +53,13 @@ struct CurlView: View {
                                 
                                 VStack(alignment: .leading, spacing: 16) {
                                     Text(advice.content)
+                                        .font(Fonts.Diphylleia.regular.swiftUIFont(size: 20))
+                                        .multilineTextAlignment(.center)
                                     Text(advice.adviceKorean ?? "")
+                                        .font(Fonts.Diphylleia.regular.swiftUIFont(size: 16))
+                                        .multilineTextAlignment(.center)
                                 }
-                                .padding(.horizontal, 30)
+                                .padding(.horizontal, 50)
                             }
                         } onDelete: {
                             viewModel.removeAdvice(at: index)

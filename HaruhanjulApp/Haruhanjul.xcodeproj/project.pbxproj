@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F4B5CBE853C6CDA11F251550 /* Pods_Haruhanjul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D0B68260262D9431F91094 /* Pods_Haruhanjul.framework */; };
+		F6149A752CC8841A0028F2D4 /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7401D2CC62B07003E9293 /* ResourceKit.framework */; };
+		F6149A762CC8841B0028F2D4 /* ResourceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7401D2CC62B07003E9293 /* ResourceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F63FACFF2CC0E42B009A5867 /* HaruhanjulApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACDC2CC0E42B009A5867 /* HaruhanjulApp.swift */; };
 		F63FAD002CC0E42B009A5867 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACDD2CC0E42B009A5867 /* MainTabView.swift */; };
 		F63FAD012CC0E42B009A5867 /* CDAdviceEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACDF2CC0E42B009A5867 /* CDAdviceEntity+CoreDataClass.swift */; };
@@ -37,7 +39,6 @@
 		F6C435CE2CAFAF8200E979EC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */; };
 		F6C435D02CAFAF8200E979EC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */; };
 		F6C435DB2CAFAF8500E979EC /* HaruhanjulWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F6C7401E2CC62B07003E9293 /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7401D2CC62B07003E9293 /* ResourceKit.framework */; };
 		F6C740252CC62EDF003E9293 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C740242CC62EDF003E9293 /* Assets.xcassets */; };
 		F6C7406E2CC64B15003E9293 /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7406D2CC64B15003E9293 /* ResourceKit.framework */; };
 		F6C740702CC64B1E003E9293 /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7406F2CC64B1E003E9293 /* ResourceKit.framework */; };
@@ -56,6 +57,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		F6149A772CC8841B0028F2D4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F6149A762CC8841B0028F2D4 /* ResourceKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F6C435E02CAFAF8500E979EC /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,8 +151,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6C7401E2CC62B07003E9293 /* ResourceKit.framework in Frameworks */,
 				F6C740702CC64B1E003E9293 /* ResourceKit.framework in Frameworks */,
+				F6149A752CC8841A0028F2D4 /* ResourceKit.framework in Frameworks */,
 				F6C435D02CAFAF8200E979EC /* SwiftUI.framework in Frameworks */,
 				F6C435CE2CAFAF8200E979EC /* WidgetKit.framework in Frameworks */,
 			);
@@ -322,12 +334,12 @@
 				F6C73F5B2CC20067003E9293 /* Config */,
 				F63FACDE2CC0E42B009A5867 /* App */,
 				F63FACE42CC0E42B009A5867 /* CoreData */,
+				F63FACFB2CC0E42B009A5867 /* Utils */,
 				F63FACE62CC0E42B009A5867 /* Data */,
 				F63FACEB2CC0E42B009A5867 /* Domain */,
 				F63FACF52CC0E42B009A5867 /* Presentation */,
 				F63FACF72CC0E42B009A5867 /* Preview Content */,
 				F63FACF92CC0E42B009A5867 /* Resource */,
-				F63FACFB2CC0E42B009A5867 /* Utils */,
 			);
 			path = Haruhanjul;
 			sourceTree = "<group>";
@@ -437,6 +449,7 @@
 				F6C435C82CAFAF8200E979EC /* Sources */,
 				F6C435C92CAFAF8200E979EC /* Frameworks */,
 				F6C435CA2CAFAF8200E979EC /* Resources */,
+				F6149A772CC8841B0028F2D4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

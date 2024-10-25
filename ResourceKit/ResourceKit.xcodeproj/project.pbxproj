@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F632C2462CC77149003EADEB /* Diphylleia-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F632C2452CC77149003EADEB /* Diphylleia-Regular.ttf */; };
+		F632C24A2CC77913003EADEB /* Fonts+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F632C2492CC77913003EADEB /* Fonts+Generated.swift */; };
 		F6C740652CC64A15003E9293 /* ResourceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F6C740632CC64A15003E9293 /* ResourceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6C740692CC64A53003E9293 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C740682CC64A53003E9293 /* Colors.xcassets */; };
 		F6C7406B2CC64A5B003E9293 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C7406A2CC64A5B003E9293 /* Images.xcassets */; };
@@ -15,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F632C2452CC77149003EADEB /* Diphylleia-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Diphylleia-Regular.ttf"; sourceTree = "<group>"; };
+		F632C2472CC774D9003EADEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F632C2492CC77913003EADEB /* Fonts+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+Generated.swift"; sourceTree = "<group>"; };
 		F6C740582CC64A0F003E9293 /* ResourceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ResourceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C740632CC64A15003E9293 /* ResourceKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResourceKit.h; sourceTree = "<group>"; };
 		F6C740682CC64A53003E9293 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -34,6 +39,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F632C2442CC77107003EADEB /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F632C2452CC77149003EADEB /* Diphylleia-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		F632C2482CC77539003EADEB /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F632C2472CC774D9003EADEB /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		F6C7404E2CC64A0F003E9293 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +74,7 @@
 		F6C740642CC64A15003E9293 /* ResourceKit */ = {
 			isa = PBXGroup;
 			children = (
+				F632C2482CC77539003EADEB /* Config */,
 				F6C740662CC64A18003E9293 /* Derived */,
 				F6C740672CC64A21003E9293 /* Resource */,
 				F6C740632CC64A15003E9293 /* ResourceKit.h */,
@@ -63,6 +85,7 @@
 		F6C740662CC64A18003E9293 /* Derived */ = {
 			isa = PBXGroup;
 			children = (
+				F632C2492CC77913003EADEB /* Fonts+Generated.swift */,
 				F6C740752CC64B6C003E9293 /* Colors+Generated.swift */,
 				F6C740762CC64B6C003E9293 /* Images+Generated.swift */,
 			);
@@ -72,6 +95,7 @@
 		F6C740672CC64A21003E9293 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F632C2442CC77107003EADEB /* fonts */,
 				F6C740682CC64A53003E9293 /* Colors.xcassets */,
 				F6C7406A2CC64A5B003E9293 /* Images.xcassets */,
 			);
@@ -153,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6C740692CC64A53003E9293 /* Colors.xcassets in Resources */,
+				F632C2462CC77149003EADEB /* Diphylleia-Regular.ttf in Resources */,
 				F6C7406B2CC64A5B003E9293 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,7 +187,6 @@
 /* Begin PBXShellScriptBuildPhase section */
 		F6C7406C2CC64A70003E9293 /* SwiftGen Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -186,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F632C24A2CC77913003EADEB /* Fonts+Generated.swift in Sources */,
 				F6C740772CC64B6C003E9293 /* Colors+Generated.swift in Sources */,
 				F6C740782CC64B6C003E9293 /* Images+Generated.swift in Sources */,
 			);
@@ -209,6 +234,7 @@
 				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ResourceKit/Config/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -253,6 +279,7 @@
 				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ResourceKit/Config/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

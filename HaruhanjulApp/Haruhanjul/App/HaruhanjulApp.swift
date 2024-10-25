@@ -8,6 +8,8 @@
 import SwiftUI
 import BackgroundTasks
 
+import ResourceKit
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -57,6 +59,10 @@ struct HaruhanjulApp: App {
     
     let adviceRefreshIdentifier = "com.daehaa.Haruhanjul.refresh"
     let persistenceController = PersistenceController.shared
+    
+    init() {
+        Fonts.registerAllCustomFonts()
+    }
 
     var body: some Scene {
         WindowGroup {
