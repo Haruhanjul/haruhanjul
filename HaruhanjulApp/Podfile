@@ -6,6 +6,7 @@ target 'Haruhanjul' do
 
   use_frameworks!
   pod 'GoogleMLKit/Translate', '3.2.0'
+
   # Pods for Haruhanjul
 
 end
