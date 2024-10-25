@@ -7,25 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61CB9F82CCB939E0080F657 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F61CB9F72CCB939E0080F657 /* Alamofire */; settings = {ATTRIBUTES = (Required, ); }; };
 		F6C93DDD2CCB7B6300E5F881 /* NetworkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F6C93DDB2CCB7B6300E5F881 /* NetworkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6C93DE72CCB7FAD00E5F881 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93DE62CCB7FAD00E5F881 /* Endpoint.swift */; };
 		F6C93E0D2CCB8FF500E5F881 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93E0C2CCB8FF400E5F881 /* Requestable.swift */; };
 		F6C93E0F2CCB900F00E5F881 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93E0E2CCB900B00E5F881 /* BaseURL.swift */; };
-		F6C93E122CCB905100E5F881 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F6C93E112CCB905100E5F881 /* Alamofire */; };
+		F6C93E152CCB91DF00E5F881 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93E142CCB91DC00E5F881 /* Network.swift */; };
+		F6C93E172CCB922C00E5F881 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93E162CCB922700E5F881 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F6C93DEE2CCB8E9B00E5F881 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F6C93DD02CCB7B5900E5F881 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +22,8 @@
 		F6C93DE62CCB7FAD00E5F881 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		F6C93E0C2CCB8FF400E5F881 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		F6C93E0E2CCB900B00E5F881 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		F6C93E142CCB91DC00E5F881 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		F6C93E162CCB922700E5F881 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6C93E122CCB905100E5F881 /* Alamofire in Frameworks */,
+				F61CB9F82CCB939E0080F657 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +58,7 @@
 		F6C93DDC2CCB7B6300E5F881 /* NetworkKit */ = {
 			isa = PBXGroup;
 			children = (
+				F6C93E132CCB91D400E5F881 /* Network */,
 				F6C93DE12CCB7C3A00E5F881 /* Endpoint */,
 				F6C93DDB2CCB7B6300E5F881 /* NetworkKit.h */,
 			);
@@ -88,6 +80,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6C93E132CCB91D400E5F881 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F6C93E162CCB922700E5F881 /* NetworkManager.swift */,
+				F6C93E142CCB91DC00E5F881 /* Network.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,7 +113,6 @@
 				F6C93DCC2CCB7B5900E5F881 /* Sources */,
 				F6C93DCD2CCB7B5900E5F881 /* Frameworks */,
 				F6C93DCE2CCB7B5900E5F881 /* Resources */,
-				F6C93DEE2CCB8E9B00E5F881 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,7 +120,7 @@
 			);
 			name = NetworkKit;
 			packageProductDependencies = (
-				F6C93E112CCB905100E5F881 /* Alamofire */,
+				F61CB9F72CCB939E0080F657 /* Alamofire */,
 			);
 			productName = NetworkKit;
 			productReference = F6C93DD02CCB7B5900E5F881 /* NetworkKit.framework */;
@@ -150,7 +150,7 @@
 			mainGroup = F6C93DC62CCB7B5900E5F881;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				F6C93E102CCB905100E5F881 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				F61CB9F62CCB939E0080F657 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F6C93DD12CCB7B5900E5F881 /* Products */;
@@ -179,6 +179,8 @@
 			files = (
 				F6C93DE72CCB7FAD00E5F881 /* Endpoint.swift in Sources */,
 				F6C93E0D2CCB8FF500E5F881 /* Requestable.swift in Sources */,
+				F6C93E172CCB922C00E5F881 /* NetworkManager.swift in Sources */,
+				F6C93E152CCB91DF00E5F881 /* Network.swift in Sources */,
 				F6C93E0F2CCB900F00E5F881 /* BaseURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -377,7 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -413,7 +415,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F6C93E102CCB905100E5F881 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		F61CB9F62CCB939E0080F657 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -424,9 +426,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F6C93E112CCB905100E5F881 /* Alamofire */ = {
+		F61CB9F72CCB939E0080F657 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F6C93E102CCB905100E5F881 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = F61CB9F62CCB939E0080F657 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
