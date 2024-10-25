@@ -19,18 +19,23 @@ struct BookmarkView: View {
         ScrollView {
             LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
                 ForEach(advices, id: \.id) { advice in
-                    Image(uiImage: Images.advicePage.image)
-                        .resizable()
-                        .scaledToFit()
-                        .padding(.horizontal, 10)
-                        .overlay {
-                            VStack(alignment: .leading) {
-                                Text(toggleTitleLanguage ? advice.content : advice.adviceKorean ?? advice.content)
-                                    .font(.system(size: 16))
-                                    .lineLimit(8)
-                                    .padding(30)
+                    NavigationLink {
+                        BookmarkDetailView(advice: advice)
+                    } label: {
+                        Image(uiImage: Images.advicePage.image)
+                            .resizable()
+                            .scaledToFit()
+                            .padding(.horizontal, 10)
+                            .overlay {
+                                VStack(alignment: .leading) {
+                                    Text(toggleTitleLanguage ? advice.content : advice.adviceKorean ?? advice.content)
+                                        .font(.system(size: 16))
+                                        .foregroundStyle(.black)
+                                        .lineLimit(8)
+                                        .padding(30)
+                                }
                             }
-                        }
+                    }
                 }
             }
             .padding()
@@ -54,10 +59,12 @@ struct BookmarkView: View {
     
     // 임시
     func loadAdviceEntities(context: NSManagedObjectContext) async -> [AdviceEntity] {
-        let fetchRequest: NSFetchRequest<CDBookmark> = CDBookmark.fetchRequest()
+        let fetchRequest: NSFetchRequest<CDAdviceEntity> = CDAdviceEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "isBookmarked == %d", true)
+
         do {
             let cdAdviceEntities = try context.fetch(fetchRequest)
-            return cdAdviceEntities.map { $0.toAdviceEntity().0 }
+            return cdAdviceEntities.map { $0.toAdviceEntity() }
         } catch {
             print("데이터 로드 실패: \(error)")
             return []

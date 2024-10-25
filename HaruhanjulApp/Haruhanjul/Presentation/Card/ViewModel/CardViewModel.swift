@@ -201,14 +201,7 @@ final class CardViewModel: ObservableObject {
     }
     
     // 북마크 토글
-    func toggleBookmark(id: Int, at index: Int, advice: AdviceEntity, context: NSManagedObjectContext) {
-        advices[index].isBookmarked.toggle()
-        updateAdviceStatus(for: id, to: advices[index].isBookmarked, context: context)
-        updateBookmark(adviceEntity: advice, context: context)
-    }
-
-    // 코어데이터 북마크 값 수정
-    func updateAdviceStatus(for id: Int, to isBookmarked: Bool, context: NSManagedObjectContext) {
+    func toggleBookmark(id: Int, isBookmarked: Bool, context: NSManagedObjectContext) {
         let fetchRequest: NSFetchRequest<CDAdviceEntity> = CDAdviceEntity.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "id == %d", id)
 
@@ -246,30 +239,6 @@ final class CardViewModel: ObservableObject {
             } catch {
                 print("CDAdviceEntity 데이터 저장 실패: \(error)")
             }
-    }
-    
-    // 북마크한 명언을 코어데이터에 저장
-    func updateBookmark(adviceEntity: AdviceEntity, context: NSManagedObjectContext) {
-        let duplicateRequest: NSFetchRequest<CDBookmark> = CDBookmark.fetchRequest()
-        duplicateRequest.predicate = NSPredicate(format: "id == %d", adviceEntity.id)
-
-        do {
-            let existingEntities = try context.fetch(duplicateRequest)
-
-            if existingEntities.isEmpty {
-                let cdBookmark = CDBookmark(context: context)
-                cdBookmark.update(from: adviceEntity, context: context)
-                
-                try context.save()
-            } else {
-                for entity in existingEntities {
-                    context.delete(entity)
-                }
-                try context.save()
-            }
-        } catch {
-            print("CDBookmark 데이터 업데이트 실패: \(error)")
-        }
     }
     
     // 명언 카드 리셋

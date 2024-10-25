@@ -29,7 +29,8 @@ struct CurlView: View {
                         HStack {
                             Spacer()
                             Button {
-                                viewModel.toggleBookmark(id: advice.id, at: index, advice: advice, context: viewContext)
+                                viewModel.advices[index].isBookmarked.toggle()
+                                viewModel.toggleBookmark(id: advice.id, isBookmarked: viewModel.advices[index].isBookmarked, context: viewContext)
                             } label: {
                                 Image(systemName: viewModel.advices[index].isBookmarked ? "bookmark.fill" : "bookmark")
                                     .font(.system(size: 30))
@@ -44,18 +45,9 @@ struct CurlView: View {
                             }
                             .padding(.trailing, 30)
                         }
+                        
                         PeelEffect(dragProgress: $viewModel.dragProgresses[index]) {
-                            Image(uiImage: Images.advicePage.image)
-                                .resizable()
-                                .scaledToFit()
-                                .overlay {
-                                    VStack(alignment: .leading, spacing: 16) {
-                                        Text(advice.content)
-                                        Text(advice.adviceKorean ?? "")
-                                    }
-                                    .padding(.horizontal, 30)
-                                }
-                                .padding(.horizontal, 20)
+                            AdvicePage(imageName: Images.advicePage.image, advice: advice)
                         } onDelete: {
                             viewModel.removeAdvice(at: index)
                         } setBack: {
