@@ -17,10 +17,11 @@ struct CurlView: View {
     var body: some View {
         ZStack {
             if viewModel.isLoading {
-                Image(uiImage: Images.advidePage.image)
+                Image(uiImage: Images.advicePage.image)
                     .resizable()
                     .scaledToFit()
-                    .padding(.horizontal, 10)
+                    .padding(.horizontal, 20)
+                    .padding(.top, 36)
                 ProgressView()
             } else {
                 ForEach(Array(viewModel.advices.enumerated()), id: \.element.id) { index, advice in
@@ -44,18 +45,17 @@ struct CurlView: View {
                             .padding(.trailing, 30)
                         }
                         PeelEffect(dragProgress: $viewModel.dragProgresses[index]) {
-                            ZStack {
-                                Image(uiImage: Images.advidePage.image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .padding(.horizontal, 10)
-                                
-                                VStack(alignment: .leading, spacing: 16) {
-                                    Text(advice.content)
-                                    Text(advice.adviceKorean ?? "")
+                            Image(uiImage: Images.advicePage.image)
+                                .resizable()
+                                .scaledToFit()
+                                .overlay {
+                                    VStack(alignment: .leading, spacing: 16) {
+                                        Text(advice.content)
+                                        Text(advice.adviceKorean ?? "")
+                                    }
+                                    .padding(.horizontal, 30)
                                 }
-                                .padding(.horizontal, 30)
-                            }
+                                .padding(.horizontal, 20)
                         } onDelete: {
                             viewModel.removeAdvice(at: index)
                         } setBack: {
@@ -66,7 +66,6 @@ struct CurlView: View {
                     }
                     .zIndex(zIndex(index))
                 }
-                .padding()
             }
         }
         .onAppear {

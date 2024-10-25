@@ -7,30 +7,47 @@
 
 import SwiftUI
 import CoreData
+import ResourceKit
 
 struct BookmarkView: View {
+    @State var toggleTitleLanguage: Bool = false
     @State var advices: [AdviceEntity] = []
     @Environment(\.managedObjectContext) private var viewContext
+    let columns = [GridItem(.flexible()), GridItem(.flexible())]
+
     var body: some View {
         ScrollView {
-            VStack {
+            LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
                 ForEach(advices, id: \.id) { advice in
-                    RoundedRectangle(cornerRadius: 16)
-                        .frame(height: 200)
-                        .foregroundStyle(.gray.opacity(0.3))
+                    Image(uiImage: Images.advicePage.image)
+                        .resizable()
+                        .scaledToFit()
+                        .padding(.horizontal, 10)
                         .overlay {
                             VStack(alignment: .leading) {
-                                Text(advice.adviceKorean ?? "")
-                                Text(advice.content)
+                                Text(toggleTitleLanguage ? advice.content : advice.adviceKorean ?? advice.content)
+                                    .font(.system(size: 16))
+                                    .lineLimit(8)
+                                    .padding(30)
                             }
                         }
-                        .padding(5)
                 }
             }
+            .padding()
         }
         .onAppear {
             Task {
                 advices = await loadAdviceEntities(context: viewContext)
+            }
+        }
+        .toolbar {
+            ToolbarItem {
+                Button {
+                    toggleTitleLanguage.toggle()
+                } label: {
+                    Text("한/영")
+                        .foregroundStyle(.black)
+                }
             }
         }
     }
