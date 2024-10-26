@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC6D6C652CCC6FD800BC0028 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6D6C642CCC6FD800BC0028 /* SettingView.swift */; };
+		BC6D6C682CCC712A00BC0028 /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6D6C672CCC712A00BC0028 /* BookmarkViewModel.swift */; };
 		BCE5718C2CCBEA96002EC931 /* BookmarkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5718B2CCBEA96002EC931 /* BookmarkDetailView.swift */; };
 		BCE5718E2CCBF504002EC931 /* AdvicePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5718D2CCBF504002EC931 /* AdvicePage.swift */; };
 		F4B5CBE853C6CDA11F251550 /* Pods_Haruhanjul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D0B68260262D9431F91094 /* Pods_Haruhanjul.framework */; };
@@ -95,6 +97,8 @@
 /* Begin PBXFileReference section */
 		21D0B68260262D9431F91094 /* Pods_Haruhanjul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Haruhanjul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CFCCF3043728EA949D5199 /* Pods-Haruhanjul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haruhanjul.release.xcconfig"; path = "Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul.release.xcconfig"; sourceTree = "<group>"; };
+		BC6D6C642CCC6FD800BC0028 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		BC6D6C672CCC712A00BC0028 /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
 		BC74156C2CC770C800C38000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC90C4132CAF99B200292310 /* Haruhanjul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haruhanjul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA6F6902CB0047D009468FF /* HaruhanjulWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = HaruhanjulWidgetExtension.entitlements; path = HaruhanjulWidget/Config/HaruhanjulWidgetExtension.entitlements; sourceTree = SOURCE_ROOT; };
@@ -173,6 +177,30 @@
 				F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC6D6C622CCC6FB800BC0028 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				BC6D6C632CCC6FC900BC0028 /* View */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		BC6D6C632CCC6FC900BC0028 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC6D6C642CCC6FD800BC0028 /* SettingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC6D6C662CCC711B00BC0028 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BC6D6C672CCC712A00BC0028 /* BookmarkViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BC90C40A2CAF99B200292310 = {
@@ -264,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				F63FACED2CC0E42B009A5867 /* View */,
+				BC6D6C662CCC711B00BC0028 /* ViewModel */,
 			);
 			path = Bookmark;
 			sourceTree = "<group>";
@@ -298,8 +327,9 @@
 		F63FACF52CC0E42B009A5867 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				F63FACEE2CC0E42B009A5867 /* Bookmark */,
 				F63FACF42CC0E42B009A5867 /* Card */,
+				F63FACEE2CC0E42B009A5867 /* Bookmark */,
+				BC6D6C622CCC6FB800BC0028 /* Setting */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -585,8 +615,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F63FACFF2CC0E42B009A5867 /* HaruhanjulApp.swift in Sources */,
+				BC6D6C682CCC712A00BC0028 /* BookmarkViewModel.swift in Sources */,
 				F63FAD4B2CC0E747009A5867 /* LaunchScreen.swift in Sources */,
 				F63FAD002CC0E42B009A5867 /* MainTabView.swift in Sources */,
+				BC6D6C652CCC6FD800BC0028 /* SettingView.swift in Sources */,
 				F63FAD012CC0E42B009A5867 /* CDAdviceEntity+CoreDataClass.swift in Sources */,
 				F63FAD022CC0E42B009A5867 /* CDAdviceEntity+CoreDataProperties.swift in Sources */,
 				F63FAD052CC0E42B009A5867 /* Haruhanjul.xcdatamodeld in Sources */,

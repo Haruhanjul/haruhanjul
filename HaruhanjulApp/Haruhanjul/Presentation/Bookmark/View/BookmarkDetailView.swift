@@ -23,7 +23,7 @@ struct BookmarkDetailView: View {
                 } label: {
                     Image(systemName: advice.isBookmarked ? "bookmark.fill" : "bookmark")
                         .font(.system(size: 30))
-                        .foregroundStyle(.yellow)
+                        .foregroundStyle(.brown.opacity(0.8))
                         .scaleEffect(y: -1)
                         .mask {
                             Rectangle()
@@ -32,7 +32,7 @@ struct BookmarkDetailView: View {
                         }
                         .offset(y: 6)
                 }
-                .padding(.trailing, 30)
+                .padding(.trailing, 40)
             }
             
             AdvicePage(imageName: Images.advicePage.image, advice: advice)

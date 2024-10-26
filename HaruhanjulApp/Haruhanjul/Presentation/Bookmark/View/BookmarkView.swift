@@ -11,38 +11,42 @@ import ResourceKit
 
 struct BookmarkView: View {
     @State var toggleTitleLanguage: Bool = false
-    @State var advices: [AdviceEntity] = []
+    @StateObject var bookmarkViewModel: BookmarkViewModel = BookmarkViewModel()
     @Environment(\.managedObjectContext) private var viewContext
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
 
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
-                ForEach(advices, id: \.id) { advice in
-                    NavigationLink {
-                        BookmarkDetailView(advice: advice)
-                    } label: {
-                        Image(uiImage: Images.advicePage.image)
-                            .resizable()
-                            .scaledToFit()
-                            .padding(.horizontal, 10)
-                            .overlay {
-                                VStack(alignment: .leading) {
-                                    Text(toggleTitleLanguage ? advice.content : advice.adviceKorean ?? advice.content)
-                                        .font(.system(size: 16))
-                                        .foregroundStyle(.black)
-                                        .lineLimit(8)
-                                        .padding(30)
+            if bookmarkViewModel.bookmarks.isEmpty {
+                Text("즐겨찾기가 없습니다.")
+            } else {
+                LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
+                    ForEach(bookmarkViewModel.bookmarks, id: \.id) { advice in
+                        NavigationLink {
+                            BookmarkDetailView(advice: advice)
+                        } label: {
+                            Image(uiImage: Images.advicePage.image)
+                                .resizable()
+                                .scaledToFit()
+                                .padding(.horizontal, 10)
+                                .overlay {
+                                    VStack(alignment: .leading) {
+                                        Text(toggleTitleLanguage ? advice.content : advice.adviceKorean ?? advice.content)
+                                            .font(Fonts.Diphylleia.regular.swiftUIFont(size: 16))
+                                            .foregroundStyle(.black)
+                                            .lineLimit(8)
+                                            .padding(30)
+                                    }
                                 }
-                            }
+                        }
                     }
                 }
+                .padding()
             }
-            .padding()
         }
         .onAppear {
             Task {
-                advices = await loadAdviceEntities(context: viewContext)
+                await bookmarkViewModel.loadAdviceEntities(context: viewContext)
             }
         }
         .toolbar {
@@ -54,20 +58,6 @@ struct BookmarkView: View {
                         .foregroundStyle(.black)
                 }
             }
-        }
-    }
-    
-    // 임시
-    func loadAdviceEntities(context: NSManagedObjectContext) async -> [AdviceEntity] {
-        let fetchRequest: NSFetchRequest<CDAdviceEntity> = CDAdviceEntity.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "isBookmarked == %d", true)
-
-        do {
-            let cdAdviceEntities = try context.fetch(fetchRequest)
-            return cdAdviceEntities.map { $0.toAdviceEntity() }
-        } catch {
-            print("데이터 로드 실패: \(error)")
-            return []
         }
     }
 }
