@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ResourceKit
 
 struct AdvicePage: View {
     let imageName: UIImage
@@ -20,6 +21,7 @@ struct AdvicePage: View {
                     Text(advice.adviceKorean ?? "")
                 }
                 .padding(.horizontal, 30)
+                .font(Fonts.Diphylleia.regular.swiftUIFont(size: 16))
             }
             .padding(.horizontal, 20)
     }
