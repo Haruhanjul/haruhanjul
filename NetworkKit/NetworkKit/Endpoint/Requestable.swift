@@ -23,3 +23,15 @@ protocol Requestable {
     var encoding: ParameterEncoding { get }
     
 }
+
+extension Requestable {
+    
+    var encoding: ParameterEncoding {
+        switch method {
+            case .post:
+                return JSONEncoding.default
+            default:
+                return URLEncoding.default
+        }
+    }
+}
