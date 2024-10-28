@@ -9,7 +9,7 @@ import Foundation
 
 internal import Alamofire
 
-typealias HTTPRequestParameter = [String: Any]
+public typealias HTTPRequestParameter = [String: Any]
 
 protocol Requestable {
     

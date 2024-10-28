@@ -7,9 +7,9 @@
 
 import Foundation
 
-internal import Alamofire
+public import Alamofire
 
-struct Endpoint<R>: Requestable where R: Decodable {
+public struct Endpoint<R>: Requestable where R: Decodable {
     typealias Response = R
     
     let baseURL: String
@@ -19,7 +19,7 @@ struct Endpoint<R>: Requestable where R: Decodable {
     let parameters: HTTPRequestParameter?
     
     
-    init(
+    public init(
         baseURL: BaseURL,
         path: String,
         method: HTTPMethod,
