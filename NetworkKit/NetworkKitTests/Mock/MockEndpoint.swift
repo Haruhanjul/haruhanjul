@@ -6,14 +6,15 @@
 //
 
 import Foundation
-import NetworkKit
+
+internal import NetworkKit
 
 enum MockEndpoint {
     
     static func getAdviceSlip() -> Endpoint<MockDTO.AdviceDTO> {
         return Endpoint(
-            baseURL: .adviceslip,
-            path: "",
+            baseURL: .adviceslipAPI,
+            path: "/advice",
             method: .get
         )
     }

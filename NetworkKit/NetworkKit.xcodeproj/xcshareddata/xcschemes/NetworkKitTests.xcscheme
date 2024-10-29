@@ -19,7 +19,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B14E272F2CCBEA2D00BCD9EA"
+               BlueprintIdentifier = "F63DCED42CCF893900FE0B06"
                BuildableName = "NetworkKitTests.xctest"
                BlueprintName = "NetworkKitTests"
                ReferencedContainer = "container:NetworkKit.xcodeproj">

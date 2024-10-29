@@ -22,6 +22,7 @@ protocol Requestable {
     var parameters: HTTPRequestParameter? { get }
     var encoding: ParameterEncoding { get }
     
+    func makeURL() -> String
 }
 
 extension Requestable {
@@ -33,5 +34,9 @@ extension Requestable {
             default:
                 return URLEncoding.default
         }
+    }
+    
+    func makeURL() -> String {
+        return "\(baseURL)\(path)"
     }
 }

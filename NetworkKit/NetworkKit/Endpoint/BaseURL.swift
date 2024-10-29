@@ -10,14 +10,14 @@ import Foundation
 internal import Alamofire
 
 public enum BaseURL: String {
-    case adviceslip
+    case adviceslipAPI
     
-    public var configValue: String {
+    var configValue: String {
         if let infoDictionary: [String: Any] = Bundle.main.infoDictionary,
            let baseURL = infoDictionary[self.rawValue] as? String {
             return baseURL.decodeURL()
         } else {
-            return "https://api.adviceslip.com/advice"
+            return "https://api.adviceslip.com"
         }
     }
 }

@@ -22,7 +22,7 @@ final class NetworkManager: Network {
                 return promise(.failure(NSError(domain: "Network Error", code: -1, userInfo: nil)))
             }
             
-            self.session.request(endpoint.baseURL,
+            self.session.request(endpoint.makeURL(),
                                  method: endpoint.method,
                                  parameters: endpoint.parameters,
                                  encoding: endpoint.encoding,

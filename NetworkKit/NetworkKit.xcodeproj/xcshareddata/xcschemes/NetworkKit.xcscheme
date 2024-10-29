@@ -15,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B14E27272CCBEA2D00BCD9EA"
+               BlueprintIdentifier = "F63DCECC2CCF893900FE0B06"
                BuildableName = "NetworkKit.framework"
                BlueprintName = "NetworkKit"
                ReferencedContainer = "container:NetworkKit.xcodeproj">
@@ -29,6 +29,19 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F63DCED42CCF893900FE0B06"
+               BuildableName = "NetworkKitTests.xctest"
+               BlueprintName = "NetworkKitTests"
+               ReferencedContainer = "container:NetworkKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -50,7 +63,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B14E27272CCBEA2D00BCD9EA"
+            BlueprintIdentifier = "F63DCECC2CCF893900FE0B06"
             BuildableName = "NetworkKit.framework"
             BlueprintName = "NetworkKit"
             ReferencedContainer = "container:NetworkKit.xcodeproj">
