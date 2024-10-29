@@ -8,6 +8,9 @@
       location = "group:../ResourceKit/ResourceKit.xcodeproj">
    </FileRef>
    <FileRef
+      location = "container:../NetworkKit/NetworkKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

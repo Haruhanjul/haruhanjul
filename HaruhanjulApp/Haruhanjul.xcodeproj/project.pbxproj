@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B14E271C2CCBE9A400BCD9EA /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14E271B2CCBE9A400BCD9EA /* ResourceKit.framework */; };
+		B14E271D2CCBE9A400BCD9EA /* ResourceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B14E271B2CCBE9A400BCD9EA /* ResourceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC6D6C652CCC6FD800BC0028 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6D6C642CCC6FD800BC0028 /* SettingView.swift */; };
 		BC6D6C682CCC712A00BC0028 /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6D6C672CCC712A00BC0028 /* BookmarkViewModel.swift */; };
 		BCE5718C2CCBEA96002EC931 /* BookmarkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5718B2CCBEA96002EC931 /* BookmarkDetailView.swift */; };
 		BCE5718E2CCBF504002EC931 /* AdvicePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5718D2CCBF504002EC931 /* AdvicePage.swift */; };
 		F4B5CBE853C6CDA11F251550 /* Pods_Haruhanjul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D0B68260262D9431F91094 /* Pods_Haruhanjul.framework */; };
-		F6149A752CC8841A0028F2D4 /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7401D2CC62B07003E9293 /* ResourceKit.framework */; };
-		F6149A762CC8841B0028F2D4 /* ResourceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7401D2CC62B07003E9293 /* ResourceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F63FACFF2CC0E42B009A5867 /* HaruhanjulApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACDC2CC0E42B009A5867 /* HaruhanjulApp.swift */; };
 		F63FAD002CC0E42B009A5867 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACDD2CC0E42B009A5867 /* MainTabView.swift */; };
 		F63FAD012CC0E42B009A5867 /* CDAdviceEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FACDF2CC0E42B009A5867 /* CDAdviceEntity+CoreDataClass.swift */; };
@@ -42,10 +42,6 @@
 		F6C435D02CAFAF8200E979EC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */; };
 		F6C435DB2CAFAF8500E979EC /* HaruhanjulWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F6C740252CC62EDF003E9293 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C740242CC62EDF003E9293 /* Assets.xcassets */; };
-		F6C7406E2CC64B15003E9293 /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7406D2CC64B15003E9293 /* ResourceKit.framework */; };
-		F6C740702CC64B1E003E9293 /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7406F2CC64B1E003E9293 /* ResourceKit.framework */; };
-		F6C740792CC74414003E9293 /* ResourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7401B2CC62A66003E9293 /* ResourceKit.framework */; };
-		F6C7407A2CC74414003E9293 /* ResourceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7401B2CC62A66003E9293 /* ResourceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +61,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F6149A762CC8841B0028F2D4 /* ResourceKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,7 +82,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F6C7407A2CC74414003E9293 /* ResourceKit.framework in Embed Frameworks */,
+				B14E271D2CCBE9A400BCD9EA /* ResourceKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +92,7 @@
 /* Begin PBXFileReference section */
 		21D0B68260262D9431F91094 /* Pods_Haruhanjul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Haruhanjul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CFCCF3043728EA949D5199 /* Pods-Haruhanjul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haruhanjul.release.xcconfig"; path = "Target Support Files/Pods-Haruhanjul/Pods-Haruhanjul.release.xcconfig"; sourceTree = "<group>"; };
+		B14E271B2CCBE9A400BCD9EA /* ResourceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResourceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6D6C642CCC6FD800BC0028 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		BC6D6C672CCC712A00BC0028 /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
 		BC74156C2CC770C800C38000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -133,11 +129,7 @@
 		F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HaruhanjulWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		F6C7401B2CC62A66003E9293 /* ResourceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResourceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6C7401D2CC62B07003E9293 /* ResourceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResourceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C740242CC62EDF003E9293 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F6C7406D2CC64B15003E9293 /* ResourceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResourceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6C7406F2CC64B1E003E9293 /* ResourceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResourceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,9 +137,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6C7406E2CC64B15003E9293 /* ResourceKit.framework in Frameworks */,
-				F6C740792CC74414003E9293 /* ResourceKit.framework in Frameworks */,
 				F4B5CBE853C6CDA11F251550 /* Pods_Haruhanjul.framework in Frameworks */,
+				B14E271C2CCBE9A400BCD9EA /* ResourceKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,8 +146,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6C740702CC64B1E003E9293 /* ResourceKit.framework in Frameworks */,
-				F6149A752CC8841A0028F2D4 /* ResourceKit.framework in Frameworks */,
 				F6C435D02CAFAF8200E979EC /* SwiftUI.framework in Frameworks */,
 				F6C435CE2CAFAF8200E979EC /* WidgetKit.framework in Frameworks */,
 			);
@@ -168,10 +157,7 @@
 		4967183B2BD2EC567B13B608 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F6C7406F2CC64B1E003E9293 /* ResourceKit.framework */,
-				F6C7406D2CC64B15003E9293 /* ResourceKit.framework */,
-				F6C7401D2CC62B07003E9293 /* ResourceKit.framework */,
-				F6C7401B2CC62A66003E9293 /* ResourceKit.framework */,
+				B14E271B2CCBE9A400BCD9EA /* ResourceKit.framework */,
 				21D0B68260262D9431F91094 /* Pods_Haruhanjul.framework */,
 				F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */,
 				F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */,
