@@ -7,10 +7,11 @@
 
 import SwiftUI
 import WidgetKit
-
 import ResourceKit
 
 struct CurlView: View {
+    let bookmarkSize: CGFloat = 30
+    let bookmarkOffset: CGFloat = 6
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.managedObjectContext) private var viewContext
     @StateObject private var viewModel = CardViewModel.shared
@@ -18,10 +19,11 @@ struct CurlView: View {
     var body: some View {
         ZStack {
             if viewModel.isLoading {
-                Image(uiImage: Images.advidePage.image)
+                Image(uiImage: Images.advicePage.image)
                     .resizable()
                     .scaledToFit()
-                    .padding(.horizontal, 10)
+                    .padding(.horizontal, 20)
+                    .padding(.top, bookmarkSize + bookmarkOffset)
                 ProgressView()
             } else {
                 ForEach(Array(viewModel.advices.enumerated()), id: \.element.id) { index, advice in
@@ -29,38 +31,25 @@ struct CurlView: View {
                         HStack {
                             Spacer()
                             Button {
-                                viewModel.toggleBookmark(id: advice.id, at: index, advice: advice, context: viewContext)
+                                viewModel.advices[index].isBookmarked.toggle()
+                                viewModel.toggleBookmark(id: advice.id, isBookmarked: viewModel.advices[index].isBookmarked, context: viewContext)
                             } label: {
                                 Image(systemName: viewModel.advices[index].isBookmarked ? "bookmark.fill" : "bookmark")
-                                    .font(.system(size: 30))
-                                    .foregroundStyle(index == 0 ? .yellow : .clear)
+                                    .font(.system(size: bookmarkSize))
+                                    .foregroundStyle(index == 0 ? .brown.opacity(0.8) : .clear)
                                     .scaleEffect(y: -1)
                                     .mask {
                                         Rectangle()
                                             .frame(width: 20, height: 28)
                                             .offset(y: -2)
                                     }
-                                    .offset(y: 6)
+                                    .offset(y: bookmarkOffset)
                             }
-                            .padding(.trailing, 30)
+                            .padding(.trailing, 40)
                         }
+                        
                         PeelEffect(dragProgress: $viewModel.dragProgresses[index]) {
-                            ZStack {
-                                Image(uiImage: Images.advidePage.image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .padding(.horizontal, 10)
-                                
-                                VStack(alignment: .leading, spacing: 16) {
-                                    Text(advice.content)
-                                        .font(Fonts.Diphylleia.regular.swiftUIFont(size: 20))
-                                        .multilineTextAlignment(.center)
-                                    Text(advice.adviceKorean ?? "")
-                                        .font(Fonts.Diphylleia.regular.swiftUIFont(size: 16))
-                                        .multilineTextAlignment(.center)
-                                }
-                                .padding(.horizontal, 50)
-                            }
+                            AdvicePage(imageName: Images.advicePage.image, advice: advice)
                         } onDelete: {
                             viewModel.removeAdvice(at: index)
                         } setBack: {
@@ -71,9 +60,10 @@ struct CurlView: View {
                     }
                     .zIndex(zIndex(index))
                 }
-                .padding()
             }
         }
+        .navigationTitle("하루한줄")
+        .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             viewModel.loadAdvices(context: viewContext)
         }
@@ -82,13 +72,6 @@ struct CurlView: View {
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    viewModel.resetAdvices(context: viewContext)
-                } label: {
-                    Text("초기화")
-                }
-                .buttonStyle(PlainButtonStyle())
-                .disabled(viewModel.isLoading)
             }
         }
     }
@@ -100,5 +83,4 @@ struct CurlView: View {
 
 #Preview {
     CurlView()
-//        .environmentObject(CardViewModel())
 }

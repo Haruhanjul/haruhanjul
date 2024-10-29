@@ -8,32 +8,40 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @State private var selectedTab = 0
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
             NavigationView {
                 CurlView()
             }
             .tabItem {
-                Image(systemName: "plus.circle")
-                Text("첫번째")
+                Image(systemName: "text.page")
+                    .environment(\.symbolVariants, selectedTab == 0 ? .fill : .none)
+                Text("명언")
             }
+            .tag(0)
             
             NavigationView {
                 BookmarkView()
             }
             .tabItem {
-                Image(systemName: "trophy.circle")
-                Text("두번째")
+                Image(systemName: "bookmark")
+                    .environment(\.symbolVariants, selectedTab == 1 ? .fill : .none)
+                Text("북마크")
             }
+            .tag(1)
             
             NavigationView {
-                Text("zz")
+                SettingView()
             }
             .tabItem {
-                Image(systemName: "info.circle")
-                Text("세번째")
+                Image(systemName: "gearshape")
+                    .environment(\.symbolVariants, selectedTab == 2 ? .fill : .none)
+                Text("설정")
             }
+            .tag(2)
         }
+        .tint(.brown)
     }
 }
 

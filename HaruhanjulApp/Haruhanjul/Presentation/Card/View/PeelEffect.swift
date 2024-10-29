@@ -40,10 +40,10 @@ struct PeelEffect<Content: View>: View {
                     
 //                    content
                     
-                    Image(uiImage: Images.advidePage.image)
+                    Image(uiImage: Images.advicePage.image)
                         .resizable()
                         .scaledToFit()
-                        .padding(.horizontal, 10)
+                        .padding(.horizontal, 20)
                     //                      RoundedRectangle(cornerRadius: 16)
                     //                        .foregroundStyle(.white.opacity(0.9))
                         .shadow(color: .black.opacity(dragProgress != 0 ? 0.1 : 0), radius: 5, x: 15, y: 0)
