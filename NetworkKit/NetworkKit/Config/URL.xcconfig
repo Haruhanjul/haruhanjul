@@ -1,0 +1,12 @@
+//
+//  MockURL.xcconfig
+//  NetworkKitTests
+//
+//  Created by 최하늘 on 10/28/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+_ADVICE_SLIP_API_ = https%3A%2F%2Fapi.adviceslip.com

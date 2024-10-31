@@ -11,12 +11,12 @@ import SwiftUI
 struct Provider: TimelineProvider {
     
     func placeholder(in context: Context) -> AdviceEntry {
-        let advice = AdviceDefaults.firstAdvice
+        let advice = AdviceDefaults.defaultText
         return AdviceEntry(date: Date(), advice: advice)
     }
     
     func getSnapshot(in context: Context, completion: @escaping (AdviceEntry) -> ()) {
-        let advice = AdviceDefaults.firstAdvice
+        let advice = AdviceDefaults.defaultText
         let entry = AdviceEntry(date: Date(), advice: advice)
         completion(entry)
     }

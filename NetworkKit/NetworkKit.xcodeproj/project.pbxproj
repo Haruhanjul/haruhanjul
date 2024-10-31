@@ -15,11 +15,11 @@
 		F63DCEFC2CCF896200FE0B06 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63DCEF42CCF896200FE0B06 /* Network.swift */; };
 		F63DCEFD2CCF896200FE0B06 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63DCEF02CCF896200FE0B06 /* Requestable.swift */; };
 		F63DCEFE2CCF896200FE0B06 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63DCEEF2CCF896200FE0B06 /* Endpoint.swift */; };
-		F63DCEFF2CCF896200FE0B06 /* URL.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F63DCEEC2CCF896200FE0B06 /* URL.xcconfig */; };
 		F63DCF042CCF898200FE0B06 /* NetworkKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63DCF032CCF898200FE0B06 /* NetworkKitTests.swift */; };
 		F63DCF052CCF898200FE0B06 /* MockDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63DCF002CCF898200FE0B06 /* MockDTO.swift */; };
 		F63DCF062CCF898200FE0B06 /* MockEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63DCF012CCF898200FE0B06 /* MockEndpoint.swift */; };
 		F63DCF0E2CCF8A9700FE0B06 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F63DCF0D2CCF8A9700FE0B06 /* Alamofire */; };
+		F6F770ED2CD235C100E92AD5 /* URL.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F6F770EC2CD235C100E92AD5 /* URL.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 		F63DCECD2CCF893900FE0B06 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63DCED52CCF893900FE0B06 /* NetworkKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63DCEE62CCF893E00FE0B06 /* NetworkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkKit.h; sourceTree = "<group>"; };
-		F63DCEEC2CCF896200FE0B06 /* URL.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = URL.xcconfig; sourceTree = "<group>"; };
 		F63DCEEE2CCF896200FE0B06 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		F63DCEEF2CCF896200FE0B06 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		F63DCEF02CCF896200FE0B06 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		F63DCF012CCF898200FE0B06 /* MockEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEndpoint.swift; sourceTree = "<group>"; };
 		F63DCF032CCF898200FE0B06 /* NetworkKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkKitTests.swift; sourceTree = "<group>"; };
 		F63DCF122CCF94E100FE0B06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6F770EC2CD235C100E92AD5 /* URL.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = URL.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				F63DCF122CCF94E100FE0B06 /* Info.plist */,
-				F63DCEEC2CCF896200FE0B06 /* URL.xcconfig */,
+				F6F770EC2CD235C100E92AD5 /* URL.xcconfig */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -254,7 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F63DCEFF2CCF896200FE0B06 /* URL.xcconfig in Resources */,
+				F6F770ED2CD235C100E92AD5 /* URL.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +304,6 @@
 /* Begin XCBuildConfiguration section */
 		F63DCEDF2CCF893900FE0B06 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F63DCEEC2CCF896200FE0B06 /* URL.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -338,7 +337,6 @@
 		};
 		F63DCEE02CCF893900FE0B06 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F63DCEEC2CCF896200FE0B06 /* URL.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -372,7 +370,6 @@
 		};
 		F63DCEE12CCF893900FE0B06 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F63DCEEC2CCF896200FE0B06 /* URL.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -439,7 +436,6 @@
 		};
 		F63DCEE22CCF893900FE0B06 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F63DCEEC2CCF896200FE0B06 /* URL.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -499,7 +495,6 @@
 		};
 		F63DCEE42CCF893900FE0B06 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F63DCEEC2CCF896200FE0B06 /* URL.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -515,7 +510,6 @@
 		};
 		F63DCEE52CCF893900FE0B06 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F63DCEEC2CCF896200FE0B06 /* URL.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
