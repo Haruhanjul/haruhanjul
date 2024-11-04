@@ -42,6 +42,7 @@
 		F6C435D02CAFAF8200E979EC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */; };
 		F6C435DB2CAFAF8500E979EC /* HaruhanjulWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F6C435CC2CAFAF8200E979EC /* HaruhanjulWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F6C740252CC62EDF003E9293 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C740242CC62EDF003E9293 /* Assets.xcassets */; };
+		F6F770EF2CD8A17100E92AD5 /* BookmarkDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F770EE2CD8A16200E92AD5 /* BookmarkDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		F6C435CD2CAFAF8200E979EC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		F6C435CF2CAFAF8200E979EC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		F6C740242CC62EDF003E9293 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6F770EE2CD8A16200E92AD5 /* BookmarkDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				BC6D6C672CCC712A00BC0028 /* BookmarkViewModel.swift */,
+				F6F770EE2CD8A16200E92AD5 /* BookmarkDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				F63FAD072CC0E42B009A5867 /* AdviceEntity.swift in Sources */,
 				F63FAD082CC0E42B009A5867 /* Persistence.swift in Sources */,
 				F63FAD092CC0E42B009A5867 /* Translation.swift in Sources */,
+				F6F770EF2CD8A17100E92AD5 /* BookmarkDetailViewModel.swift in Sources */,
 				F63FAD0A2CC0E42B009A5867 /* BookmarkView.swift in Sources */,
 				F63FAD0B2CC0E42B009A5867 /* CurlView.swift in Sources */,
 				F63FAD0C2CC0E42B009A5867 /* PeelEffect.swift in Sources */,

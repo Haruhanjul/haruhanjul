@@ -9,19 +9,23 @@ import SwiftUI
 import ResourceKit
 
 struct BookmarkDetailView: View {
-    @State var advice: AdviceEntity
-    @StateObject private var viewModel = CardViewModel.shared
+    private let viewModel: BookmarkDetailViewModel
+    @StateObject private var cardViewModel = CardViewModel.shared
     @Environment(\.managedObjectContext) private var viewContext
+    
+    init(viewModel: BookmarkDetailViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         VStack(spacing: 0) {
             HStack {
                 Spacer()
                 Button {
-                    advice.isBookmarked.toggle()
-                    viewModel.toggleBookmark(id: advice.id, isBookmarked: advice.isBookmarked, context: viewContext)
+                    viewModel.advice.isBookmarked.toggle()
+                    cardViewModel.toggleBookmark(id: viewModel.advice.id, isBookmarked: viewModel.advice.isBookmarked, context: viewContext)
                 } label: {
-                    Image(systemName: advice.isBookmarked ? "bookmark.fill" : "bookmark")
+                    Image(systemName: viewModel.advice.isBookmarked ? "bookmark.fill" : "bookmark")
                         .font(.system(size: 30))
                         .foregroundStyle(.brown.opacity(0.8))
                         .scaleEffect(y: -1)
@@ -35,7 +39,16 @@ struct BookmarkDetailView: View {
                 .padding(.trailing, 40)
             }
             
-            AdvicePage(imageName: Images.advicePage.image, advice: advice)
+            AdvicePage(advice: viewModel.advice)
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    viewModel.shareAdvice()
+                } label: {
+                    Image(systemName: "square.and.arrow.up")
+                }
+            }
         }
     }
 }

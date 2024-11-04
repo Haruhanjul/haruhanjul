@@ -49,7 +49,7 @@ struct CurlView: View {
                         }
                         
                         PeelEffect(dragProgress: $viewModel.dragProgresses[index]) {
-                            AdvicePage(imageName: Images.advicePage.image, advice: advice)
+                            AdvicePage(advice: advice)
                         } onDelete: {
                             viewModel.removeAdvice(at: index)
                         } setBack: {

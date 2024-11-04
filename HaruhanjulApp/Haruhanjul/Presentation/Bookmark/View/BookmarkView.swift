@@ -23,7 +23,12 @@ struct BookmarkView: View {
                 LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
                     ForEach(bookmarkViewModel.bookmarks, id: \.id) { advice in
                         NavigationLink {
-                            BookmarkDetailView(advice: advice)
+                            BookmarkDetailView(
+                                viewModel:
+                                    BookmarkDetailViewModel(
+                                        advice: advice
+                                    )
+                            )
                         } label: {
                             Image(uiImage: Images.advicePage.image)
                                 .resizable()

@@ -9,8 +9,11 @@ import SwiftUI
 import ResourceKit
 
 struct AdvicePage: View {
-    let imageName: UIImage
+    
     let advice: AdviceEntity
+    
+    private let imageName = Images.advicePage.image
+    
     var body: some View {
         Image(uiImage: imageName)
             .resizable()
