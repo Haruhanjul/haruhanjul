@@ -6,14 +6,12 @@
 //
 
 import SwiftUI
-import WidgetKit
-import CoreData
 import Combine
-
-import MLKitTranslate
+import CoreData
 import Alamofire
-
+import WidgetKit
 import NetworkKit
+import MLKitTranslate
 
 final class CardViewModel: ObservableObject {
     
@@ -25,10 +23,10 @@ final class CardViewModel: ObservableObject {
     
     private let englishKoreanTranslator = Translator.translator(options: TranslatorOptions(sourceLanguage: .english, targetLanguage: .korean))
     private let conditions = ModelDownloadConditions(allowsCellularAccess: false, allowsBackgroundDownloading: true)
+    private let networkManager = NetworkManager(session: Session(eventMonitors: [APIEventMonitor()]))
+    
     private var removedAdvices: [AdviceEntity] = []
     private var removedCount = 0
-    
-    private let networkManager = NetworkManager(session: Session(eventMonitors: [APIEventMonitor()]))
     
     var cancellables = Set<AnyCancellable>()
     var isTranslatorReady = false
