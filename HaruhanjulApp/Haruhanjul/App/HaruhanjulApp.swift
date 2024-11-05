@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             try BGTaskScheduler.shared.submit(request)
 //            print("[BGTaskScheduler] submitted task with id: \(request.identifier)")
         } catch let error {
-//            print("[BGTaskScheduler] error:", error)
+            print("[BGTaskScheduler] error:", error)
         }
     }
 
