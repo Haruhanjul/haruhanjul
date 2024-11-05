@@ -66,6 +66,7 @@ struct CurlView: View {
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             viewModel.loadAdvices(context: viewContext)
+            viewModel.testNetwork()
         }
         .onChange(of: viewModel.lastIndex) { value in
             AdviceDefaults.cardIndex = value

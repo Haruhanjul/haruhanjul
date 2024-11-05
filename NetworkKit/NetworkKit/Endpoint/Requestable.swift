@@ -7,11 +7,11 @@
 
 import Foundation
 
-internal import Alamofire
+public import Alamofire
 
 public typealias HTTPRequestParameter = [String: Any]
 
-protocol Requestable {
+public protocol Requestable {
     
     associatedtype Response: Decodable
     
@@ -25,7 +25,7 @@ protocol Requestable {
     func makeURL() -> String
 }
 
-extension Requestable {
+public extension Requestable {
     
     var encoding: ParameterEncoding {
         switch method {

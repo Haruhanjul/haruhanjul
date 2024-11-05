@@ -10,13 +10,13 @@ import Foundation
 public import Alamofire
 
 public struct Endpoint<R>: Requestable where R: Decodable {
-    typealias Response = R
+    public typealias Response = R
     
-    let baseURL: String
-    let path: String
-    let method: HTTPMethod
-    let headers: HTTPHeaders
-    let parameters: HTTPRequestParameter?
+    public let baseURL: String
+    public let path: String
+    public let method: HTTPMethod
+    public let headers: HTTPHeaders
+    public let parameters: HTTPRequestParameter?
     
     
     public init(

@@ -7,16 +7,16 @@
 
 import Foundation
 import Combine
-internal import Alamofire
+public import Alamofire
 
-final class NetworkManager: Network {
+public final class NetworkManager: Network {
     var session: Session
     
-    init(session: Session = .default) {
+    public init(session: Session = .default) {
         self.session = session
     }
     
-    func request<E: Requestable>(with endpoint: E) -> AnyPublisher<E.Response, Error> {
+    public func request<E: Requestable>(with endpoint: E) -> AnyPublisher<E.Response, Error> {
         Future { [weak self] promise in
             guard let self = self else {
                 return promise(.failure(NSError(domain: "Network Error", code: -1, userInfo: nil)))

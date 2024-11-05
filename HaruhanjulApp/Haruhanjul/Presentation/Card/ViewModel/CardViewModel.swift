@@ -5,11 +5,15 @@
 //  Created by 임대진 on 9/5/24.
 //
 
-import Foundation
-import MLKitTranslate
-import CoreData
-import WidgetKit
 import SwiftUI
+import WidgetKit
+import CoreData
+import Combine
+
+import MLKitTranslate
+import Alamofire
+
+import NetworkKit
 
 final class CardViewModel: ObservableObject {
     
@@ -282,5 +286,19 @@ final class CardViewModel: ObservableObject {
     func widgetUpdate(advice: String, adviceKorean: String) {
         AdviceDefaults.content = [advice, adviceKorean]
         WidgetCenter.shared.reloadTimelines(ofKind: "HaruhanjulWidget")
+    }
+    
+    func testNetwork() {
+        let endpoint = Endpoint<AdviceDTO>(
+            baseURL: .adviceslipAPI,
+            path: "/advice",
+            method: .get
+        )
+        
+        let networkManager = NetworkManager(
+            session: Session(eventMonitors: [APIEventMonitor()])
+        )
+        let endpon = networkManager.request(with: endpoint)
+            .map { $0.slip.convertToEntity() }
     }
 }

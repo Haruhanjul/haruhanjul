@@ -7,9 +7,9 @@
 
 import Foundation
 
-internal import Alamofire
+public import Alamofire
 
-final class APIEventMonitor: EventMonitor {
+public final class APIEventMonitor: EventMonitor {
 
     public let queue = DispatchQueue(label: "APIEventMonitor")
     
@@ -17,12 +17,11 @@ final class APIEventMonitor: EventMonitor {
 
     public func requestDidFinish(_ request: Request) {
         
-        debugPrint("""
+        print("""
         📱 NETWORK Reqeust LOG
         📱 URL: \(request.request?.url?.absoluteString ?? "")
         📱 Method: \(request.request?.httpMethod ?? "")
         📱 Headers: \(request.request?.allHTTPHeaderFields ?? [:])
-        📱 AccessToken: \(request.request?.headers["X-Access-Token"] ?? "")
         📱 Body: \(request.request?.httpBody?.toPrettyPrintedString ?? "")
 
         ------------------------------------------------------------------------
@@ -31,7 +30,7 @@ final class APIEventMonitor: EventMonitor {
 
     public func request<Value>(_ request: DataRequest, didParseResponse response: DataResponse<Value, AFError>) {
         
-        debugPrint("""
+        print("""
         📲 NETWORK Response LOG
         📲 URL: \(request.request?.url?.absoluteString ?? "")
         📲 Result: \(response.result)
