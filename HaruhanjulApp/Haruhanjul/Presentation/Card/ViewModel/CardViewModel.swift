@@ -28,13 +28,16 @@ final class CardViewModel: ObservableObject {
     private var removedAdvices: [AdviceEntity] = []
     private var removedCount = 0
     
+    private let networkManager = NetworkManager(session: Session(eventMonitors: [APIEventMonitor()]))
+    
+    var cancellables = Set<AnyCancellable>()
     var isTranslatorReady = false
     var lastIndex = 0
     
     init() {
         lastIndex = AdviceDefaults.cardIndex
     }
-
+    
     // View에 명언 적용
     func loadAdvices(context: NSManagedObjectContext) {
         Task {
@@ -43,7 +46,7 @@ final class CardViewModel: ObservableObject {
             }
             
             let (result, count) = await loadCDAdviceEntities(context: context)
-                    
+            
             await MainActor.run {
                 if count < 10 {
                     fetchAdvice(count: 10, context: context)
@@ -101,61 +104,45 @@ final class CardViewModel: ObservableObject {
         }
     }
     
+    
     // 명언 API
     func downloadAdvices(count: Int, context: NSManagedObjectContext, completion: @escaping ([AdviceEntity]) -> ()) {
+        
         var result: [AdviceEntity] = []
-        let urlString = "https://api.adviceslip.com/advice"
-        guard let url = URL(string: urlString) else {
-            print("Invalid URL")
-            return
-        }
+        let endpoint = Endpoint<AdviceDTO>(
+            baseURL: .adviceslipAPI,
+            path: "/advice",
+            method: .get
+        )
         
         let dispatchGroup = DispatchGroup()
         
         for _ in 0..<count {
-            let request = URLRequest(url: url)
-            
             dispatchGroup.enter()
             
-            let task = URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) in
-                defer { dispatchGroup.leave() }
-                
-                guard let self else { return }
-                
-                if let error = error {
-                    print("Error: \(error)")
-                    return
-                }
-                
-                guard let httpResponse = response as? HTTPURLResponse, (200..<300).contains(httpResponse.statusCode) else {
-                    print("Invalid response or status code")
-                    return
-                }
-                
-                guard let data = data else {
-                    print("No data")
-                    return
-                }
-                
-                do {
-                    let response = try JSONDecoder().decode(AdviceDTO.self, from: data)
-                    let advice = response.slip.convertToEntity()
-                    
-                    englishKoreanTranslator.translate(advice.content) { translatedText, error in
-                        if let error = error {
-                            print("Translation error: \(error)")
-                        } else {
-                            let updatedAdvice = AdviceEntity(id: advice.id, content: advice.content, adviceKorean: translatedText)
-                            self.saveAdviceEntity(adviceEntity: updatedAdvice, context: context)
-                            result.append(updatedAdvice)
+            networkManager.request(with: endpoint)
+                .map { $0.slip.convertToEntity() }
+                .sink(
+                    receiveCompletion: { completion in
+                        if case .failure(let error) = completion {
+                            print("Request failed with error: \(error)")
+                            dispatchGroup.leave()
+                        }
+                    },
+                    receiveValue: { [self] entity in
+                        englishKoreanTranslator.translate(entity.content) { translatedText, error in
+                            if let error = error {
+                                print("Translation error: \(error)")
+                            } else {
+                                let updatedAdvice = AdviceEntity(id: entity.id, content: entity.content, adviceKorean: translatedText)
+                                self.saveAdviceEntity(adviceEntity: updatedAdvice, context: context)
+                                result.append(updatedAdvice)
+                                dispatchGroup.leave()
+                            }
                         }
                     }
-                    
-                } catch {
-                    print("Error decoding JSON: \(error)")
-                }
-            }
-            task.resume()
+                )
+                .store(in: &cancellables)
         }
         
         dispatchGroup.notify(queue: .main) {
@@ -189,7 +176,7 @@ final class CardViewModel: ObservableObject {
             fetchAdvice(count: 5, context: context)
         }
     }
-
+    
     // 카드 되돌리기
     func restoreAdvice(at index: Int) {
         if !removedAdvices.isEmpty {
@@ -208,7 +195,7 @@ final class CardViewModel: ObservableObject {
     func toggleBookmark(id: Int, isBookmarked: Bool, context: NSManagedObjectContext) {
         let fetchRequest: NSFetchRequest<CDAdviceEntity> = CDAdviceEntity.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "id == %d", id)
-
+        
         do {
             let results = try context.fetch(fetchRequest)
             
@@ -226,23 +213,23 @@ final class CardViewModel: ObservableObject {
     
     // 다운받은 명언을 코어데이터 저장
     func saveAdviceEntity(adviceEntity: AdviceEntity, context: NSManagedObjectContext) {
-            let duplicateRequest: NSFetchRequest<CDAdviceEntity> = CDAdviceEntity.fetchRequest()
-            duplicateRequest.predicate = NSPredicate(format: "id == %d", adviceEntity.id)
+        let duplicateRequest: NSFetchRequest<CDAdviceEntity> = CDAdviceEntity.fetchRequest()
+        duplicateRequest.predicate = NSPredicate(format: "id == %d", adviceEntity.id)
+        
+        do {
+            let existingEntities = try context.fetch(duplicateRequest)
             
-            do {
-                let existingEntities = try context.fetch(duplicateRequest)
-
-                if existingEntities.isEmpty {
-                    let cdAdviceEntity = CDAdviceEntity(context: context)
-                    cdAdviceEntity.update(from: adviceEntity, context: context)
-                    
-                    try context.save()
-                } else {
-                    print("중복된 CDAdviceEntity가 존재합니다.")
-                }
-            } catch {
-                print("CDAdviceEntity 데이터 저장 실패: \(error)")
+            if existingEntities.isEmpty {
+                let cdAdviceEntity = CDAdviceEntity(context: context)
+                cdAdviceEntity.update(from: adviceEntity, context: context)
+                
+                try context.save()
+            } else {
+                print("중복된 CDAdviceEntity가 존재합니다.")
             }
+        } catch {
+            print("CDAdviceEntity 데이터 저장 실패: \(error)")
+        }
     }
     
     // 명언 카드 리셋
@@ -251,16 +238,16 @@ final class CardViewModel: ObservableObject {
             await MainActor.run {
                 isLoading = true
             }
-
+            
             await deleteAllAdviceEntities(context: context)
-
+            
             await MainActor.run {
                 removedAdvices = []
                 advices = []
                 removedCount = 0
                 lastIndex = 0
             }
-
+            
             fetchAdvice(count: 10, context: context)
         }
     }
@@ -286,19 +273,5 @@ final class CardViewModel: ObservableObject {
     func widgetUpdate(advice: String, adviceKorean: String) {
         AdviceDefaults.content = [advice, adviceKorean]
         WidgetCenter.shared.reloadTimelines(ofKind: "HaruhanjulWidget")
-    }
-    
-    func testNetwork() {
-        let endpoint = Endpoint<AdviceDTO>(
-            baseURL: .adviceslipAPI,
-            path: "/advice",
-            method: .get
-        )
-        
-        let networkManager = NetworkManager(
-            session: Session(eventMonitors: [APIEventMonitor()])
-        )
-        let endpon = networkManager.request(with: endpoint)
-            .map { $0.slip.convertToEntity() }
     }
 }
