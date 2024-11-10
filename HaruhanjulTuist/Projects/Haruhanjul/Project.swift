@@ -22,7 +22,9 @@ let project = Project(
             deploymentTargets: .iOS("15.0"),
             infoPlist: .extendingDefault(
                 with: [
-                    "UILaunchStoryboardName": "LaunchScreen"
+                    "UILaunchStoryboardName": "LaunchScreen",
+                    "UIBackgroundModes": ["fetch", "processing"],
+                    "BGTaskSchedulerPermittedIdentifiers": ["com.daehaa.Haruhanjul.refresh"]
                 ]
             ),
             sources: ["Sources/**"],
@@ -31,7 +33,7 @@ let project = Project(
                 "Sources/App/LaunchScreen.storyboard",
                 .glob(pattern: "Sources/CoreData/Haruhanjul.xcdatamodeld")
             ],
-            entitlements: "Haruhanjul.entitlements",
+            entitlements: "Config/Haruhanjul.entitlements",
             dependencies: [
                 .project(target: "ResourceKit", path: "../ResourceKit"),
                 .project(target: "NetworkKit", path: "../NetworkKit"),
@@ -56,7 +58,7 @@ let project = Project(
             ]),
             sources: ["HaruhanjulWidget/Sources/**","Sources/Utils/UserDefault.swift"],
             resources: "HaruhanjulWidget/Resources/**",
-            entitlements: "HaruhanjulWidget/HaruhanjulWidgetExtension.entitlements",
+            entitlements: "HaruhanjulWidget/Config/HaruhanjulWidgetExtension.entitlements",
             settings: .settings(base: [
                 "APP_GROUP": "group.com.daehaa.Haruhanjul"
             ])

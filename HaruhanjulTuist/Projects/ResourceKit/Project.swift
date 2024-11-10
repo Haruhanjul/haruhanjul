@@ -9,7 +9,13 @@ let resourceKit = Project(
             product: .framework,
             bundleId: "com.daehaa.ResourceKit",
             deploymentTargets: .iOS("15.0"),
-            infoPlist: .default,
+            infoPlist: .extendingDefault(
+                with: [
+                    "UIAppFonts": [
+                        "Diphylleia-Regular.ttf"
+                    ]
+                ]
+            ),
             sources: ["Sources/**"],
             resources: ["Resources/**"],
             dependencies: []
