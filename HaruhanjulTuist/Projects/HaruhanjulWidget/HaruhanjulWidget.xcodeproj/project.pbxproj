@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13E9B92B6981D268F1ED5287 /* TuistBundle+HaruhanjulWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413FEC748A58FC2C02ED9B64 /* TuistBundle+HaruhanjulWidget.swift */; };
+		59754F09A28FB76F33260D65 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983F048D3D51274C78A25103 /* Provider.swift */; };
+		79E59E45E0C7E6141C18E436 /* HaruhanjulWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFB0724AEAB3B63218E5BD /* HaruhanjulWidgetView.swift */; };
+		82F3912681AA71750CC41185 /* HaruhanjulWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036EAAC816321436EBD2EB1 /* HaruhanjulWidgetBundle.swift */; };
+		AC2A99C71679FEE847D303A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BF59E7B376CD29A6EE30B99 /* Assets.xcassets */; };
+		B2BD981B86A9F441C18201F7 /* HaruhanjulWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CDCFFF2BB58CBED7B9A486 /* HaruhanjulWidget.swift */; };
+		BE6B68FB0B90B42DCECBA756 /* AdviceEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E66AC5DB96BB903AF7C4FD0 /* AdviceEntry.swift */; };
+		DC5D4D34BDF1C270123C649A /* TuistAssets+HaruhanjulWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B014CDDA7647D6536542B6 /* TuistAssets+HaruhanjulWidget.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4F04B413506C3D57BDDC0713 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		000576CEB2A823D2516EB3A8 /* HaruhanjulWidget-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "HaruhanjulWidget-Info.plist"; sourceTree = "<group>"; };
+		1DFE4EF7383811F83923B1E0 /* HaruhanjulWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HaruhanjulWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		413FEC748A58FC2C02ED9B64 /* TuistBundle+HaruhanjulWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+HaruhanjulWidget.swift"; sourceTree = "<group>"; };
+		4BF59E7B376CD29A6EE30B99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5E66AC5DB96BB903AF7C4FD0 /* AdviceEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceEntry.swift; sourceTree = "<group>"; };
+		70CDCFFF2BB58CBED7B9A486 /* HaruhanjulWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruhanjulWidget.swift; sourceTree = "<group>"; };
+		983F048D3D51274C78A25103 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		A2EFB0724AEAB3B63218E5BD /* HaruhanjulWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruhanjulWidgetView.swift; sourceTree = "<group>"; };
+		ABD77E2726F280D1C0FC3AFD /* HaruhanjulWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HaruhanjulWidgetExtension.entitlements; sourceTree = "<group>"; };
+		E5B014CDDA7647D6536542B6 /* TuistAssets+HaruhanjulWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+HaruhanjulWidget.swift"; sourceTree = "<group>"; };
+		F036EAAC816321436EBD2EB1 /* HaruhanjulWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruhanjulWidgetBundle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7FBD7270760F28321AF9D0FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53F4485A3B5EDC57515B9834 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7913A49341062BE7EE7AB18F /* Entry */,
+				988CF8E5A92D233EF69A1207 /* Presentation */,
+				B530DFF33FBBAAC39053BF23 /* Provider */,
+				C466B7756CBE04495050E5BB /* Widget */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		6B1AC022C9D7B546A239F13D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4BF59E7B376CD29A6EE30B99 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7913A49341062BE7EE7AB18F /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				5E66AC5DB96BB903AF7C4FD0 /* AdviceEntry.swift */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
+		861C751E4716294EB1652D68 /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				F646762FBAE357A1534CF9D9 /* InfoPlists */,
+				F3E2D41D6A513FFE4A764977 /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		988CF8E5A92D233EF69A1207 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				70CDCFFF2BB58CBED7B9A486 /* HaruhanjulWidget.swift */,
+				A2EFB0724AEAB3B63218E5BD /* HaruhanjulWidgetView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B530DFF33FBBAAC39053BF23 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				983F048D3D51274C78A25103 /* Provider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		B92FB7C21B2DB1425DDC3015 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DFE4EF7383811F83923B1E0 /* HaruhanjulWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C466B7756CBE04495050E5BB /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				F036EAAC816321436EBD2EB1 /* HaruhanjulWidgetBundle.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		E0494A8B050A8F8B605E9569 = {
+			isa = PBXGroup;
+			children = (
+				F625F8F1810B3507D1DB4DAF /* Project */,
+				B92FB7C21B2DB1425DDC3015 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3E2D41D6A513FFE4A764977 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E5B014CDDA7647D6536542B6 /* TuistAssets+HaruhanjulWidget.swift */,
+				413FEC748A58FC2C02ED9B64 /* TuistBundle+HaruhanjulWidget.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F625F8F1810B3507D1DB4DAF /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				861C751E4716294EB1652D68 /* Derived */,
+				6B1AC022C9D7B546A239F13D /* Resources */,
+				53F4485A3B5EDC57515B9834 /* Sources */,
+				ABD77E2726F280D1C0FC3AFD /* HaruhanjulWidgetExtension.entitlements */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		F646762FBAE357A1534CF9D9 /* InfoPlists */ = {
+			isa = PBXGroup;
+			children = (
+				000576CEB2A823D2516EB3A8 /* HaruhanjulWidget-Info.plist */,
+			);
+			path = InfoPlists;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		866E64DC2AEEBE0AA8CEBBA6 /* HaruhanjulWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E0BE66D0C8BF302280F9BD3 /* Build configuration list for PBXNativeTarget "HaruhanjulWidget" */;
+			buildPhases = (
+				F28DE43659941CB7FD589D59 /* Sources */,
+				959B56879AEED7493A2F53ED /* Resources */,
+				4F04B413506C3D57BDDC0713 /* Embed Frameworks */,
+				7FBD7270760F28321AF9D0FF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HaruhanjulWidget;
+			packageProductDependencies = (
+			);
+			productName = HaruhanjulWidget;
+			productReference = 1DFE4EF7383811F83923B1E0 /* HaruhanjulWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D2D89B83A763DA1396A221C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = AD739AC19700088C06D4EEEC /* Build configuration list for PBXProject "HaruhanjulWidget" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = E0494A8B050A8F8B605E9569;
+			productRefGroup = B92FB7C21B2DB1425DDC3015 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				866E64DC2AEEBE0AA8CEBBA6 /* HaruhanjulWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		959B56879AEED7493A2F53ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC2A99C71679FEE847D303A8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F28DE43659941CB7FD589D59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC5D4D34BDF1C270123C649A /* TuistAssets+HaruhanjulWidget.swift in Sources */,
+				13E9B92B6981D268F1ED5287 /* TuistBundle+HaruhanjulWidget.swift in Sources */,
+				BE6B68FB0B90B42DCECBA756 /* AdviceEntry.swift in Sources */,
+				B2BD981B86A9F441C18201F7 /* HaruhanjulWidget.swift in Sources */,
+				79E59E45E0C7E6141C18E436 /* HaruhanjulWidgetView.swift in Sources */,
+				59754F09A28FB76F33260D65 /* Provider.swift in Sources */,
+				82F3912681AA71750CC41185 /* HaruhanjulWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5F1AC4A460E1AF0C03DC291E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APP_GROUP = group.com.daehaa.Haruhanjul;
+				CODE_SIGN_ENTITLEMENTS = HaruhanjulWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iOS Developer";
+				DEVELOPMENT_TEAM = 3URYLCPH2H;
+				INFOPLIST_FILE = "Derived/InfoPlists/HaruhanjulWidget-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.daehaa.Haruhanjul.HaruhanjulWidget;
+				PRODUCT_NAME = HaruhanjulWidget;
+				PROVISIONING_PROFILE_SPECIFIER = Automatic;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C278296B398F683DF6393BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA8FDFF338A68825F30F4FDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APP_GROUP = group.com.daehaa.Haruhanjul;
+				CODE_SIGN_ENTITLEMENTS = HaruhanjulWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iOS Developer";
+				DEVELOPMENT_TEAM = 3URYLCPH2H;
+				INFOPLIST_FILE = "Derived/InfoPlists/HaruhanjulWidget-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.daehaa.Haruhanjul.HaruhanjulWidget;
+				PRODUCT_NAME = HaruhanjulWidget;
+				PROVISIONING_PROFILE_SPECIFIER = Automatic;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FF782DA60F2E75007A77D1AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E0BE66D0C8BF302280F9BD3 /* Build configuration list for PBXNativeTarget "HaruhanjulWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1AC4A460E1AF0C03DC291E /* Debug */,
+				BA8FDFF338A68825F30F4FDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD739AC19700088C06D4EEEC /* Build configuration list for PBXProject "HaruhanjulWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF782DA60F2E75007A77D1AB /* Debug */,
+				9C278296B398F683DF6393BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4D2D89B83A763DA1396A221C /* Project object */;
+}

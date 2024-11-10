@@ -1,0 +1,18 @@
+# Uncomment the next line to define a global platform for your project
+  platform :ios, '15.0'
+
+workspace 'HaruhanjulWorkspace.xcworkspace'
+
+project 'Projects/Haruhanjul/Haruhanjul.xcodeproj'
+
+target 'Haruhanjul' do
+
+  project 'Projects/Haruhanjul/Haruhanjul.xcodeproj'
+
+  use_frameworks!
+
+  pod 'GoogleMLKit/Translate', '3.2.0'
+
+  # Pods for Haruhanjul
+
+end
