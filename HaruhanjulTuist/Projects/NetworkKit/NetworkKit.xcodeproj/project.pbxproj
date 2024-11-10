@@ -7,16 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AA82065AB8D81CFFE47CE76 /* MockEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F6931E9007EB21E3B0BEF /* MockEndpoint.swift */; };
 		32AF40221717E197138C2B83 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117D970405D0ED276DB199B3 /* Alamofire.framework */; };
 		407F24BAB94009591AA1F487 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55449E3497BAF2A396B08AD /* Endpoint.swift */; };
 		72415FC30D7E07DCA26E9CD4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0BD4E5DE68672759D3925 /* NetworkManager.swift */; };
 		9682F6CD497D08CB556800D1 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45095348FBFF9AD13AE94347 /* Requestable.swift */; };
 		9B2B729B1210EA2BC8EFB16E /* APIEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693736F09E0FF834C5D94F13 /* APIEventMonitor.swift */; };
+		B4F78262CA727F88E64E3A7C /* MockDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51FAC07D480332CD6B79AFB /* MockDTO.swift */; };
 		C16CBFA5EAC485CBA0D32F42 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD152990319A2B9FA541F402 /* Network.swift */; };
 		CF93FB961922A2D300E82BE1 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A73EEE82BF654D366AE06CB /* BaseURL.swift */; };
+		DCB71273023BE8669D8D857D /* NetworkKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C23B4CD2391ADC27D5F2A0 /* NetworkKitTests.swift */; };
+		E50593E00D1BF7FDEBDDED10 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D16F42116C9DD2902A0175D /* NetworkKit.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3DEEB8F1166E9D1E8E0DAB86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 354C1C28EB130ABD6428A2E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC93B437E5CFD867C043748F;
+			remoteInfo = NetworkKit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		34467764FB245D5C715D1B0D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		996AF320FE49399744830ED0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -31,17 +55,31 @@
 
 /* Begin PBXFileReference section */
 		117D970405D0ED276DB199B3 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		156F1376A1FC22FA1C94B47E /* NetworkKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28DBDBD334AF10F9CAC7682B /* NetworkKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "NetworkKit-Info.plist"; sourceTree = "<group>"; };
 		45095348FBFF9AD13AE94347 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		693736F09E0FF834C5D94F13 /* APIEventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEventMonitor.swift; sourceTree = "<group>"; };
+		780F6931E9007EB21E3B0BEF /* MockEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEndpoint.swift; sourceTree = "<group>"; };
 		8D16F42116C9DD2902A0175D /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C23B4CD2391ADC27D5F2A0 /* NetworkKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkKitTests.swift; sourceTree = "<group>"; };
 		9A73EEE82BF654D366AE06CB /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		9CD0BD4E5DE68672759D3925 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B55449E3497BAF2A396B08AD /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		C51FAC07D480332CD6B79AFB /* MockDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDTO.swift; sourceTree = "<group>"; };
 		CD152990319A2B9FA541F402 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		FC30DFBAF5EFE7C320CA4677 /* NetworkKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "NetworkKitTests-Info.plist"; sourceTree = "<group>"; };
+		FFFCEFA3603320894AC4B238 /* URL.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = URL.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C0083E84F3EDC4373784D31A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E50593E00D1BF7FDEBDDED10 /* NetworkKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD20C4B7FB849B4F9FE33094 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,6 +101,23 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		34C1751FDAB343819A56875A /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				C51FAC07D480332CD6B79AFB /* MockDTO.swift */,
+				780F6931E9007EB21E3B0BEF /* MockEndpoint.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		54E0401854B60E723FCFB505 /* NetworkKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				876B91A5B4EBE22A1DF3F3EA /* Sources */,
+			);
+			path = NetworkKitTests;
+			sourceTree = "<group>";
+		};
 		74411804B87A24432823D48C /* Endpoint */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,10 +128,28 @@
 			path = Endpoint;
 			sourceTree = "<group>";
 		};
+		876B91A5B4EBE22A1DF3F3EA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				34C1751FDAB343819A56875A /* Mock */,
+				91C23B4CD2391ADC27D5F2A0 /* NetworkKitTests.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BC6A3531E639A9FFD3E30437 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				FFFCEFA3603320894AC4B238 /* URL.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		C3D501F413187950FE7763B3 /* InfoPlists */ = {
 			isa = PBXGroup;
 			children = (
 				28DBDBD334AF10F9CAC7682B /* NetworkKit-Info.plist */,
+				FC30DFBAF5EFE7C320CA4677 /* NetworkKitTests-Info.plist */,
 			);
 			path = InfoPlists;
 			sourceTree = "<group>";
@@ -86,6 +159,7 @@
 			children = (
 				117D970405D0ED276DB199B3 /* Alamofire.framework */,
 				8D16F42116C9DD2902A0175D /* NetworkKit.framework */,
+				156F1376A1FC22FA1C94B47E /* NetworkKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,7 +167,9 @@
 		E30427D2759F6CE2F3BF76DD /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				BC6A3531E639A9FFD3E30437 /* Config */,
 				F72D42525B145EBA6D5941D9 /* Derived */,
+				54E0401854B60E723FCFB505 /* NetworkKitTests */,
 				2D29DFC27908A4EC776DAC0B /* Sources */,
 			);
 			name = Project;
@@ -135,6 +211,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9B17E4D47DF96CA31165578D /* NetworkKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6BCDA22743CBA7FFC44FA47 /* Build configuration list for PBXNativeTarget "NetworkKitTests" */;
+			buildPhases = (
+				6571A063E4525A3CBBB9B28B /* Sources */,
+				C22D399E8BB7A10E6697B926 /* Resources */,
+				34467764FB245D5C715D1B0D /* Embed Frameworks */,
+				C0083E84F3EDC4373784D31A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A16F94AE2519B6F2DD4159B0 /* PBXTargetDependency */,
+			);
+			name = NetworkKitTests;
+			packageProductDependencies = (
+			);
+			productName = NetworkKitTests;
+			productReference = 156F1376A1FC22FA1C94B47E /* NetworkKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DC93B437E5CFD867C043748F /* NetworkKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7104FC7AD3DA53472F3557A5 /* Build configuration list for PBXNativeTarget "NetworkKit" */;
@@ -179,6 +276,7 @@
 			projectRoot = "";
 			targets = (
 				DC93B437E5CFD867C043748F /* NetworkKit */,
+				9B17E4D47DF96CA31165578D /* NetworkKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -191,9 +289,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C22D399E8BB7A10E6697B926 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6571A063E4525A3CBBB9B28B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F78262CA727F88E64E3A7C /* MockDTO.swift in Sources */,
+				0AA82065AB8D81CFFE47CE76 /* MockEndpoint.swift in Sources */,
+				DCB71273023BE8669D8D857D /* NetworkKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFB50B8FC5F7881326CE970A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,7 +324,66 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A16F94AE2519B6F2DD4159B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NetworkKit;
+			target = DC93B437E5CFD867C043748F /* NetworkKit */;
+			targetProxy = 3DEEB8F1166E9D1E8E0DAB86 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		0CECA00E838B4AB6DFFC45C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/NetworkKitTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.daehaa.NetworkKitTests;
+				PRODUCT_NAME = NetworkKitTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		43B649EBAEC7360DBD05483A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/NetworkKitTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.daehaa.NetworkKitTests;
+				PRODUCT_NAME = NetworkKitTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		631FE0259D2A92F5C8234DED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -324,6 +498,7 @@
 		};
 		DBD07547D4F1F21CD71CED77 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFFCEFA3603320894AC4B238 /* URL.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -361,6 +536,7 @@
 		};
 		FA8BC43AC0A6573CCEBB4774 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFFCEFA3603320894AC4B238 /* URL.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -409,6 +585,15 @@
 			buildConfigurations = (
 				631FE0259D2A92F5C8234DED /* Debug */,
 				D6063C40E7A4EEEE43C8467C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6BCDA22743CBA7FFC44FA47 /* Build configuration list for PBXNativeTarget "NetworkKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43B649EBAEC7360DBD05483A /* Debug */,
+				0CECA00E838B4AB6DFFC45C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
